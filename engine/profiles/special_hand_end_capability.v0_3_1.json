@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "capability_id": "special_hand_end.v0_3_1",
+  "profile_registry": "registry.v1.json",
+  "families": ["abortive_draw", "nagashi_mangan"],
+  "profiles": [
+    {"profile_id": "m_league_official_rules_2026_09_08_content_snapshot", "abortive_draw": "NOT_ADOPTED", "nagashi_mangan": "NOT_ADOPTED"},
+    {"profile_id": "jpml_official_2026_04_01_rule_0_7", "abortive_draw": "NOT_ADOPTED", "nagashi_mangan": "NOT_ADOPTED"},
+    {"profile_id": "saikouisen_highest_title_rules_2024_12_05", "abortive_draw": "NOT_ADOPTED", "nagashi_mangan": "NOT_ADOPTED"},
+    {"profile_id": "npm_official_rules_2008_05_10", "abortive_draw": "NOT_ADOPTED", "nagashi_mangan": "NOT_ADOPTED"},
+    {"profile_id": "mu_shouou_mu_league_2025_01_21_content_snapshot", "abortive_draw": "NOT_ADOPTED", "nagashi_mangan": "NOT_ADOPTED"},
+    {"profile_id": "rmu_a_2026_04_12_content_snapshot", "abortive_draw": "NOT_ADOPTED", "nagashi_mangan": "NOT_ADOPTED"},
+    {"profile_id": "rmu_b_2026_04_12_content_snapshot", "abortive_draw": "NOT_ADOPTED", "nagashi_mangan": "NOT_ADOPTED"},
+    {"profile_id": "rmu_m_2026_04_12_content_snapshot", "abortive_draw": "NOT_ADOPTED", "nagashi_mangan": "NOT_ADOPTED"},
+    {"profile_id": "wrc_rules_2025", "abortive_draw": "NOT_ADOPTED", "nagashi_mangan": "NOT_ADOPTED"},
+    {"profile_id": "tenhou_ranked_four_player_south_red_2026_09_08_content_snapshot", "abortive_draw": "EXECUTABLE", "nagashi_mangan": "EXECUTABLE"}
+  ],
+  "policy": {
+    "EXECUTABLE": "allow_reason_specific_engine_entry",
+    "NOT_ADOPTED": "return_no_candidate_without_side_effects",
+    "REVIEW_REQUIRED": "reject_before_hand_start"
+  }
+}

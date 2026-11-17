@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chombo.multiple_ron_profile.v1.schema.json",
+  "description": "Wire selectors from engine/profiles/multiple_ron_profiles.v1.json; Engine resolves values from that data, never competition-name branches.",
+  "type": "string",
+  "enum": ["m_league_head_bump", "ema_multiple_winners"]
+}

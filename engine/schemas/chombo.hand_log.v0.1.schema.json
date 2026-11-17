@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chombo.local/schemas/chombo.hand_log.v0.1.schema.json",
+  "title": "Chombo v0.1 single-hand game record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["hand_id", "schema_version", "record_format", "seed", "rng_id", "policy_id", "rule_profile_id", "rule_snapshot_id", "participants", "seat_assignments", "initial_public_state", "authoritative_initial_state", "events", "result"],
+  "properties": {
+    "hand_id": {"type": "string", "minLength": 1},
+    "schema_version": {"const": "chombo.hand_log.v0.1"},
+    "record_format": {"const": "semantic-delta.v2"},
+    "seed": {"type": "integer"},
+    "rng_id": {"type": "string", "minLength": 1},
+    "policy_id": {"type": "string", "minLength": 1},
+    "rule_profile_id": {"type": "string", "minLength": 1},
+    "rule_snapshot_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "participants": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {"$ref": "#/$defs/participant"}
+    },
+    "seat_assignments": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["east", "south", "west", "north"],
+      "properties": {
+        "east": {"type": "string", "minLength": 1},
+        "south": {"type": "string", "minLength": 1},
+        "west": {"type": "string", "minLength": 1},
+        "north": {"type": "string", "minLength": 1}
+      }
+    },
+    "initial_public_state": {"type": "object"},
+    "authoritative_initial_state": {"type": "object"},
+    "events": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/event"}},
+    "result": {"$ref": "#/$defs/result"}
+  },
+  "$defs": {
+    "seat": {"enum": ["east", "south", "west", "north"]},
+    "participant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["participant_id", "display_name", "controller_id"],
+      "properties": {
+        "participant_id": {"type": "string", "minLength": 1},
+        "display_name": {"type": "string", "minLength": 1},
+        "controller_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "concept_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "seat_points": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["east", "south", "west", "north"],
+      "properties": {"east": {"type": "integer"}, "south": {"type": "integer"}, "west": {"type": "integer"}, "north": {"type": "integer"}}
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sequence", "event_id", "kind", "actor", "caused_by_event_ids", "public_data", "authoritative_data", "applied_concept_ids"],
+      "properties": {
+        "sequence": {"type": "integer", "minimum": 0},
+        "event_id": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["hand_started", "action_applied", "response_resolved", "tenpai_declared", "hand_ended", "settlement_applied"]},
+        "actor": {"oneOf": [{"$ref": "#/$defs/seat"}, {"type": "null"}]},
+        "caused_by_event_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "public_data": {"type": "object"},
+        "authoritative_data": {"type": "object"},
+        "applied_concept_ids": {"$ref": "#/$defs/concept_ids"}
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["end_reason", "winners", "point_deltas", "final_scores", "applied_concept_ids"],
+      "properties": {
+        "end_reason": {"enum": ["ron", "tsumo", "exhaustive_draw"]},
+        "winners": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/seat"}},
+        "point_deltas": {"$ref": "#/$defs/seat_points"},
+        "final_scores": {"$ref": "#/$defs/seat_points"},
+        "applied_concept_ids": {"$ref": "#/$defs/concept_ids", "minItems": 1}
+      }
+    }
+  }
+}

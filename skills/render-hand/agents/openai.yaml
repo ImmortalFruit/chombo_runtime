@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chomboの手牌図"
+  short_description: "牌の簡略表記から手牌画像を生成"
+  default_prompt: "$render-hand で 11122s333p456m77z 2s の手牌図を作成してください。"

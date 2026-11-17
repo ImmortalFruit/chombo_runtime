@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chombo.local/schemas/chombo.operation_phase.v0.3.1.schema.json",
+  "title": "Chombo v0.3.1 immutable operation phase",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["document_kind", "schema_id", "format_version", "producer", "created_at", "owner_id", "session_id", "lineage_id", "operation_id", "request_id", "operation_kind", "phase", "phase_sequence", "previous_phase_hash", "base_checkpoint_id", "base_boundary_revision", "base_event_id", "base_state_digest", "rule_profile_id", "rule_snapshot_id", "payload", "integrity"],
+  "properties": {
+    "document_kind": {"const": "OPERATION_PHASE"},
+    "schema_id": {"const": "https://chombo.local/schemas/chombo.operation_phase.v0.3.1.schema.json"},
+    "format_version": {"const": "1.0.0"},
+    "producer": {"type": "object"}, "created_at": {"type": "string", "minLength": 1},
+    "owner_id": {"type": "string", "minLength": 1}, "session_id": {"type": "string", "format": "uuid"},
+    "lineage_id": {"type": "string", "format": "uuid"}, "operation_id": {"type": "string", "format": "uuid"},
+    "request_id": {"type": "string", "minLength": 1, "maxLength": 128}, "operation_kind": {"const": "LIVE_ACTION"},
+    "phase": {"enum": ["PREPARED", "COMMITTED", "DELIVERED", "ABORTED", "QUARANTINED"]},
+    "phase_sequence": {"type": "integer", "minimum": 0},
+    "previous_phase_hash": {"type": ["string", "null"]}, "base_checkpoint_id": {"type": ["string", "null"]},
+    "base_boundary_revision": {"type": "integer", "minimum": 0}, "base_event_id": {"type": "string"},
+    "base_state_digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "rule_profile_id": {"type": "string"}, "rule_snapshot_id": {"type": "string"},
+    "payload": {"type": "object"}, "integrity": {"type": "object"}
+  }
+}

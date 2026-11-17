@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "profile_id": "m_league_simulation.v1",
+  "profile_version": 1,
+  "immutable": true,
+  "created_at": "2026-09-01",
+  "scope": "four_player_single_hand_simulation_v0_1",
+  "dimensions": {
+    "match.start.procedure": {
+      "value": "virtual_seeded_seat_dealer_wall_and_deal_generation",
+      "concept_ids": ["game.match.setup.virtual_seat_and_dealer_selection", "game.match.setup.virtual_wall_and_deal_generation", "game.match.setup.dealer_opening_acquisition"]
+    },
+    "match.start.points": {
+      "value": {"points_per_player": 25000, "honba": 0, "riichi_deposit_points": 0},
+      "concept_ids": ["game.score.starting_points", "game.match.setup.virtual_balance_initialization_boundary"]
+    },
+    "tile.red_five.composition": {
+      "value": {"5m": 1, "5p": 1, "5s": 1, "total": 3},
+      "concept_ids": ["tile.red_five"]
+    },
+    "dora.profile": {
+      "value": {"standard": true, "red": true, "kan": true, "ura": true, "kan_ura": true, "han_each": 1, "dora_alone_is_yaku": false},
+      "concept_ids": ["scoring.dora.standard", "scoring.dora.red", "scoring.dora.kan", "scoring.dora.ura", "scoring.dora.kan_ura"]
+    },
+    "response.call.priority": {
+      "value": [["ron"], ["pon", "kan_open"], ["chi"]],
+      "concept_ids": ["game.hand.action.call.priority", "game.hand.response.resolution"]
+    },
+    "response.post_call_discard_restriction": {
+      "value": {"prohibit_discard_completing_called_meld_with_used_group": true},
+      "concept_ids": ["game.hand.action.call.post_discard_restriction"]
+    },
+    "kan.count_limit": {
+      "value": {"established_kans_max": 4, "fifth_kan_allowed": false},
+      "concept_ids": ["game.hand.action.kan.count_limit"]
+    },
+    "kan.profile_boundaries": {
+      "value": {"chankan_on_concealed_kan": false, "generic_daiminkan_liability": false, "yakuman_liability": ["daisangen", "daisuushii", "suukantsu"]},
+      "concept_ids": ["game.scoring.special.chankan_payment", "game.scoring.special.daiminkan_liability", "game.scoring.special.yakuman_liability"]
+    },
+    "kan.last_draw_restrictions": {
+      "value": {"kan_on_last_draw": false, "riichi_on_last_draw": false, "calls_on_last_discard": false, "qualified_ron_on_last_discard": true},
+      "concept_ids": ["game.hand.wall.last_draw.action_restrictions", "game.hand.last_discard.response_restrictions"]
+    },
+    "riichi.score_eligibility": {
+      "value": {"minimum_points": 1100},
+      "concept_ids": ["game.hand.riichi.eligibility"]
+    },
+    "riichi.post_establishment_kan": {
+      "value": {"concealed_kan_only": true, "drawn_tile_must_be_used": true, "waits_must_be_unchanged": true, "meld_interpretations_must_not_change": true, "yaku_treatment_must_not_change": true},
+      "concept_ids": ["game.hand.riichi.post_establishment_actions"]
+    },
+    "riichi.first_turn_and_ippatsu": {
+      "value": {"track_first_uninterrupted_turn": true, "established_chi_pon_or_any_kan_interrupts": true, "ippatsu_expires_on_next_own_discard": true},
+      "concept_ids": ["game.hand.turn.first_uninterrupted", "game.hand.ippatsu.right.lifecycle", "game.hand.yaku.ippatsu", "game.hand.yaku.double_riichi"]
+    },
+    "win.multiple_ron_resolution": {
+      "value": {"maximum_winners": 1, "claimant_order": ["next_player", "opposite_player", "previous_player"]},
+      "concept_ids": ["game.hand.win.multiple_ron", "game.hand.win.head_bump", "game.scoring.special.multiple_winner_score"]
+    },
+    "hand.abortive_draws": {
+      "value": {"adopted": false},
+      "concept_ids": ["game.hand.end.abortive_draw"]
+    },
+    "yaku.ordinary_catalog_and_values": {
+      "value": {"catalog": "qualified_ordinary_yaku_v1", "apply_open_closed_han": true, "remove_approved_non_composable_lower_yaku": true},
+      "concept_ids": ["game.hand.yaku.ordinary.open_closed_value", "game.hand.yaku.ordinary.composition"]
+    },
+    "yaku.yakuman_catalog_and_values": {
+      "value": {"catalog": "qualified_yakuman_12_v1", "catalog_size": 12, "combine_distinct_yakuman": true, "special_double_yakuman": false},
+      "concept_ids": ["game.hand.yaku.yakuman.catalog", "game.hand.yaku.yakuman.variants"]
+    },
+    "scoring.fu": {
+      "value": {"double_wind_pair_fu": 2, "chiitoitsu_fu": 25, "pinfu_tsumo_fu": 20, "open_pinfu_shape_ron_fu": 30},
+      "concept_ids": ["game.scoring.fu.components", "game.scoring.fu.calculation", "game.scoring.fu.hane"]
+    },
+    "scoring.engine_profile": {
+      "value": "m_league_2026",
+      "concept_ids": ["game.scoring.limit.thresholds", "game.scoring.limit.kiriage_mangan", "game.scoring.payment.rounding"]
+    },
+    "scoring.limit_and_rounding": {
+      "value": {"kiriage_mangan": [[30, 4], [60, 3]], "aotenjou": false, "ordinary_13_plus": "sanbaiman_cap", "payment_rounding_unit": 100},
+      "concept_ids": ["game.scoring.limit.thresholds", "game.scoring.limit.kiriage_mangan", "game.scoring.payment.rounding"]
+    },
+    "settlement.honba": {
+      "value": {"points_per_honba": 300, "ron_payer": "discarder", "tsumo_points_per_non_winner": 100},
+      "concept_ids": ["game.counter.honba", "game.scoring.honba.ron", "game.scoring.honba.tsumo"]
+    },
+    "settlement.riichi_deposit": {
+      "value": {"points_per_declaration": 1000, "win": "approved_winner_takes_all", "exhaustive_draw": "carry_over"},
+      "concept_ids": ["game.score.riichi_deposit_transfer", "game.hand.end.riichi_deposit"]
+    },
+    "settlement.exhaustive_draw_tenpai": {
+      "value": {"total_points": 3000, "zero_or_four_tenpai_transfer": 0},
+      "concept_ids": ["game.hand.end.draw_tenpai_declaration", "game.hand.end.draw_payment"]
+    }
+  },
+  "excluded_unqualified_rules": ["chombo", "nagashi_mangan"],
+  "deferred_implementation": []
+}

@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "ledger_id": "chombo.v0_5_2.rule_source_verification.v1",
+  "release_version": "0.5.2",
+  "checked_at": "2026-11-17T11:15:57.176759+00:00",
+  "checked_revision": "514f6a7d613c743652fb5b6314741b654d2f7ee2",
+  "results": [
+    {
+      "ruleset_id": "m_league.official_rules",
+      "profile_ids": [
+        "m_league_official_rules_2026_09_08_content_snapshot",
+        "m_league_simulation.v1"
+      ],
+      "ruleset_version": "2026-09-08-content-snapshot",
+      "result": "CHANGED",
+      "sources": [
+        {
+          "source_id": "m_league.official_rules",
+          "url": "https://m-league.jp/about/",
+          "comparison": "Selected section.p-rule or article descendant data joined by spaces; Unicode whitespace collapsed; NFC; SHA256",
+          "expected": "6282f54e4f58fb20ea42ae8cf2d0a7f64085fa0b3d9f04bae9fd3b42c7dd8b50",
+          "observed": "6282f54e4f58fb20ea42ae8cf2d0a7f64085fa0b3d9f04bae9fd3b42c7dd8b50",
+          "status": "CHANGED_RESOLVED"
+        }
+      ],
+      "scope_status": "MATCH",
+      "resolution": "NO_NEW_PROFILE_REQUIRED",
+      "notes": "新規取得した同じ規則本文・版・採用範囲を照合。外枠の変更は取得証拠で解決し、不変profile/Conceptは変更しない。"
+    },
+    {
+      "ruleset_id": "jpml.official_rules",
+      "profile_ids": [
+        "jpml_official_2026_04_01_rule_0_7"
+      ],
+      "ruleset_version": "2026-04-01-rule-0.7",
+      "result": "UNAVAILABLE",
+      "sources": [
+        {
+          "source_id": "jpml.competition_rules",
+          "url": "https://www.ma-jan.or.jp/activity/game_rule.html",
+          "comparison": "Newly fetched complete source bytes SHA-256 versus v0.5.1 verified source; identical bytes retain its version/text/scope",
+          "expected": "3a212af40ed6ad62f6282088219f84e06730b8f2478812c3d1f4694c7b89d50b",
+          "observed": "3a212af40ed6ad62f6282088219f84e06730b8f2478812c3d1f4694c7b89d50b",
+          "status": "MATCH"
+        },
+        {
+          "source_id": "jpml.competition_rules.gid0",
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vS23LsIu2BmUCVgj326GNwtKbxWtFDswxi0yWETJq_Sn_hwypel5ZGM9g6oBhH9Q7naaT2Rqqk6yjgb/pubhtml",
+          "comparison": "Newly fetched complete source bytes SHA-256 versus v0.5.1 verified source; identical bytes retain its version/text/scope",
+          "expected": "7b2a8af03dc0970568a30b772120f969a77c3cfee4af373485880dc038899541",
+          "observed": "7b2a8af03dc0970568a30b772120f969a77c3cfee4af373485880dc038899541",
+          "status": "MATCH"
+        },
+        {
+          "source_id": "jpml.competition_rules.gid1037086896",
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vS23LsIu2BmUCVgj326GNwtKbxWtFDswxi0yWETJq_Sn_hwypel5ZGM9g6oBhH9Q7naaT2Rqqk6yjgb/pubhtml",
+          "comparison": "Newly fetched complete source bytes SHA-256 versus v0.5.1 verified source; identical bytes retain its version/text/scope",
+          "expected": "82913959ea852341906582cf179f358950457f3e51b1cecbdb89c04f3fbff845",
+          "observed": "82913959ea852341906582cf179f358950457f3e51b1cecbdb89c04f3fbff845",
+          "status": "MATCH"
+        },
+        {
+          "source_id": "jpml.adopted_yaku",
+          "url": "https://www.ma-jan.or.jp/activity/yaku.html",
+          "comparison": "official source reachability and scope",
+          "expected": null,
+          "observed": "HTTP 404",
+          "status": "UNAVAILABLE"
+        },
+        {
+          "source_id": "jpml.glossary",
+          "url": "https://www.ma-jan.or.jp/class_1/1552.html",
+          "comparison": "Newly fetched complete source bytes SHA-256 versus v0.5.1 verified source; identical bytes retain its version/text/scope",
+          "expected": "4259773a6ab904b8382c6561781975f9ed0459cd2788b1472c0d086f4b166676",
+          "observed": "4259773a6ab904b8382c6561781975f9ed0459cd2788b1472c0d086f4b166676",
+          "status": "MATCH"
+        },
+        {
+          "source_id": "jpml.official_rules_through_2024",
+          "url": "https://www.ma-jan.or.jp/column_other/115081.html",
+          "comparison": "Newly fetched complete source bytes SHA-256 versus v0.5.1 verified source; identical bytes retain its version/text/scope",
+          "expected": "744e16ee5475f747016284f942c20cada27110451b8f8bf8f9ae9a6717cf516b",
+          "observed": "744e16ee5475f747016284f942c20cada27110451b8f8bf8f9ae9a6717cf516b",
+          "status": "MATCH"
+        }
+      ],
+      "scope_status": "UNAVAILABLE",
+      "resolution": "BLOCKED",
+      "notes": "2026-11-17新規取得。前版の除外承認は継承しない。 2026-11-17所有者指示「連盟は現状の状態でリリースを準備」によりv0.5.2限定で取得不能資料の鮮度確認を除外。UNAVAILABLE/BLOCKEDの観測、不変profileと機能を保持する。"
+    },
+    {
+      "ruleset_id": "saikouisen.highest_title_rules",
+      "profile_ids": [
+        "saikouisen_highest_title_rules_2024_12_05"
+      ],
+      "ruleset_version": "2024-12-05",
+      "result": "CHANGED",
+      "sources": [
+        {
+          "source_id": "saikouisen.rules_index",
+          "url": "https://saikouisen.com/about/rules/",
+          "comparison": "Fresh official route/edition/scope plus byte-identical pinned PDF or normalized rule article; resolution in v0.5.2-release-source-check.json",
+          "expected": "Previously verified official route/edition and pinned rule source",
+          "observed": "Official highest-title competition regulations route; target PDF byte-identical to pinned source",
+          "status": "CHANGED_RESOLVED"
+        },
+        {
+          "source_id": "saikouisen.regulations_2024-12-05",
+          "url": "https://drive.google.com/file/d/1KfRZQQYkmtBRytaYlBePPmf5TRv4k-96/view?usp=drive_link",
+          "comparison": "Newly fetched complete source bytes SHA-256 versus v0.5.1 verified source; identical bytes retain its version/text/scope",
+          "expected": "b18abd9463d4ab9438e48459f62e70d0628dd6f9fb5f7bdddfff1c33a93fd5e1",
+          "observed": "b18abd9463d4ab9438e48459f62e70d0628dd6f9fb5f7bdddfff1c33a93fd5e1",
+          "status": "MATCH"
+        }
+      ],
+      "scope_status": "MATCH",
+      "resolution": "NO_NEW_PROFILE_REQUIRED",
+      "notes": "新規取得した同じ規則本文・版・採用範囲を照合。外枠の変更は取得証拠で解決し、不変profile/Conceptは変更しない。"
+    },
+    {
+      "ruleset_id": "npm.official_rules",
+      "profile_ids": [
+        "npm_official_rules_2008_05_10"
+      ],
+      "ruleset_version": "2008-05-10",
+      "result": "CHANGED",
+      "sources": [
+        {
+          "source_id": "npm.official_rules",
+          "url": "https://npm2001.com/about/rule/",
+          "comparison": "HTMLParser descendant data joined by spaces; Unicode whitespace collapsed; NFC; SHA256",
+          "expected": "1791b20637d5c5f03c4d0c3dfefee78a5ae874a5d752a767cf89058477e0fdb4",
+          "observed": "1791b20637d5c5f03c4d0c3dfefee78a5ae874a5d752a767cf89058477e0fdb4",
+          "status": "CHANGED_RESOLVED"
+        },
+        {
+          "source_id": "npm.competition_regulations_index",
+          "url": "https://npm2001.com/about/regulations/",
+          "comparison": "HTMLParser descendant data joined by spaces; Unicode whitespace collapsed; NFC; SHA256",
+          "expected": "ca6a18c6d1f0c4d33660c6d73d1cbfe4a959a1cb6bc664c424e2cebf17d5cc40",
+          "observed": "ca6a18c6d1f0c4d33660c6d73d1cbfe4a959a1cb6bc664c424e2cebf17d5cc40",
+          "status": "CHANGED_RESOLVED"
+        },
+        {
+          "source_id": "npm.competition_regulations_2008-05-10",
+          "url": "https://npm2001.com/pdf/regulations.pdf",
+          "comparison": "Newly fetched complete source bytes SHA-256 versus v0.5.1 verified source; identical bytes retain its version/text/scope",
+          "expected": "27fc0d79828a66ad0cf106f145a3328d34edf6235280efbeddcd131212290f6f",
+          "observed": "27fc0d79828a66ad0cf106f145a3328d34edf6235280efbeddcd131212290f6f",
+          "status": "MATCH"
+        }
+      ],
+      "scope_status": "MATCH",
+      "resolution": "NO_NEW_PROFILE_REQUIRED",
+      "notes": "新規取得した同じ規則本文・版・採用範囲を照合。外枠の変更は取得証拠で解決し、不変profile/Conceptは変更しない。"
+    },
+    {
+      "ruleset_id": "mu.shouou_mu_league",
+      "profile_ids": [
+        "mu_shouou_mu_league_2025_01_21_content_snapshot"
+      ],
+      "ruleset_version": "2025-01-21-content-snapshot",
+      "result": "UNCHANGED",
+      "sources": [
+        {
+          "source_id": "mu.competition_regulations",
+          "url": "https://mu-mahjong.jp/tournament/%E7%AB%B6%E6%8A%80%E8%A6%8F%E5%AE%9A/",
+          "comparison": "Newly fetched complete source bytes SHA-256 versus v0.5.1 verified source; identical bytes retain its version/text/scope",
+          "expected": "f3c1368646fc5fa4cbf573b0c9b4dbdd5a509353e2d70168c0570e47f1536429",
+          "observed": "f3c1368646fc5fa4cbf573b0c9b4dbdd5a509353e2d70168c0570e47f1536429",
+          "status": "MATCH"
+        },
+        {
+          "source_id": "mu.official_rules",
+          "url": "https://mu-mahjong.jp/wp-content/uploads/2025/01/murule_202501.pdf",
+          "comparison": "Newly fetched complete source bytes SHA-256 versus v0.5.1 verified source; identical bytes retain its version/text/scope",
+          "expected": "9db01ef92b4653fdf3ac7d803f9f4dddb1430242e9dc5eefb10517b03e85f88f",
+          "observed": "9db01ef92b4653fdf3ac7d803f9f4dddb1430242e9dc5eefb10517b03e85f88f",
+          "status": "MATCH"
+        },
+        {
+          "source_id": "mu.mu_cup_rules",
+          "url": "https://mu-mahjong.jp/tournament/%CE%BC%E3%82%AB%E3%83%83%E3%83%97/",
+          "comparison": "Newly fetched complete source bytes SHA-256 versus v0.5.1 verified source; identical bytes retain its version/text/scope",
+          "expected": "6013ad5b4811156bd74e3fb64a687a201994383df6480cd852ff68f587901e27",
+          "observed": "6013ad5b4811156bd74e3fb64a687a201994383df6480cd852ff68f587901e27",
+          "status": "MATCH"
+        },
+        {
+          "source_id": "mu.mu_league_rules",
+          "url": "https://mu-mahjong.jp/tournament/%CE%BC%E3%83%AA%E3%83%BC%E3%82%B0%EF%BC%88%E5%B0%86%E7%8E%8B%EF%BC%89/",
+          "comparison": "Newly fetched complete source bytes SHA-256 versus v0.5.1 verified source; identical bytes retain its version/text/scope",
+          "expected": "112816b3a0c18ac7b624aad8239fabc737a3e4e3a6e16a44351766dab6e77277",
+          "observed": "112816b3a0c18ac7b624aad8239fabc737a3e4e3a6e16a44351766dab6e77277",
+          "status": "MATCH"
+        }
+      ],
+      "scope_status": "MATCH",
+      "resolution": "NONE_REQUIRED",
+      "notes": "新規取得した同じ規則本文・版・採用範囲を照合。外枠の変更は取得証拠で解決し、不変profile/Conceptは変更しない。"
+    },
+    {
+      "ruleset_id": "rmu.rules",
+      "profile_ids": [
+        "rmu_a_2026_04_12_content_snapshot",
+        "rmu_b_2026_04_12_content_snapshot",
+        "rmu_m_2026_04_12_content_snapshot"
+      ],
+      "ruleset_version": "2026-04-12-content-snapshot",
+      "result": "CHANGED",
+      "sources": [
+        {
+          "source_id": "rmu.rules_2026-04-12",
+          "url": "https://rmu.jp/rule",
+          "comparison": "Selected section.p-rule or article descendant data joined by spaces; Unicode whitespace collapsed; NFC; SHA256",
+          "expected": "b0c822345848b77d05ce71d20395fee2177a9b7a9250489a2c337150316989cf",
+          "observed": "b0c822345848b77d05ce71d20395fee2177a9b7a9250489a2c337150316989cf",
+          "status": "CHANGED_RESOLVED"
+        },
+        {
+          "source_id": "rmu.crown_a_rule",
+          "url": "https://rmu.jp/title/crown",
+          "comparison": "Fresh official route/edition/scope plus byte-identical pinned PDF or normalized rule article; resolution in v0.5.2-release-source-check.json",
+          "expected": "Previously verified official route/edition and pinned rule source",
+          "observed": "RMU official A-rule adoption and rule link retained; current rule article/version normalized hash match separately verified",
+          "status": "CHANGED_RESOLVED"
+        }
+      ],
+      "scope_status": "MATCH",
+      "resolution": "NO_NEW_PROFILE_REQUIRED",
+      "notes": "新規取得した同じ規則本文・版・採用範囲を照合。外枠の変更は取得証拠で解決し、不変profile/Conceptは変更しない。"
+    },
+    {
+      "ruleset_id": "wrc.rules",
+      "profile_ids": [
+        "wrc_rules_2025"
+      ],
+      "ruleset_version": "2025",
+      "result": "CHANGED",
+      "sources": [
+        {
+          "source_id": "wrc.rules_downloads",
+          "url": "https://www.worldriichi.org/wrc-rules",
+          "comparison": "Fresh official route/edition/scope plus byte-identical pinned PDF or normalized rule article; resolution in v0.5.2-release-source-check.json",
+          "expected": "Previously verified official route/edition and pinned rule source",
+          "observed": "Official current 2025 edition/2025 clarification links; both target PDFs byte-identical; no later current-rule edition observed in rule download area",
+          "status": "CHANGED_RESOLVED"
+        },
+        {
+          "source_id": "wrc.rules_2025_v20250526",
+          "url": "https://www.worldriichi.org/s/WRC-Rules-2025-42fx.pdf",
+          "comparison": "Newly fetched complete source bytes SHA-256 versus v0.5.1 verified source; identical bytes retain its version/text/scope",
+          "expected": "6868638609d3a0e41b551d7870e6f01b5b349883456e73badbc158457f97a8bd",
+          "observed": "6868638609d3a0e41b551d7870e6f01b5b349883456e73badbc158457f97a8bd",
+          "status": "MATCH"
+        },
+        {
+          "source_id": "wrc.clarifications_2025_2025-06-29",
+          "url": "https://www.worldriichi.org/s/WRC_2025_Rules_Clarification.pdf",
+          "comparison": "Newly fetched complete source bytes SHA-256 versus v0.5.1 verified source; identical bytes retain its version/text/scope",
+          "expected": "2817c3e4fd4031c733f8baf38c914d02a1e3b6ffe99a27925f9432d5e39cfd06",
+          "observed": "2817c3e4fd4031c733f8baf38c914d02a1e3b6ffe99a27925f9432d5e39cfd06",
+          "status": "MATCH"
+        }
+      ],
+      "scope_status": "MATCH",
+      "resolution": "NO_NEW_PROFILE_REQUIRED",
+      "notes": "新規取得した同じ規則本文・版・採用範囲を照合。外枠の変更は取得証拠で解決し、不変profile/Conceptは変更しない。"
+    },
+    {
+      "ruleset_id": "tenhou.ranked.four_player_south.red",
+      "profile_ids": [
+        "tenhou_ranked_four_player_south_red_2026_09_08_content_snapshot"
+      ],
+      "ruleset_version": "2026-09-08-content-snapshot",
+      "result": "UNCHANGED",
+      "sources": [
+        {
+          "source_id": "tenhou.manual",
+          "url": "https://tenhou.net/man/index.html",
+          "comparison": "Newly fetched complete source bytes SHA-256 versus v0.5.1 verified source; identical bytes retain its version/text/scope",
+          "expected": "3de07f2c338caf520f6c4dc2160270adb7b1fbd25c1666bf61d3f351902f210a",
+          "observed": "3de07f2c338caf520f6c4dc2160270adb7b1fbd25c1666bf61d3f351902f210a",
+          "status": "MATCH"
+        }
+      ],
+      "scope_status": "MATCH",
+      "resolution": "NONE_REQUIRED",
+      "notes": "新規取得した同じ規則本文・版・採用範囲を照合。外枠の変更は取得証拠で解決し、不変profile/Conceptは変更しない。"
+    }
+  ],
+  "release_gate": {
+    "status": "PASSED",
+    "unavailable_count": 1,
+    "unresolved_change_count": 0
+  }
+}

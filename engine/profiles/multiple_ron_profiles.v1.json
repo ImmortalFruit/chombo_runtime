@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "source_concept_ids": [
+    "game.hand.win.multiple_ron",
+    "game.hand.win.head_bump"
+  ],
+  "profiles": {
+    "m_league_head_bump": {
+      "maximum_winners": 1,
+      "claimant_order": ["next_player", "opposite_player", "previous_player"]
+    },
+    "ema_multiple_winners": {
+      "maximum_winners": 3,
+      "claimant_order": ["next_player", "opposite_player", "previous_player"]
+    }
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Chombo local Codex confirmation bridge",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8765"
+    }
+  ],
+  "paths": {
+    "/api/conversation/confirm": {
+      "post": {
+        "description": "Local Navigator owner context; no API key or BYOK. Resolve an owned ambiguous ref on its original frozen event. Same choice reuses the derived ref; a conflicting choice is rejected. Does not implement /api/v1 interaction state.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "conversation_ref_id",
+                  "choice_id"
+                ],
+                "properties": {
+                  "conversation_ref_id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  "choice_id": {
+                    "type": "string",
+                    "enum": [
+                      "SELF",
+                      "PUBLIC_TABLE"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Derived fixed reference (including identical retry)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "session_id": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 16384
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "lineage_id": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 16384
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "checkpoint_id": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 16384
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "event_id": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 16384
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "observer_seat": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 16384
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "subject_seat": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 16384
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "conversation_ref_id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 16384
+                    },
+                    "source_kind": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 16384
+                    },
+                    "record_id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 16384
+                    },
+                    "hand_id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 16384
+                    },
+                    "mode": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 16384
+                    },
+                    "observer_kind": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 16384
+                    },
+                    "requested_subject": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 16384
+                    },
+                    "rule_profile_id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 16384
+                    },
+                    "rule_snapshot_id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 16384
+                    },
+                    "event_sequence": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 9007199254740991
+                    }
+                  },
+                  "required": [
+                    "session_id",
+                    "lineage_id",
+                    "checkpoint_id",
+                    "event_id",
+                    "observer_seat",
+                    "subject_seat",
+                    "conversation_ref_id",
+                    "source_kind",
+                    "record_id",
+                    "hand_id",
+                    "mode",
+                    "observer_kind",
+                    "requested_subject",
+                    "rule_profile_id",
+                    "rule_snapshot_id",
+                    "event_sequence"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input, unknown ref, conflict, expiry or revoked grant",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "error",
+                    "details"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/conversation/openapi.json": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "This OpenAPI document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

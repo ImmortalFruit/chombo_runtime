@@ -1,0 +1,1501 @@
+{
+  "artifact": "chombo-0.5.2",
+  "asset_rights_status": "APPROVED",
+  "files": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "db77999d02d8f08d38f43ed9a2e7f4538630eb9456ddcae6244e0c4cdbf6dd55",
+      "size": 1111
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "2b4de74ce99e9f300ddfd0051c6eda93f6594bdd7dca3f5091d0b92cadd5f9c1",
+      "size": 5425
+    },
+    {
+      "path": "ASSET_RIGHTS.md",
+      "sha256": "b0ca5e4678cfc09932a1f74d304f8aa49769811e7c81b61a3421c7918c23e0d9",
+      "size": 10772
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "73ba74dfaa520b49a401b5d21459a8523a146f3b7518a833eea5efa85130bf68",
+      "size": 10273
+    },
+    {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "sha256": "419896aea50c15d6e40c5b4baf4bd346f78223b9a354c7357ad00262afdc08ec",
+      "size": 14527
+    },
+    {
+      "path": "LICENSE_SCOPE.md",
+      "sha256": "a0632548f3237aba360926f41c39ca8005e69d3aad4ac1c36e504fdc0667e3e9",
+      "size": 3583
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "60c3168d1d8ee1d8574ecca2e6903a4cec7900be7ed220574e68124a6297f3bc",
+      "size": 909
+    },
+    {
+      "path": "PYTHON_DEVELOPER_PREVIEW.md",
+      "sha256": "a6dfcfb3f2fa1a48f831d6d813803e574b971223ef2169dcf87e188c9f7e3791",
+      "size": 5483
+    },
+    {
+      "path": "README.md",
+      "sha256": "633719f1a059ae976d77f721a5c3b35637c5633aa55052b64e9df43771b4ee48",
+      "size": 16561
+    },
+    {
+      "path": "VERSION",
+      "sha256": "26e0ab83aa1ff6bd0ae3882787a92663aa19db128e1241ffc99375fb9ca0c121",
+      "size": 6
+    },
+    {
+      "path": "assets/chombo-icon.png",
+      "sha256": "e3c07025b21665d429a189889914983484536ef6b8967177f7c450f8e2d2f79d",
+      "size": 991839
+    },
+    {
+      "path": "assets/chombo-logo.png",
+      "sha256": "498cbfd64a314641adfe22d05994881965cbdf4a17cae38c484290f631442040",
+      "size": 1017595
+    },
+    {
+      "path": "assets/point-sticks/riichi-stick-100.png",
+      "sha256": "33f2b5cf6754fac337027774020888aa109d23df3fa56f3fe5ff39685190b5f9",
+      "size": 10439
+    },
+    {
+      "path": "assets/point-sticks/riichi-stick-1000.png",
+      "sha256": "c2fd748331e56a1dd79a8113ab2f5e519188d95b7f4a2bf0d78a885dec7f35e4",
+      "size": 10876
+    },
+    {
+      "path": "assets/sounds/chombo-call.wav",
+      "sha256": "97b72f8ce3c2cb6ba68c9423bcd759e4a3f16d6d98434c7e87d3dc0b08e6f870",
+      "size": 24382
+    },
+    {
+      "path": "assets/sounds/chombo-noten.wav",
+      "sha256": "aa475eb3d35bb87cb07bd37357e18562c014cfbe71bb2a29aad95a9defe279ff",
+      "size": 26944
+    },
+    {
+      "path": "assets/sounds/chombo-riichi.wav",
+      "sha256": "c55c7b3c3f0bac2108de1cf7e3b92c371c2bcb8a78c12784cfea4b55a45b3dc2",
+      "size": 42022
+    },
+    {
+      "path": "assets/sounds/chombo-tenpai.wav",
+      "sha256": "f84cf08190b06ff4a41201699a0f9e2e5c1a27ec7a57d917a76df5b5f4ce2d25",
+      "size": 20326
+    },
+    {
+      "path": "assets/sounds/chombo-win.wav",
+      "sha256": "38299da88fa14670ceacb4e6cf595d36c7f653f434c67d3f1303fd6288a05ada",
+      "size": 62308
+    },
+    {
+      "path": "assets/sounds/hand-topple.wav",
+      "sha256": "2272387ce90b77595413a1b9b724994ea4252f4b448dcca9292578e69e18cf0c",
+      "size": 44668
+    },
+    {
+      "path": "assets/sounds/response-hint.wav",
+      "sha256": "3c61c06c5fca53f9dd8436349afc03970301422d5e2310556369820777ba545b",
+      "size": 17766
+    },
+    {
+      "path": "assets/sounds/tile-collision.wav",
+      "sha256": "999455df571eebd6d07da8622f2899cbf1b7a0661561a738b61e745624b3e8cf",
+      "size": 16002
+    },
+    {
+      "path": "assets/sounds/tile-discard.wav",
+      "sha256": "9b356a3758050a0def9c0838901814c55e74b711b1e46de12172b0b6cc3c34c8",
+      "size": 19090
+    },
+    {
+      "path": "concepts/schemas/ruleset-dependency.schema.json",
+      "sha256": "a4ff421d79352ac5735c3da3f6fe4e8d5e7ce2e7c7a8e2450ba67eb25a4ee706",
+      "size": 2451
+    },
+    {
+      "path": "config/agent.json",
+      "sha256": "51f74a2dcaf53d636b877b0b23eff90fd18dae02c1dac2b11dd54ef60422f086",
+      "size": 523
+    },
+    {
+      "path": "engine/__init__.py",
+      "sha256": "f6b8887b917df39a563434eff4d95aabb402e76399b0e3387a67d9dac7a18e6d",
+      "size": 177
+    },
+    {
+      "path": "engine/abortive_draw.py",
+      "sha256": "81f1bab285a8ec1e10bdea102807b785688c16f3ceae8b04dfbd1318a0c61652",
+      "size": 17308
+    },
+    {
+      "path": "engine/actions.py",
+      "sha256": "64663c1cc6c56326b47067f9407bb3eef84a79e9c2ef430ad80723dfc008f93d",
+      "size": 5327
+    },
+    {
+      "path": "engine/agent_policy.py",
+      "sha256": "9186bf27762519e7d9c04c25e2c5c50e9244edbc885e811c2c24728df016a192",
+      "size": 5890
+    },
+    {
+      "path": "engine/aggregate_ranking.py",
+      "sha256": "5a0402c4abbab35be252474e641becd8cb8f10e3bc06917119a39ff4bbad8244",
+      "size": 6715
+    },
+    {
+      "path": "engine/application.py",
+      "sha256": "0b88ef240ce0f9f518673a1c586cea8febfff3e92652064fced3723ad64c8dcf",
+      "size": 14719
+    },
+    {
+      "path": "engine/application_schema.py",
+      "sha256": "1aebde4c8440e1bcab2e400315857bdedd929bc50f09b790781cfe03f92a47ce",
+      "size": 24115
+    },
+    {
+      "path": "engine/autonomous_viewer.py",
+      "sha256": "ad3f76e03b180fc5d77c095c63e9e6cd946a9449d1146cee3b3be59f4f524ec0",
+      "size": 5205
+    },
+    {
+      "path": "engine/byok_contract.py",
+      "sha256": "acda52811e3b48cce3d709b79395321e30888bf7964c948e43f76750ba5eb007",
+      "size": 2277
+    },
+    {
+      "path": "engine/byok_dialogue.py",
+      "sha256": "6aa6f09dfbe6079143775f0a490af6e059caba663a876f90c7180776df9d80b2",
+      "size": 11156
+    },
+    {
+      "path": "engine/byok_provider.py",
+      "sha256": "c46b2d4385e78a52c3d1b61168a18d51e65e23b0b6fedf7a0a89a7657ede9f84",
+      "size": 8965
+    },
+    {
+      "path": "engine/canonical_record.py",
+      "sha256": "524942ea1e2812b228e1b1cb766867f558986b386a19b0c78bc06d8d8ce5a023",
+      "size": 36932
+    },
+    {
+      "path": "engine/codex_adapter.py",
+      "sha256": "ac0033c74f7a904e2b991bb2c06767a66e44a6981b142ea65c1adc1bb3c9f6ad",
+      "size": 4196
+    },
+    {
+      "path": "engine/codex_schema.py",
+      "sha256": "31f0b32ef6a0318dfdbedd7b7049b43bfd817fadad7963d45636323c87029d6b",
+      "size": 2251
+    },
+    {
+      "path": "engine/condition_aggregate.py",
+      "sha256": "695d4a381ce63256f55b2ed2f38fcea5c9d1e5f179bd3992484d2a1f1bdbeb12",
+      "size": 5361
+    },
+    {
+      "path": "engine/condition_candidates.py",
+      "sha256": "6c4a41fb3f98eead2d8ff18182d7c0daf8abfdd1216c6de304d7ebef49f26637",
+      "size": 12114
+    },
+    {
+      "path": "engine/condition_documents.py",
+      "sha256": "dfd4f50f482dda3b668c3b5b0b920aeff776b44323967d7078bf6eee13e1eff3",
+      "size": 31123
+    },
+    {
+      "path": "engine/condition_form.py",
+      "sha256": "0c552a4309b823f784386a979fa82b13b337bf88c87ef9d8e4515ae008511747",
+      "size": 8870
+    },
+    {
+      "path": "engine/condition_limits.py",
+      "sha256": "6694175f7d2f6646ba7184dd069d15b92254f0b55669dd1134a63d0e6cf8ae33",
+      "size": 2193
+    },
+    {
+      "path": "engine/condition_navigator.py",
+      "sha256": "e7ab4d2fb1c81349fee8ad278f99c659f91de2ca3a2441ff1dfc6e55f82648fa",
+      "size": 4456
+    },
+    {
+      "path": "engine/condition_points.py",
+      "sha256": "e12bc501a9c4c9a9bf321ba0ccffc6187ae3ab35f72fdedc5c44337d72ace532",
+      "size": 8711
+    },
+    {
+      "path": "engine/condition_search.py",
+      "sha256": "4ee2ff06f33229b379cb58640194d196cd2b5834f765fb376b64d299fd036fd5",
+      "size": 3410
+    },
+    {
+      "path": "engine/condition_single_match.py",
+      "sha256": "86d91bcf3d86a5a0f169a44022d4caf3e5218887d7d85eff2944e9b5ad650e99",
+      "size": 17587
+    },
+    {
+      "path": "engine/condition_skill.py",
+      "sha256": "9bcd19b924a842f09bbffa1aabc6b79ce1bf0f250ea0d85702207816d4b1c653",
+      "size": 9488
+    },
+    {
+      "path": "engine/dialogue_knowledge.py",
+      "sha256": "d59aa533ea26441793a61358a191c997363835c70bc17b2b83e4e2cdce5257ee",
+      "size": 4293
+    },
+    {
+      "path": "engine/final_points.py",
+      "sha256": "0cfbf61c0ed571a40381c37206bed8511e137d2f803532109afc80980ab28854",
+      "size": 22106
+    },
+    {
+      "path": "engine/game_state.py",
+      "sha256": "5bb7585bba1fef76065f5df14975903335e14aeef66cb2addb3ad6d300c89f6e",
+      "size": 7803
+    },
+    {
+      "path": "engine/hand_app.py",
+      "sha256": "94c1a5b53ae6ad7a3a04c881d11878582b3134441a4904938869f2234b56bdea",
+      "size": 11220
+    },
+    {
+      "path": "engine/hand_completion.py",
+      "sha256": "e712ff75c1307840a3dfb49883d2acff16168ac71478321c732932d3c351eeba",
+      "size": 20229
+    },
+    {
+      "path": "engine/hand_log.py",
+      "sha256": "e48db5bd49940c7165cdd38ebc59b4e8bdbd7380846d597738bf272cde7f7bae",
+      "size": 13949
+    },
+    {
+      "path": "engine/hand_orchestrator.py",
+      "sha256": "de66ec0cc7d97a2d588fde14e21ac08fafdee3316b2322f64e80cb311ae661a5",
+      "size": 28221
+    },
+    {
+      "path": "engine/hand_ui.py",
+      "sha256": "f6ff622e7a85ff2c863f4b14743939f10e913656cb46cf3156fb55194f998b05",
+      "size": 1677
+    },
+    {
+      "path": "engine/hand_viewer.py",
+      "sha256": "89330f04c9bdd51e34564cbe9ed5da2f6abed37e57d46bc51280e74064d76bd0",
+      "size": 10848
+    },
+    {
+      "path": "engine/interactive_hand.py",
+      "sha256": "deafb6349239a0a41a06a84d2eabceb42120970487b4a1bb9162cbba1c93ad65",
+      "size": 40112
+    },
+    {
+      "path": "engine/interactive_viewer.py",
+      "sha256": "f453db1a7b2d4ce6ff95638c553a539c6ad098f221b3f91def50c6bd4678c3f8",
+      "size": 1307
+    },
+    {
+      "path": "engine/knowledge_cli.py",
+      "sha256": "efe3a7038482ef626a9431ca8995049ff6235da78bdb5bf018f728a86e9e95da",
+      "size": 2931
+    },
+    {
+      "path": "engine/knowledge_store.py",
+      "sha256": "66e525d25c6ec0fe28851714d285106f8d83514235a088a24eaadc6d420cb431",
+      "size": 7521
+    },
+    {
+      "path": "engine/legal_actions.py",
+      "sha256": "65b53526ba2c89724d013a26e70bc8a9e280a2fd5ffd7660168c878727a1c21e",
+      "size": 15600
+    },
+    {
+      "path": "engine/live_condition_support.py",
+      "sha256": "a1a73c21ca614057a528629354b7f080ab24c6c4ff062ca57733be2ae0407e33",
+      "size": 11907
+    },
+    {
+      "path": "engine/local_calculations.py",
+      "sha256": "74750cb2573650159e19c51ca8674fadfc4df56cbf7850706acc283743efed73",
+      "size": 5746
+    },
+    {
+      "path": "engine/match_app.py",
+      "sha256": "fee05af887e7d57d033561ef5605f345fd7d0e82a379c569e92516c8b868a54f",
+      "size": 7681
+    },
+    {
+      "path": "engine/match_end.py",
+      "sha256": "891ea0b75c8b7f1832ccc6ee34167c21f50b45ecafd637ffd974a190e2ee2dee",
+      "size": 8468
+    },
+    {
+      "path": "engine/match_integrity.py",
+      "sha256": "d2fedc43b4e98bd4a0de32ee4c716dbb02dba061f1e4e9bd3f0c203163f245c1",
+      "size": 6457
+    },
+    {
+      "path": "engine/match_orchestrator.py",
+      "sha256": "d5cdac9b9cd8992343ad9bb934084939f89e435b5cdffc904374f91383c9bab6",
+      "size": 16944
+    },
+    {
+      "path": "engine/match_reconstruction.py",
+      "sha256": "53c468d8bc42d38855eb795521a7b376c828fdb6a700cbe65913eb2b2cfa24e2",
+      "size": 12065
+    },
+    {
+      "path": "engine/match_record.py",
+      "sha256": "ee48f2124319e7b288023189714e812784a7f61a04dc6f8b9e253cd3d019af50",
+      "size": 10020
+    },
+    {
+      "path": "engine/match_state.py",
+      "sha256": "7e508e8157d6979b8de74820cf58848a25ec97bc0a9a9e55674997b77069c818",
+      "size": 10508
+    },
+    {
+      "path": "engine/nagashi_mangan.py",
+      "sha256": "f2165b4c4dffb996723d9626307d8e86384bae6e6da3268559ab78580193711d",
+      "size": 7734
+    },
+    {
+      "path": "engine/nagashi_mangan_settlement.py",
+      "sha256": "65d59950d883d9264c5787fa9e654acbb050624173db8378281d1752315c31e5",
+      "size": 5186
+    },
+    {
+      "path": "engine/navigator.py",
+      "sha256": "121811a368ea9049d8a98977605ff6f724ce205acf1005e7ea9ccf423f8ecfd8",
+      "size": 96135
+    },
+    {
+      "path": "engine/next_hand_state.py",
+      "sha256": "47c6d6d66a21f008d2779f2a1ee224effa0fa871264fe2f60f4eae37738ee2cf",
+      "size": 5919
+    },
+    {
+      "path": "engine/next_hand_transition.py",
+      "sha256": "e5b88560c72778ac1486302d04adee2855ae22bf9bb277d94df671ac0ab1b57b",
+      "size": 10278
+    },
+    {
+      "path": "engine/observer_projection.py",
+      "sha256": "90726bf9724b2d9e7a713b5ae7c52ccebed489bedd8a68c84e4d0f08fe284589",
+      "size": 10050
+    },
+    {
+      "path": "engine/operation_journal.py",
+      "sha256": "c1946375946d650b614627b28903e60809e3e5da4d2a68a62e3c10a001c109de",
+      "size": 10895
+    },
+    {
+      "path": "engine/position_conversation.py",
+      "sha256": "28d49ab0d9d0ad91ca887ed2d699facf685d9a65d80652f6c286e856a7e333e9",
+      "size": 12547
+    },
+    {
+      "path": "engine/profiles/aggregate_ranking_source_audit.v1.json",
+      "sha256": "b9fcf03130ce425e223997642f4b140b370a02cc267cd0cae18541c352ee91bd",
+      "size": 8318
+    },
+    {
+      "path": "engine/profiles/chombo_qualified_snapshot_v1.json",
+      "sha256": "2e8bf774702ecd0a26d704ca3405b8c9cb75b5809016d8f6de324d590ce34d0c",
+      "size": 1575
+    },
+    {
+      "path": "engine/profiles/custom_rule_approval.v1.json",
+      "sha256": "8023d554ffe3fa4eeae39c4da84df836d74d439046ea06030e490581d83700fb",
+      "size": 50397
+    },
+    {
+      "path": "engine/profiles/custom_rule_capability.v1.json",
+      "sha256": "33c23cd3ee6b0a32a7c6b7ded456800afc85e0fb34cd57b2e5d57d3de42c65d4",
+      "size": 4530
+    },
+    {
+      "path": "engine/profiles/four_player_east_south_complete_scope.v1.json",
+      "sha256": "39b8b0fb6691a29ce2ca14b4cbec4ced5a5773a761abaded056c1ca3586260a5",
+      "size": 3285
+    },
+    {
+      "path": "engine/profiles/jpml_official_2026_04_01_rule_0_7.json",
+      "sha256": "4647a8159afa80d0990e2f07b7a94f7ceafdaea2ed1c2714bb03b9d3d86bdeb8",
+      "size": 7912
+    },
+    {
+      "path": "engine/profiles/m_league_complete_profile_concept_audit.v1.json",
+      "sha256": "172072451d38b5ffc155f997960cb2ab331c90ac58303f5aba05ef353b1ba733",
+      "size": 7767
+    },
+    {
+      "path": "engine/profiles/m_league_official_rules_2026_09_08_content_snapshot.json",
+      "sha256": "398804e5a12c92d6d142b97ad115a33c36246d4237a1b08d6a87935c2ac32c8d",
+      "size": 9017
+    },
+    {
+      "path": "engine/profiles/m_league_rule_source_2026_09_08_content_snapshot.json",
+      "sha256": "9bd8b85a04633e518f842c891ccb11330c43c81d1affb6ed3fbf3e8deb5236c9",
+      "size": 2380
+    },
+    {
+      "path": "engine/profiles/m_league_simulation.v1.json",
+      "sha256": "7a35c2615fd0384f032a952ef585a7bc11b67c4c40a48824f65da149f2803290",
+      "size": 5706
+    },
+    {
+      "path": "engine/profiles/mu_shouou_mu_league_2025_01_21_content_snapshot.json",
+      "sha256": "e40c4f5e8a065ee3b24ed6945369341b37691c1c0e036f900bbb78ddd2bc66ca",
+      "size": 8732
+    },
+    {
+      "path": "engine/profiles/multiple_ron_profiles.v1.json",
+      "sha256": "a55c456a7bc02ed7465525a26478eadc1cb87e6715962e0d073d5a4d736b63f0",
+      "size": 425
+    },
+    {
+      "path": "engine/profiles/npm_official_rules_2008_05_10.json",
+      "sha256": "e547d120ba3df0febb1a41bde45df29c030b1a1a8b7a65c2599f416d3195b72f",
+      "size": 10396
+    },
+    {
+      "path": "engine/profiles/record_engine_code_compatibility.v1.json",
+      "sha256": "ec4430387724df97fd1fd46078a0accedb1439f25d2edeeeb93fc24489700c4f",
+      "size": 2492
+    },
+    {
+      "path": "engine/profiles/registry.v1.json",
+      "sha256": "d7d9a3b7b178fddd4e6395dd87728f1b047af0b01fece82bfbecd9ecdee51417",
+      "size": 3152
+    },
+    {
+      "path": "engine/profiles/rmu_a_2026_04_12_content_snapshot.json",
+      "sha256": "e44eada565e1dd8b0f51ad768a9dd26ad4d97733b014860b3615ae375a39446e",
+      "size": 7986
+    },
+    {
+      "path": "engine/profiles/rmu_b_2026_04_12_content_snapshot.json",
+      "sha256": "4ccccabe77f2a38c9521bbbfe3d3872ce8aa34158d19595c65bf85d0e46ca635",
+      "size": 7975
+    },
+    {
+      "path": "engine/profiles/rmu_m_2026_04_12_content_snapshot.json",
+      "sha256": "762a4364e953492165f12ab2a09e89af52af23f692f2c333b517fc878f11eaff",
+      "size": 7997
+    },
+    {
+      "path": "engine/profiles/rmu_new_final_current_source_audit.v1.json",
+      "sha256": "2658a358f91ff37a1225094d34b6b61c2140285d6e5f609e68fc84f9cb4b6c40",
+      "size": 4597
+    },
+    {
+      "path": "engine/profiles/rule_source_verification.v0_3.v1.json",
+      "sha256": "0d10c2230052efab434991fb8b709fdc0c6b4f1ebe2fcb10ce9be74f64e25051",
+      "size": 11055
+    },
+    {
+      "path": "engine/profiles/rule_source_verification.v0_3_1.v1.json",
+      "sha256": "67156e6af7a672220cd964cea82012000f5710c5f0354ce4a2a29635fd470c55",
+      "size": 9086
+    },
+    {
+      "path": "engine/profiles/rule_source_verification.v0_4.v1.json",
+      "sha256": "7aab5a5dc8c56a3fa031f11c09663e4a5baa6ff72ffbb9c27d87490947a80d6f",
+      "size": 13685
+    },
+    {
+      "path": "engine/profiles/rule_source_verification.v0_4_1.v1.json",
+      "sha256": "af2fa5b9dc6a71e4d4631adec8f10409cce1b6983eb3a6aba2daa1a1509a05d4",
+      "size": 13530
+    },
+    {
+      "path": "engine/profiles/rule_source_verification.v0_5_0.v1.json",
+      "sha256": "618258fb56e088c5fe6cf6e320e219ea5b2a1623adc7a9523999d70384540a85",
+      "size": 13320
+    },
+    {
+      "path": "engine/profiles/rule_source_verification.v0_5_1.v1.json",
+      "sha256": "5c31613403c23e7cf7e89b1da0866b8fd088f1958a24f69ebe123fd9ff9b35af",
+      "size": 25898
+    },
+    {
+      "path": "engine/profiles/rule_source_verification.v0_5_2.v1.json",
+      "sha256": "6b51bb416266a907115d39e4a8fa071ea9b7ce80ab250e138e77f766d8cc9144",
+      "size": 15682
+    },
+    {
+      "path": "engine/profiles/rule_source_verification.v1.json",
+      "sha256": "17378b457c215b16ddb62d32c458f40022cb489b8a692c077b71fe7b44456225",
+      "size": 10614
+    },
+    {
+      "path": "engine/profiles/ruleset_target_catalog.v1.json",
+      "sha256": "22227450ae326f52f86d3852de6039d95b8a3b81d08279ca4719e92add1e144c",
+      "size": 14077
+    },
+    {
+      "path": "engine/profiles/saikouisen_highest_title_rules_2024_12_05.json",
+      "sha256": "9304e48d1e89c37901afc17ea1db6eba6e2ceb6edb1d6aa17e7767a4223b4c9e",
+      "size": 7824
+    },
+    {
+      "path": "engine/profiles/special_hand_end_capability.v0_3_1.json",
+      "sha256": "77ac3838655c75b4d31c40fbdf25b6c1b4d02d0fa9e67a1969c456bb720c9681",
+      "size": 1638
+    },
+    {
+      "path": "engine/profiles/tenhou_ranked_four_player_south_red_2026_09_08_content_snapshot.json",
+      "sha256": "24e46bc6854f18a88d906c66c740d617a6487d11f667b1fec352a6045bf50d0f",
+      "size": 16344
+    },
+    {
+      "path": "engine/profiles/wrc_rules_2025.json",
+      "sha256": "b53e6387081332268a3d4c35dd67a6d7b6e8d01c76354a29c22ae83896f576de",
+      "size": 10196
+    },
+    {
+      "path": "engine/record_replay.py",
+      "sha256": "8e324bc2a3da4728339dfaa61e97fa3dfd75289bc0a2ed6be331cd2c7d0aaf82",
+      "size": 4354
+    },
+    {
+      "path": "engine/recovery_classifier.py",
+      "sha256": "20bf92921933a604ab00d146065bd0f16466b5c18bce92c7944067b631e8c598",
+      "size": 10997
+    },
+    {
+      "path": "engine/replay_condition_support.py",
+      "sha256": "08f1a11e96f5357018db5749cfe05b841e9b21e46d39ce681cfadd3fd1b96c03",
+      "size": 13805
+    },
+    {
+      "path": "engine/rule_conversation.py",
+      "sha256": "9f36b18fe0d807427f99537e2855b1a100bcad667b2772614fa0624c921bba05",
+      "size": 9752
+    },
+    {
+      "path": "engine/rule_display.py",
+      "sha256": "18743b6154492bb9d0ce849839c8dd72c6b8c05042e7af3353797194e225705a",
+      "size": 12740
+    },
+    {
+      "path": "engine/rule_drafts.py",
+      "sha256": "01061ad022474e8467813f065f0392e115f258fa3ecffe6f16838cd4df0432a1",
+      "size": 30447
+    },
+    {
+      "path": "engine/rule_editor.py",
+      "sha256": "618fc8a6083608ce1ec9e200cb61bcf35c92b4b1c46d50afa5fce071b85dc1bc",
+      "size": 32041
+    },
+    {
+      "path": "engine/rule_inputs.py",
+      "sha256": "bd4b027b6b93392dd75858a0aef8e9a97297024c6f3ec9a9a2790f7fd2086da8",
+      "size": 3384
+    },
+    {
+      "path": "engine/rule_profiles.py",
+      "sha256": "3a1208ae6aabaa9ea1881b8bea8d2ec2aae588da1fd3904024030cb574bd8aab",
+      "size": 19031
+    },
+    {
+      "path": "engine/runtime.py",
+      "sha256": "50a0cc973f3bace36c238e53a9faa6cd830ea1322b194acdfd5071593eb232d1",
+      "size": 21408
+    },
+    {
+      "path": "engine/runtime_application.py",
+      "sha256": "c4604e840fc0223d14d8b0251b1e77a4b30afb67481c12415a3c8e75ddbf5de5",
+      "size": 47267
+    },
+    {
+      "path": "engine/runtime_config.py",
+      "sha256": "37896f68b22cb34dc916e111f6b3103b4851a3bf258ae65ccea2f364cc696e9a",
+      "size": 4974
+    },
+    {
+      "path": "engine/runtime_http.py",
+      "sha256": "3883840d05473a7781bbd8ce0e436a9d97aec68994e4d31cb06e7d37f29700d9",
+      "size": 17126
+    },
+    {
+      "path": "engine/runtime_schema.py",
+      "sha256": "3ad0fecb9845ddc4808697fc713a1e68080b8fc7706ae297e19b7126c724b582",
+      "size": 11904
+    },
+    {
+      "path": "engine/runtime_storage.py",
+      "sha256": "10889b7a279f7ff8528dee02fc276692f3d078d896324b6eeb8ccbe30229f3b5",
+      "size": 17992
+    },
+    {
+      "path": "engine/runtime_ui.py",
+      "sha256": "5847f70512cf1c274621ce6ed1b9f045b16d2efec4541c606afd2aa58da265ba",
+      "size": 2181
+    },
+    {
+      "path": "engine/schemas/chombo.aggregate_rank_profile.v0.4.schema.json",
+      "sha256": "92764f813c0354c0c3bc5182f677d332d91bce3c388af18daa29296f0f282c33",
+      "size": 3254
+    },
+    {
+      "path": "engine/schemas/chombo.application.v1.openapi.json",
+      "sha256": "11dabda120b27eed678e3ea19dccced28ad150371ce7d8acc2713cf8f64f1ec1",
+      "size": 349240
+    },
+    {
+      "path": "engine/schemas/chombo.codex.v1.openapi.json",
+      "sha256": "bc2b57b09bd98531b88106f826ed3f25b537d487dcb89e9d87be35c07135f392",
+      "size": 7633
+    },
+    {
+      "path": "engine/schemas/chombo.condition_replay_grant_ref.v0.4.schema.json",
+      "sha256": "2f0d275429ce7b897e5cb130817d06bfcfa1332d7256acf8bc4e0fac510f4fce",
+      "size": 1887
+    },
+    {
+      "path": "engine/schemas/chombo.condition_request.v0.4.schema.json",
+      "sha256": "db9320c671175220a6d2c08e485d029909d33a4a50c6a8b189d48fbc06b4b6d2",
+      "size": 5233
+    },
+    {
+      "path": "engine/schemas/chombo.condition_response.v0.4.schema.json",
+      "sha256": "52543d23ffc7d6bbed74ae7643be338d5a6590827c78b00c01cc4a5d1f619af7",
+      "size": 2627
+    },
+    {
+      "path": "engine/schemas/chombo.condition_state.v0.4.schema.json",
+      "sha256": "656e7cb2917d856024ed5d840d3e48e152a13834daf9c6e45357d5dfdf204b99",
+      "size": 3135
+    },
+    {
+      "path": "engine/schemas/chombo.condition_support_ref.v0.4.schema.json",
+      "sha256": "6e86be8400f1bf2311fa7e1fb32984954136b6ade5723bad8e013004faab4204",
+      "size": 1976
+    },
+    {
+      "path": "engine/schemas/chombo.hand_log.v0.1.schema.json",
+      "sha256": "a9cbf935fd4bdb04ecfd75ea3004209422379920a15e280724c44b9a3f4db617",
+      "size": 3953
+    },
+    {
+      "path": "engine/schemas/chombo.hand_record.v0.3.schema.json",
+      "sha256": "fbc54d6ac53054a9859ccc4deaf61ea6b1becd869e4c0b2f5d3b6b631254223c",
+      "size": 2754
+    },
+    {
+      "path": "engine/schemas/chombo.match_record.v0.2.schema.json",
+      "sha256": "0f8073bf910bd5b6734ad5681b9fa91f87dd21172a8ab4a2f1ba20ca019f29c9",
+      "size": 2780
+    },
+    {
+      "path": "engine/schemas/chombo.match_record.v0.3.schema.json",
+      "sha256": "06d0eea905eff333d151f95a8c3b7c4f90870170a3624b243e767a446347b117",
+      "size": 1860
+    },
+    {
+      "path": "engine/schemas/chombo.multiple_ron_profile.v1.schema.json",
+      "sha256": "a75c4ba4c73243879980c16421d0847d44ba85c8054de64605286bf0393359dc",
+      "size": 356
+    },
+    {
+      "path": "engine/schemas/chombo.operation_phase.v0.3.1.schema.json",
+      "sha256": "2c378f0b56fc68f3e706f1c867b66cb6ccedba19a2f381c1ce9c5454896b4ac8",
+      "size": 1853
+    },
+    {
+      "path": "engine/schemas/chombo.runtime.v1.openapi.json",
+      "sha256": "c11f0043bf92c4d1bcaf03f2b1bcad4f8aa71c294a3122465038cc71633a8a8b",
+      "size": 1484911
+    },
+    {
+      "path": "engine/schemas/chombo.session_checkpoint.v0.3.1.schema.json",
+      "sha256": "91552f63c1ff3b34802cd1838b19990e9fe2ffce6a99dbd3654c99aad89cbde6",
+      "size": 758
+    },
+    {
+      "path": "engine/schemas/chombo.session_checkpoint.v0.3.schema.json",
+      "sha256": "e84bfe3c9ff494f78ccfeb2449afcec5565809b7018dc53bb93eaeb0c9d578c6",
+      "size": 2758
+    },
+    {
+      "path": "engine/schemas/complete_rule_profile_scope.v1.schema.json",
+      "sha256": "f117cbaa6df2984dfa57bb154f46dc6d1e5b023990f6ae7c0bbf7a6a70b487db",
+      "size": 1600
+    },
+    {
+      "path": "engine/schemas/custom_rule_confirmed.v1.schema.json",
+      "sha256": "91ed6b9e567d36bc85cab892b4295fdd6b27ce1c00e7b070184cbf9880dd9bb1",
+      "size": 13852
+    },
+    {
+      "path": "engine/schemas/custom_rule_draft.v1.schema.json",
+      "sha256": "704de483707731e609c8c1480ed6385c3d7f14a1f7098bcd075aee5bd0cad5d8",
+      "size": 4211
+    },
+    {
+      "path": "engine/schemas/m_league_rule_source_snapshot.v1.schema.json",
+      "sha256": "22c56a0219ae203db400e181220d1463040feb523d73c321e5e08553151b30bd",
+      "size": 3731
+    },
+    {
+      "path": "engine/schemas/rule_profile_registry.v1.schema.json",
+      "sha256": "df5754b9366f03faad5d39c790c3c191bb34df3eb594750d697c27ac8dc833d9",
+      "size": 1008
+    },
+    {
+      "path": "engine/schemas/rule_source_verification.v1.schema.json",
+      "sha256": "4ed1451f72859f9a0c1d1638b5c8c834b7fa2cb7114f1402f1a91b21a6d743e6",
+      "size": 2653
+    },
+    {
+      "path": "engine/schemas/ruleset_target_catalog.v1.schema.json",
+      "sha256": "533ec5aa57abded1c8874bad0fbda7b70ab84b9751ad9f754ab0e50005cf2bdc",
+      "size": 3759
+    },
+    {
+      "path": "engine/score_integration.py",
+      "sha256": "95f20e2363c0c7b129dd521920520adb3db6754a5326a7f4f9c542e4324f3705",
+      "size": 18930
+    },
+    {
+      "path": "engine/scoring.py",
+      "sha256": "32c539fedd91abf457cb8c75dc7bbaf8410981e1d07bf9647e4e4ac1511cdbb0",
+      "size": 10532
+    },
+    {
+      "path": "engine/seat_controllers.py",
+      "sha256": "0f29404af3b68d509ca2a853408d4b97e476a78a79ef519b05ee83ecd1502a1b",
+      "size": 6106
+    },
+    {
+      "path": "engine/seed.py",
+      "sha256": "3287f28e49614ed010084df13a80c35f432240c51f6d5ca79a2eee06b46c3958",
+      "size": 409
+    },
+    {
+      "path": "engine/session_credentials.py",
+      "sha256": "3e309887de10045040c8b08399f2eb1d3d7381e7bb75ec5126494206310963b6",
+      "size": 5144
+    },
+    {
+      "path": "engine/settlement.py",
+      "sha256": "febbace44df64b6e4e1311a3fdef7c3fc475878d6ace2c33f9bf07bcb8659d48",
+      "size": 13056
+    },
+    {
+      "path": "engine/setup.py",
+      "sha256": "8e572bf28d53ce7bec909a410288523a65aad2622ba978dbe478524cd6335853",
+      "size": 9018
+    },
+    {
+      "path": "engine/special_hand_end.py",
+      "sha256": "4b8e80462793721561c5c3535e8ec1b0cabd82c4488c7356526e50134648f432",
+      "size": 13385
+    },
+    {
+      "path": "engine/state_transition.py",
+      "sha256": "79e710e3d39edb6c14e6095f47b3c2f1f500eaa6c4c9af20c93abc3d4a320af1",
+      "size": 17523
+    },
+    {
+      "path": "engine/ui_compat.py",
+      "sha256": "d0dc8b026b9a55307af3b688fbef472ec029ba9c6b73fa9bfee29d7d2b5ca362",
+      "size": 2200
+    },
+    {
+      "path": "engine/visible_waits.py",
+      "sha256": "336a75d4218f00845653cc018a9c7a93cf926dfae77f276939afe4123a1bf7c3",
+      "size": 9362
+    },
+    {
+      "path": "engine/winning.py",
+      "sha256": "e09257b24f68c7a63aa22ce8ca99c303c105f1d0c2d5168d73e49aa0f015467c",
+      "size": 21448
+    },
+    {
+      "path": "knowledge/chombo.ckp",
+      "sha256": "878b61a1e39f0aaf2bbe7519019d25a3516d4c222e88ed447c78a590c3656a96",
+      "size": 65669
+    },
+    {
+      "path": "locales/en-US/terms.json",
+      "sha256": "6fa71503ded19d399b437d929d085d89a2d14f12b097eb128987cfd55825c951",
+      "size": 684
+    },
+    {
+      "path": "locales/ja-JP/hand-ui.json",
+      "sha256": "bc4ea658037b7a38ffa086a7da7376e4cbbb03e69bac47ad77a530facafd70fc",
+      "size": 623
+    },
+    {
+      "path": "locales/ja-JP/terms.json",
+      "sha256": "c6ffbbec4c6b62a03c41cd405ed0edea4364db790d227c3f726a0bc94408ea60",
+      "size": 616
+    },
+    {
+      "path": "locales/ja-JP/ui.json",
+      "sha256": "7362cbec4198896a7edd9405294a58de22b7120c979f26b382a8881c3d837cae",
+      "size": 4473
+    },
+    {
+      "path": "locales/ja-JP/yaku.json",
+      "sha256": "eace901589be4b3689937d29921ac8fc507ca08c5fb1ec048de30be68d5e961d",
+      "size": 1483
+    },
+    {
+      "path": "locales/zh-CN/terms.json",
+      "sha256": "938fd0d4a490818d346f719dee5183cadd6a8c8fdf5673935596e86cc74a474c",
+      "size": 607
+    },
+    {
+      "path": "skills/analyze-hand-completion/SKILL.md",
+      "sha256": "51225124d168ec75c3d5eff9a3787e74d4bfe51554048c1c2248b3dd80739e84",
+      "size": 5932
+    },
+    {
+      "path": "skills/analyze-hand-completion/agents/openai.yaml",
+      "sha256": "e065a9f0e343f22437e3c2dd9ffcba185e38bcaf65b1828d086e996944d7f7c2",
+      "size": 524
+    },
+    {
+      "path": "skills/analyze-hand-completion/scripts/analyze_hand.py",
+      "sha256": "9a126b8da3028bc8ff2013f34e2b50f7f3879a0f9309f712fcb91cd79eb64385",
+      "size": 3662
+    },
+    {
+      "path": "skills/calculate-mahjong-score/SKILL.md",
+      "sha256": "8ade020db12cded187bf66a45b0087fbf1fdb2f804f85785b79c1eb50cecb383",
+      "size": 5966
+    },
+    {
+      "path": "skills/calculate-mahjong-score/agents/openai.yaml",
+      "sha256": "7508cac76442225f649d0c843d1fd9f0d607e05e46a455eed56810b71c909cc6",
+      "size": 274
+    },
+    {
+      "path": "skills/calculate-mahjong-score/scripts/calculate_score.py",
+      "sha256": "0bc05d170b8d1e0cd7b9573292386ba3d0288daddd2731f8ed48a82762488150",
+      "size": 3847
+    },
+    {
+      "path": "skills/calculate-rank-conditions/SKILL.md",
+      "sha256": "8a2e109f4d66cfdbd90d516971101fc5fa68360af5fe74ac110dcb51029c4103",
+      "size": 5050
+    },
+    {
+      "path": "skills/calculate-rank-conditions/agents/openai.yaml",
+      "sha256": "8ed39e5a498b6396dc2587ebc1b6d3803ee61ab6207b0fbc9c7999f737355557",
+      "size": 342
+    },
+    {
+      "path": "skills/calculate-rank-conditions/scripts/calculate_conditions.py",
+      "sha256": "581685039a9cea2cab4f9d7804302c7fd641b73e208442849b4cb99bf6ae8038",
+      "size": 3837
+    },
+    {
+      "path": "skills/configured-match-session/SKILL.md",
+      "sha256": "e4e8b07ef51ee1fa625efb5d233eea9dc684a1c1997a82b2a9f3a166d9670c8b",
+      "size": 2172
+    },
+    {
+      "path": "skills/configured-match-session/agents/openai.yaml",
+      "sha256": "2f5805984eef87914a42cee03b50cc9ec38fd9fa4c8873c9df7710361a540870",
+      "size": 293
+    },
+    {
+      "path": "skills/generate-autonomous-hand/SKILL.md",
+      "sha256": "2104ac052940337e25b37ea38f657dfe18fd112813c7be298442cdae5db26cdf",
+      "size": 2001
+    },
+    {
+      "path": "skills/generate-autonomous-hand/agents/openai.yaml",
+      "sha256": "49e15924f1fa839422ac5d74c801ae253426f59d8833ca3f03bd1b54dadd8092",
+      "size": 269
+    },
+    {
+      "path": "skills/generate-autonomous-hand/scripts/generate_hand_log.py",
+      "sha256": "73878d653555d346edd8222323330d5a9608628ec7b2b68d796178003e964486",
+      "size": 2960
+    },
+    {
+      "path": "skills/hanchan-session/SKILL.md",
+      "sha256": "89996fa8eae6882480fc5bb98b1c2474670cd10310f8879f094a28ee7c60c57f",
+      "size": 2790
+    },
+    {
+      "path": "skills/hanchan-session/agents/openai.yaml",
+      "sha256": "459b273570365e5467115a769c958471e03e269f2abffd7c4379edafc2a3cffa",
+      "size": 251
+    },
+    {
+      "path": "skills/quick-game/SKILL.md",
+      "sha256": "a7c1e8ccdfbb519866fb8837d9dce247064bde17a4e25571ede941afb4bc7611",
+      "size": 1625
+    },
+    {
+      "path": "skills/quick-game/agents/openai.yaml",
+      "sha256": "c6ddd3f0ce8c2278aff05e473a10f8981157b5b5d6ef97bad0531d0f1964a132",
+      "size": 243
+    },
+    {
+      "path": "skills/render-hand/SKILL.md",
+      "sha256": "fab67b8670d9a3569d5b8b49d8a24270234148cd61686b0c719350bfebe85af8",
+      "size": 6051
+    },
+    {
+      "path": "skills/render-hand/agents/openai.yaml",
+      "sha256": "2b965e18ed55d007b2faeb2dd12c8cba4e11c1ba53f3992996cca1100ab072ae",
+      "size": 218
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/aka-manzu-5.png",
+      "sha256": "66870bac28b6ccaf2cc8361472e2380ef5be3bca63d6e862c2c8d92261dba9b7",
+      "size": 18942
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/aka-pinzu-5.png",
+      "sha256": "3859b2521a366e8ba3470031b94349526005ae0cd6939ad9eaff17dd540b3f17",
+      "size": 12456
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/aka-souzu-5.png",
+      "sha256": "67c451d30479a1107a891e6c1de64d51e31b74dc971279ed0c4737f6de26d347",
+      "size": 12496
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/chun.png",
+      "sha256": "3df58988ad129a71a066b507dda4c1b55f8f5ffe9ac4f2192d8b28e960d10624",
+      "size": 12655
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/facedown.png",
+      "sha256": "a5207a9509dc25f4569bc5abf618ad42ba8e9e0a7b73efa4d978f4c4cbf22f60",
+      "size": 1784
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/haku.png",
+      "sha256": "4788b37e3688cb7aa6cba40e9a7e9c92eb73f50bf319cdbdbb0bdaa207f8e137",
+      "size": 11835
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/hatsu.png",
+      "sha256": "4061c226c188c74ce4cb03234d6241e1e8adfe2ec64415d9158f989020747471",
+      "size": 14275
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/manzu-1.png",
+      "sha256": "ec8d13e0d0313b1791fcbf5d2b2f7d64df456b08118a776ec686f69f9803eb37",
+      "size": 16644
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/manzu-2.png",
+      "sha256": "dda62428d86781109b615c21b478a9bd894a360b4beee8ca3ec3dd221d0f8446",
+      "size": 17359
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/manzu-3.png",
+      "sha256": "b059586828f93430eac66a40cc7f1e60192a4cc1b8890f4fad650c5c9ce69af5",
+      "size": 17721
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/manzu-4.png",
+      "sha256": "e16cde749f70a0a9293f4a02f675d4e647dcaf35144f272d312f3b2576094bcc",
+      "size": 18300
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/manzu-5.png",
+      "sha256": "fb8336f5a40112784c91abeba859d7ae6ab8c4d399879dbf8ed30a46132c7394",
+      "size": 18823
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/manzu-6.png",
+      "sha256": "61280941f2452e05fc9a906e3e67bdaf122d482209be61c46dc70f205130059e",
+      "size": 18376
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/manzu-7.png",
+      "sha256": "f7cccef1bfe7f75e7d058e697c8b0047f23369090f1ebf56888d75f8e3857d0b",
+      "size": 17490
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/manzu-8.png",
+      "sha256": "271b765eaeb1330884d75e99ca3276a25a4e4365b11c8f52704f03bb56d5a245",
+      "size": 17712
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/manzu-9.png",
+      "sha256": "f99788f3a84fd7a8c785de4436a1fb2a4d314d745d4fb82ccef5e151c91822ef",
+      "size": 18275
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/nan.png",
+      "sha256": "1b6a9ea086ebeae10356048974a849d10582e19d94ca64c3e8afe80485e09f79",
+      "size": 13482
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/pei.png",
+      "sha256": "5951fbbcbbafb0e39259cc842a08b99896f6ce3813ece2ca0940d70602a06405",
+      "size": 13340
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/pinzu-1.png",
+      "sha256": "cfad86e241532c7f5fb81377df457369c37da473de939c4d0bbe32d199dee697",
+      "size": 16188
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/pinzu-2.png",
+      "sha256": "29bff0797fdaba67113c50175646e938cb2c79071699257344f095db9f7feae6",
+      "size": 14004
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/pinzu-3.png",
+      "sha256": "8434af32b809e87137b8138a4623451b016db5a84820472323b3b43dee16c6cd",
+      "size": 13519
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/pinzu-4.png",
+      "sha256": "645adfc218631dcab7b48e366331eae7befe17a9d7ce3a9feb8f3138fe133e75",
+      "size": 12719
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/pinzu-5.png",
+      "sha256": "a93ba7696a8a56d345791be31ba8cf681c7cec673af60233325150fd86d49b2e",
+      "size": 12768
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/pinzu-6.png",
+      "sha256": "5ccbd3b4186cc7141c6b0643c8c044b542c85a1de1288ed75a71b83ec4a2ba0e",
+      "size": 12510
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/pinzu-7.png",
+      "sha256": "edc83e70cfee1a9b5e04cb2d2073b3b05f43ad5ef5681c60225f3834306db95a",
+      "size": 12649
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/pinzu-8.png",
+      "sha256": "2a3a2913f3d74d3479f8db7c0c7e2b35c8a53715c2e62f404afe993633db4424",
+      "size": 11733
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/pinzu-9.png",
+      "sha256": "7223ac2068a7176f8a2f8d4103d09bf67453d145774356fe40eddd2b1385a8af",
+      "size": 11791
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/sha.png",
+      "sha256": "670849aa12cf98f63470857643c7690520221d0f5251e6c1c62000ca222b3b85",
+      "size": 13284
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/souzu-1.png",
+      "sha256": "1773bcd6fcf9506906dbb332be367fc73b46a78bbdb6533d6bfa5d19ffa763f9",
+      "size": 22234
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/souzu-2.png",
+      "sha256": "a8b53da467ef8e4aa77ca630e5e3fd5bd09a6293ffa56560408f7ad468207195",
+      "size": 13361
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/souzu-3.png",
+      "sha256": "ec7f8336d59116d650917feecad9688f0bdb010b378536c6594b11a0476839d0",
+      "size": 13010
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/souzu-4.png",
+      "sha256": "38fd8ab527e493f77035526f9ac767b93cce623d4d1aaacd146c33eef4b7538a",
+      "size": 12536
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/souzu-5.png",
+      "sha256": "3aaeda2e8d0ed0b7431cba98d73d7fb407e086620398cb18d621fb403c06e1e5",
+      "size": 13758
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/souzu-6.png",
+      "sha256": "8774f7ff2140277974e82de00c254e01aba91b440fa290335caff307c384d6fc",
+      "size": 12129
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/souzu-7.png",
+      "sha256": "2c6c64f72a605ab387c07707c6d00322db37368c0739a6611996c297a4a77e7d",
+      "size": 12919
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/souzu-8.png",
+      "sha256": "5c4b3d92f7215803c56019fb4ef83b56a32ef1af547279a4e4b0bbd03cfaec3b",
+      "size": 18148
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/souzu-9.png",
+      "sha256": "0789f3b4586588aeca9ee6ad6b933b8f09b1628e32bfa431070e472f1e67ca47",
+      "size": 13197
+    },
+    {
+      "path": "skills/render-hand/assets/mahjong-tiles/ton.png",
+      "sha256": "691662e7d3c07be4be941503bc0cd17e12803aa3f9733ade8bc1b87bfa2839e0",
+      "size": 13600
+    },
+    {
+      "path": "skills/render-hand/scripts/generate_hand.py",
+      "sha256": "4478a18fc637a5b9d140c4bf218beb34e27229980a6320d6e6b61bb0a6463f2e",
+      "size": 11164
+    },
+    {
+      "path": "skills/replay-mahjong-hand/SKILL.md",
+      "sha256": "f940fc504136e7688553306e203b1210e0d2a523ac408d083e94054a17dc9df8",
+      "size": 2134
+    },
+    {
+      "path": "skills/replay-mahjong-hand/agents/openai.yaml",
+      "sha256": "8f74b7dd67080736aee14a8216848b9f9d1371509fc44dcdfd675481bd311dbb",
+      "size": 360
+    },
+    {
+      "path": "skills/report-chombo-bug/SKILL.md",
+      "sha256": "9505770f686f79c0cea73b215b104e0e823451db3c5ec7badf2b5c54c45e5dbc",
+      "size": 4364
+    },
+    {
+      "path": "skills/report-chombo-bug/agents/openai.yaml",
+      "sha256": "7f7aab88b5b43772363f1d478648e266a9862f980ba04d4d2abfa0e1f8a60855",
+      "size": 325
+    },
+    {
+      "path": "ui/.output/public/_nuxt/BH4dhZ50.js",
+      "sha256": "6b787d4e9d92e2aa78b65780f710a64e346d38f3d2456c7dfd260eea5d05e1ab",
+      "size": 2695
+    },
+    {
+      "path": "ui/.output/public/_nuxt/BU9DRBb5.js",
+      "sha256": "4c0c24facb967a5d03dd414c2d1d14b6228c8fb0ba272c559c5f78ea4f0cbfcc",
+      "size": 10190
+    },
+    {
+      "path": "ui/.output/public/_nuxt/D7Tt6sZC.js",
+      "sha256": "dd04e09375473d77e11654f6580206ed8f4406ce12faf1554fa5d3a5614da6c4",
+      "size": 883941
+    },
+    {
+      "path": "ui/.output/public/_nuxt/DIGZKpMs.js",
+      "sha256": "7440d012fb47c15922cd21059af8b1c22a84e8d06188a8bfd4ca23208b5fc4d7",
+      "size": 94391
+    },
+    {
+      "path": "ui/.output/public/_nuxt/DKwp8xto.js",
+      "sha256": "2b1f62687adc4155928fcf86cde3eefe3473871d12677e179373d6b90c90ba7c",
+      "size": 882
+    },
+    {
+      "path": "ui/.output/public/_nuxt/aka-manzu-5.R5V7y9ps.png",
+      "sha256": "66870bac28b6ccaf2cc8361472e2380ef5be3bca63d6e862c2c8d92261dba9b7",
+      "size": 18942
+    },
+    {
+      "path": "ui/.output/public/_nuxt/aka-pinzu-5.Cuy-DXvL.png",
+      "sha256": "3859b2521a366e8ba3470031b94349526005ae0cd6939ad9eaff17dd540b3f17",
+      "size": 12456
+    },
+    {
+      "path": "ui/.output/public/_nuxt/aka-souzu-5.7eh-mtUs.png",
+      "sha256": "67c451d30479a1107a891e6c1de64d51e31b74dc971279ed0c4737f6de26d347",
+      "size": 12496
+    },
+    {
+      "path": "ui/.output/public/_nuxt/builds/latest.json",
+      "sha256": "94de2bb96bb2a60b1de043286220d2f5eed6a90c7b2c18f42777aae0c9b2c106",
+      "size": 71
+    },
+    {
+      "path": "ui/.output/public/_nuxt/builds/meta/cb313655-1a7a-4fb0-9433-11d3ac09f116.json",
+      "sha256": "467252f4c820d89b9883b5501575dfaac8e476352b556f3a08688d3ea78f4d7c",
+      "size": 88
+    },
+    {
+      "path": "ui/.output/public/_nuxt/chombo-call.BFBEfOCt.wav",
+      "sha256": "97b72f8ce3c2cb6ba68c9423bcd759e4a3f16d6d98434c7e87d3dc0b08e6f870",
+      "size": 24382
+    },
+    {
+      "path": "ui/.output/public/_nuxt/chombo-dialogue-icon-monochrome.CpZpPtx-.png",
+      "sha256": "24873ca68b0b17ca2b08059441535a9029cfb262200683ff976f976031932830",
+      "size": 761167
+    },
+    {
+      "path": "ui/.output/public/_nuxt/chombo-icon.BhY0eDMv.png",
+      "sha256": "e3c07025b21665d429a189889914983484536ef6b8967177f7c450f8e2d2f79d",
+      "size": 991839
+    },
+    {
+      "path": "ui/.output/public/_nuxt/chombo-noten.DeIdmRkL.wav",
+      "sha256": "aa475eb3d35bb87cb07bd37357e18562c014cfbe71bb2a29aad95a9defe279ff",
+      "size": 26944
+    },
+    {
+      "path": "ui/.output/public/_nuxt/chombo-riichi.D6v0MSoD.wav",
+      "sha256": "c55c7b3c3f0bac2108de1cf7e3b92c371c2bcb8a78c12784cfea4b55a45b3dc2",
+      "size": 42022
+    },
+    {
+      "path": "ui/.output/public/_nuxt/chombo-tenpai.Db95MwcC.wav",
+      "sha256": "f84cf08190b06ff4a41201699a0f9e2e5c1a27ec7a57d917a76df5b5f4ce2d25",
+      "size": 20326
+    },
+    {
+      "path": "ui/.output/public/_nuxt/chombo-win.DsHcQ314.wav",
+      "sha256": "38299da88fa14670ceacb4e6cf595d36c7f653f434c67d3f1303fd6288a05ada",
+      "size": 62308
+    },
+    {
+      "path": "ui/.output/public/_nuxt/chun.vxwGU17s.png",
+      "sha256": "3df58988ad129a71a066b507dda4c1b55f8f5ffe9ac4f2192d8b28e960d10624",
+      "size": 12655
+    },
+    {
+      "path": "ui/.output/public/_nuxt/entry.aFAOJFfm.css",
+      "sha256": "aeb3090f4b6ba8c41b26795745df53ce7a3d9460cbbecb83cb3e088552bcb233",
+      "size": 346059
+    },
+    {
+      "path": "ui/.output/public/_nuxt/error-404.DpKY_dMl.css",
+      "sha256": "830d0ba8a011835a2db0ccec96e3aab9f127ee4c23df5bdf48a95fbe3221cbf6",
+      "size": 2701
+    },
+    {
+      "path": "ui/.output/public/_nuxt/error-500.CmR4p1fc.css",
+      "sha256": "f3232c01d773770b33b8d57ae2ca6c238ee2195b41bddd15f5e5971e92cb1a69",
+      "size": 1951
+    },
+    {
+      "path": "ui/.output/public/_nuxt/haku.JKrlnsWz.png",
+      "sha256": "4788b37e3688cb7aa6cba40e9a7e9c92eb73f50bf319cdbdbb0bdaa207f8e137",
+      "size": 11835
+    },
+    {
+      "path": "ui/.output/public/_nuxt/hand-topple.C5p-CZa4.wav",
+      "sha256": "2272387ce90b77595413a1b9b724994ea4252f4b448dcca9292578e69e18cf0c",
+      "size": 44668
+    },
+    {
+      "path": "ui/.output/public/_nuxt/hatsu.ap27yHA8.png",
+      "sha256": "4061c226c188c74ce4cb03234d6241e1e8adfe2ec64415d9158f989020747471",
+      "size": 14275
+    },
+    {
+      "path": "ui/.output/public/_nuxt/manzu-1.xuMZCuKx.png",
+      "sha256": "ec8d13e0d0313b1791fcbf5d2b2f7d64df456b08118a776ec686f69f9803eb37",
+      "size": 16644
+    },
+    {
+      "path": "ui/.output/public/_nuxt/manzu-2.PB-RWoJ5.png",
+      "sha256": "dda62428d86781109b615c21b478a9bd894a360b4beee8ca3ec3dd221d0f8446",
+      "size": 17359
+    },
+    {
+      "path": "ui/.output/public/_nuxt/manzu-3.D9o34j3f.png",
+      "sha256": "b059586828f93430eac66a40cc7f1e60192a4cc1b8890f4fad650c5c9ce69af5",
+      "size": 17721
+    },
+    {
+      "path": "ui/.output/public/_nuxt/manzu-4.COEQkxLD.png",
+      "sha256": "e16cde749f70a0a9293f4a02f675d4e647dcaf35144f272d312f3b2576094bcc",
+      "size": 18300
+    },
+    {
+      "path": "ui/.output/public/_nuxt/manzu-5.B3-SYrY1.png",
+      "sha256": "fb8336f5a40112784c91abeba859d7ae6ab8c4d399879dbf8ed30a46132c7394",
+      "size": 18823
+    },
+    {
+      "path": "ui/.output/public/_nuxt/manzu-6.CzpLLuun.png",
+      "sha256": "61280941f2452e05fc9a906e3e67bdaf122d482209be61c46dc70f205130059e",
+      "size": 18376
+    },
+    {
+      "path": "ui/.output/public/_nuxt/manzu-7.CTjjwQhq.png",
+      "sha256": "f7cccef1bfe7f75e7d058e697c8b0047f23369090f1ebf56888d75f8e3857d0b",
+      "size": 17490
+    },
+    {
+      "path": "ui/.output/public/_nuxt/manzu-8.D1-96JI9.png",
+      "sha256": "271b765eaeb1330884d75e99ca3276a25a4e4365b11c8f52704f03bb56d5a245",
+      "size": 17712
+    },
+    {
+      "path": "ui/.output/public/_nuxt/manzu-9.C5B2SiJZ.png",
+      "sha256": "f99788f3a84fd7a8c785de4436a1fb2a4d314d745d4fb82ccef5e151c91822ef",
+      "size": 18275
+    },
+    {
+      "path": "ui/.output/public/_nuxt/nan.BxWJKKon.png",
+      "sha256": "1b6a9ea086ebeae10356048974a849d10582e19d94ca64c3e8afe80485e09f79",
+      "size": 13482
+    },
+    {
+      "path": "ui/.output/public/_nuxt/pei.fcJoiMYA.png",
+      "sha256": "5951fbbcbbafb0e39259cc842a08b99896f6ce3813ece2ca0940d70602a06405",
+      "size": 13340
+    },
+    {
+      "path": "ui/.output/public/_nuxt/pinzu-1.DO1OZO0k.png",
+      "sha256": "cfad86e241532c7f5fb81377df457369c37da473de939c4d0bbe32d199dee697",
+      "size": 16188
+    },
+    {
+      "path": "ui/.output/public/_nuxt/pinzu-2.BBRcj1_U.png",
+      "sha256": "29bff0797fdaba67113c50175646e938cb2c79071699257344f095db9f7feae6",
+      "size": 14004
+    },
+    {
+      "path": "ui/.output/public/_nuxt/pinzu-3.DUj5SPK8.png",
+      "sha256": "8434af32b809e87137b8138a4623451b016db5a84820472323b3b43dee16c6cd",
+      "size": 13519
+    },
+    {
+      "path": "ui/.output/public/_nuxt/pinzu-4.CFu-ZNQN.png",
+      "sha256": "645adfc218631dcab7b48e366331eae7befe17a9d7ce3a9feb8f3138fe133e75",
+      "size": 12719
+    },
+    {
+      "path": "ui/.output/public/_nuxt/pinzu-5.CiYwv4Ix.png",
+      "sha256": "a93ba7696a8a56d345791be31ba8cf681c7cec673af60233325150fd86d49b2e",
+      "size": 12768
+    },
+    {
+      "path": "ui/.output/public/_nuxt/pinzu-6.CvANequA.png",
+      "sha256": "5ccbd3b4186cc7141c6b0643c8c044b542c85a1de1288ed75a71b83ec4a2ba0e",
+      "size": 12510
+    },
+    {
+      "path": "ui/.output/public/_nuxt/pinzu-7.DO2IpExs.png",
+      "sha256": "edc83e70cfee1a9b5e04cb2d2073b3b05f43ad5ef5681c60225f3834306db95a",
+      "size": 12649
+    },
+    {
+      "path": "ui/.output/public/_nuxt/pinzu-8.B-W81VKf.png",
+      "sha256": "2a3a2913f3d74d3479f8db7c0c7e2b35c8a53715c2e62f404afe993633db4424",
+      "size": 11733
+    },
+    {
+      "path": "ui/.output/public/_nuxt/pinzu-9.B-M6FT4H.png",
+      "sha256": "7223ac2068a7176f8a2f8d4103d09bf67453d145774356fe40eddd2b1385a8af",
+      "size": 11791
+    },
+    {
+      "path": "ui/.output/public/_nuxt/response-hint.Vn8j8Fmo.wav",
+      "sha256": "3c61c06c5fca53f9dd8436349afc03970301422d5e2310556369820777ba545b",
+      "size": 17766
+    },
+    {
+      "path": "ui/.output/public/_nuxt/riichi-stick-100.CxGaBP0o.png",
+      "sha256": "33f2b5cf6754fac337027774020888aa109d23df3fa56f3fe5ff39685190b5f9",
+      "size": 10439
+    },
+    {
+      "path": "ui/.output/public/_nuxt/riichi-stick-1000.Lu-4gNfG.png",
+      "sha256": "c2fd748331e56a1dd79a8113ab2f5e519188d95b7f4a2bf0d78a885dec7f35e4",
+      "size": 10876
+    },
+    {
+      "path": "ui/.output/public/_nuxt/sha.hT3LgxmV.png",
+      "sha256": "670849aa12cf98f63470857643c7690520221d0f5251e6c1c62000ca222b3b85",
+      "size": 13284
+    },
+    {
+      "path": "ui/.output/public/_nuxt/souzu-1.CukKnIA_.png",
+      "sha256": "1773bcd6fcf9506906dbb332be367fc73b46a78bbdb6533d6bfa5d19ffa763f9",
+      "size": 22234
+    },
+    {
+      "path": "ui/.output/public/_nuxt/souzu-2.ka4v3U64.png",
+      "sha256": "a8b53da467ef8e4aa77ca630e5e3fd5bd09a6293ffa56560408f7ad468207195",
+      "size": 13361
+    },
+    {
+      "path": "ui/.output/public/_nuxt/souzu-3.CLFX9EfW.png",
+      "sha256": "ec7f8336d59116d650917feecad9688f0bdb010b378536c6594b11a0476839d0",
+      "size": 13010
+    },
+    {
+      "path": "ui/.output/public/_nuxt/souzu-4.0toCca_w.png",
+      "sha256": "38fd8ab527e493f77035526f9ac767b93cce623d4d1aaacd146c33eef4b7538a",
+      "size": 12536
+    },
+    {
+      "path": "ui/.output/public/_nuxt/souzu-5.DMJh6G66.png",
+      "sha256": "3aaeda2e8d0ed0b7431cba98d73d7fb407e086620398cb18d621fb403c06e1e5",
+      "size": 13758
+    },
+    {
+      "path": "ui/.output/public/_nuxt/souzu-6.Ben_4pNT.png",
+      "sha256": "8774f7ff2140277974e82de00c254e01aba91b440fa290335caff307c384d6fc",
+      "size": 12129
+    },
+    {
+      "path": "ui/.output/public/_nuxt/souzu-7.CIXOwyU4.png",
+      "sha256": "2c6c64f72a605ab387c07707c6d00322db37368c0739a6611996c297a4a77e7d",
+      "size": 12919
+    },
+    {
+      "path": "ui/.output/public/_nuxt/souzu-8.wjQ06kNu.png",
+      "sha256": "5c4b3d92f7215803c56019fb4ef83b56a32ef1af547279a4e4b0bbd03cfaec3b",
+      "size": 18148
+    },
+    {
+      "path": "ui/.output/public/_nuxt/souzu-9.CfQYbRSH.png",
+      "sha256": "0789f3b4586588aeca9ee6ad6b933b8f09b1628e32bfa431070e472f1e67ca47",
+      "size": 13197
+    },
+    {
+      "path": "ui/.output/public/_nuxt/third-party-notices.json",
+      "sha256": "de571a187c3d79afb61ce5f3892d32a493366f7b134db75f5a6408cfa7c02d7a",
+      "size": 123185
+    },
+    {
+      "path": "ui/.output/public/_nuxt/tile-collision.BPG24MbP.wav",
+      "sha256": "999455df571eebd6d07da8622f2899cbf1b7a0661561a738b61e745624b3e8cf",
+      "size": 16002
+    },
+    {
+      "path": "ui/.output/public/_nuxt/tile-discard.Chggeof_.wav",
+      "sha256": "9b356a3758050a0def9c0838901814c55e74b711b1e46de12172b0b6cc3c34c8",
+      "size": 19090
+    },
+    {
+      "path": "ui/.output/public/_nuxt/ton.DIF9LrsC.png",
+      "sha256": "691662e7d3c07be4be941503bc0cd17e12803aa3f9733ade8bc1b87bfa2839e0",
+      "size": 13600
+    },
+    {
+      "path": "ui/.output/public/chombo-ui-manifest.json",
+      "sha256": "c7fd68da3a614c745722074841b9a03fbf112705b3e20fa7342b803f5e6e4a29",
+      "size": 6417
+    },
+    {
+      "path": "ui/.output/public/index.html",
+      "sha256": "6a9f35879cbf2246cd4ae6a9f7db30db0f774f1f0e33cd28d7cccddcc9c594bb",
+      "size": 5426
+    }
+  ],
+  "knowledge_pack": {
+    "format_version": 1,
+    "path": "knowledge/chombo.ckp"
+  },
+  "license_status": "APPROVED",
+  "release_mode": "release",
+  "schema_version": 1,
+  "source_dirty": false,
+  "source_revision": "01555b92ca2a725c49e998dedd84dba667b1fd30",
+  "version": "0.5.2"
+}

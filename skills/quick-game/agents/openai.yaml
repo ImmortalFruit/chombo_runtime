@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chomboの一局対局"
+  short_description: "利用者一人とChombo三家で一局を対局"
+  default_prompt: "$quick-game で、使用する規則を確認してChomboとの一局を開始してください。"

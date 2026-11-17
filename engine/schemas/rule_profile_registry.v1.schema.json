@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chombo.local/schemas/rule_profile_registry.v1.schema.json",
+  "title": "Chombo rule profile registry v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "profiles"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["ruleset_id", "ruleset_version", "profile_id", "path", "aliases"],
+        "properties": {
+          "ruleset_id": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"},
+          "ruleset_version": {"type": "string", "minLength": 1},
+          "profile_id": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"},
+          "path": {"type": "string", "pattern": "^[a-zA-Z0-9_.-]+\\.json$"},
+          "aliases": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+        }
+      }
+    }
+  }
+}

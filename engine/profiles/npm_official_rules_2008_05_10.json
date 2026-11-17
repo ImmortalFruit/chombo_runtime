@@ -1,0 +1,400 @@
+{
+  "schema_version": 1,
+  "profile_id": "npm_official_rules_2008_05_10",
+  "ruleset_id": "npm.official_rules",
+  "ruleset_version": "2008-05-10",
+  "scope_id": "four_player_east_south_complete.v1",
+  "source_snapshots": {
+    "regulations_pdf_sha256": "27fc0d79828a66ad0cf106f145a3328d34edf6235280efbeddcd131212290f6f",
+    "official_rules_html_sha256": "d212291354448fabba26e9f3cf8613093dc6a261058c3827f6549454cd6f4578",
+    "retrieved_on": "2026-09-07"
+  },
+  "dimensions": {
+    "match.start.procedure": {
+      "value": "virtual_seeded_seat_dealer_wall_and_deal_generation",
+      "concept_ids": [
+        "game.match.setup.virtual_seat_and_dealer_selection",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "match.start.points": {
+      "value": {
+        "points_per_player": 25000,
+        "honba": 0,
+        "riichi_deposit_points": 0
+      },
+      "concept_ids": [
+        "game.score.starting_points",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "match.structure": {
+      "value": {
+        "format": "east_south",
+        "scheduled_final_hand": {
+          "prevailing_wind": "south",
+          "hand_number": 4
+        }
+      },
+      "concept_ids": [
+        "game.match.east_south",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "tile.red_five.composition": {
+      "value": {
+        "5m": 0,
+        "5p": 0,
+        "5s": 0,
+        "total": 0
+      },
+      "concept_ids": [
+        "tile.red_five",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "dora.profile": {
+      "value": {
+        "standard": true,
+        "red": false,
+        "kan": true,
+        "ura": true,
+        "kan_ura": true,
+        "han_each": 1,
+        "dora_alone_is_yaku": false
+      },
+      "concept_ids": [
+        "scoring.dora.standard",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "response.call.priority": {
+      "value": [
+        [
+          "ron"
+        ],
+        [
+          "pon",
+          "kan_open"
+        ],
+        [
+          "chi"
+        ]
+      ],
+      "concept_ids": [
+        "game.hand.action.call.priority",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "response.post_call_discard_restriction": {
+      "value": {
+        "same_tile": false,
+        "other_end_of_called_sequence": false
+      },
+      "concept_ids": [
+        "game.hand.action.call.post_discard_restriction",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "kan.count_limit": {
+      "value": {
+        "established_kans_max": 4,
+        "fifth_kan_allowed": false
+      },
+      "concept_ids": [
+        "game.hand.action.kan.count_limit",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "kan.profile_boundaries": {
+      "value": {
+        "chankan_on_concealed_kan": false,
+        "generic_daiminkan_liability": false,
+        "yakuman_liability": []
+      },
+      "concept_ids": [
+        "game.scoring.special.chankan_payment",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "kan.last_draw_restrictions": {
+      "value": {
+        "kan_on_last_draw": false,
+        "riichi_on_last_draw": false,
+        "calls_on_last_discard": false,
+        "qualified_ron_on_last_discard": true
+      },
+      "concept_ids": [
+        "game.hand.wall.last_draw.action_restrictions",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "riichi.score_eligibility": {
+      "value": {
+        "minimum_points": null
+      },
+      "concept_ids": [
+        "game.hand.riichi.eligibility",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "riichi.post_establishment_kan": {
+      "value": {
+        "concealed_kan_only": true,
+        "drawn_tile_only": true,
+        "meld_type_count_must_not_decrease": true,
+        "all_wait_shapes_must_be_unchanged": false,
+        "yaku_change_allowed": true
+      },
+      "concept_ids": [
+        "game.hand.riichi.post_establishment_actions",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "riichi.first_turn_and_ippatsu": {
+      "value": {
+        "double_riichi": true,
+        "ippatsu": true,
+        "established_call_interrupts_first_turn": true
+      },
+      "concept_ids": [
+        "game.hand.yaku.double_riichi",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "win.multiple_ron_resolution": {
+      "value": {
+        "maximum_winners": 1,
+        "claimant_order": [
+          "next_player",
+          "opposite_player",
+          "previous_player"
+        ]
+      },
+      "concept_ids": [
+        "game.hand.win.head_bump",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "hand.abortive_draws": {
+      "value": {
+        "adopted": false
+      },
+      "concept_ids": [
+        "game.hand.end.abortive_draw",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "hand.special.nagashi_mangan": {
+      "value": {
+        "adopted": false
+      },
+      "concept_ids": [
+        "game.hand.end.special.nagashi_mangan_profile",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "yaku.ordinary_catalog_and_values": {
+      "value": {
+        "catalog": "saikouisen_regulations_2024_12_05",
+        "ippatsu": true,
+        "open_tanyao": true
+      },
+      "concept_ids": [
+        "game.hand.yaku.ordinary.open_closed_value",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "yaku.yakuman_catalog_and_values": {
+      "value": {
+        "catalog": "saikouisen_regulations_2024_12_05",
+        "combine_distinct_yakuman": true,
+        "counted_yakuman": false,
+        "maximum_multiple": 4
+      },
+      "concept_ids": [
+        "game.hand.yaku.yakuman.catalog",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "scoring.fu": {
+      "value": {
+        "double_wind_pair_fu": 2,
+        "chiitoitsu_fu": 25,
+        "pinfu_tsumo_fu": 20,
+        "open_pinfu_shape_ron_fu": 30,
+        "rinshan_tsumo_fu": 2
+      },
+      "concept_ids": [
+        "game.scoring.fu.components",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "scoring.engine_profile": {
+      "value": "npm_official_rules_2008_05_10",
+      "concept_ids": [
+        "game.scoring.limit.thresholds",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "scoring.limit_and_rounding": {
+      "value": {
+        "kiriage_mangan": [
+          [
+            30,
+            4
+          ],
+          [
+            60,
+            3
+          ]
+        ],
+        "aotenjou": false,
+        "ordinary_11_to_12": "sanbaiman",
+        "ordinary_13_plus": "sanbaiman_cap",
+        "maximum_multiple_yakuman": 4,
+        "payment_rounding_unit": 100
+      },
+      "concept_ids": [
+        "game.scoring.limit.thresholds",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "settlement.honba": {
+      "value": {
+        "points_per_honba": 300,
+        "ron_payer": "discarder",
+        "tsumo_points_per_non_winner": 100
+      },
+      "concept_ids": [
+        "game.counter.honba",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "settlement.riichi_deposit": {
+      "value": {
+        "points_per_declaration": 1000,
+        "win": "approved_winner_takes_all",
+        "exhaustive_draw": "carry_over"
+      },
+      "concept_ids": [
+        "game.score.riichi_deposit_transfer",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "settlement.exhaustive_draw_tenpai": {
+      "value": {
+        "total_points": 3000,
+        "formal_tenpai": true,
+        "zero_or_four_tenpai_transfer": 0
+      },
+      "concept_ids": [
+        "game.hand.end.draw_payment",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "transition.dealer": {
+      "value": {
+        "dealer_continues_on_win": true,
+        "dealer_continues_on_exhaustive_draw_when_tenpai": true,
+        "dealer_changes_on_exhaustive_draw_when_noten": true
+      },
+      "concept_ids": [
+        "game.hand.transition.dealer",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "transition.honba": {
+      "value": {
+        "dealer_continues": "increment_by_one",
+        "dealer_changes": "reset_to_zero"
+      },
+      "concept_ids": [
+        "game.hand.transition.honba",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "transition.riichi_deposit": {
+      "value": {
+        "exhaustive_draw": "carry_entire_pool_forward",
+        "qualified_win": "transfer_to_approved_winner"
+      },
+      "concept_ids": [
+        "game.hand.transition.state_carryover",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "transition.round_and_seat_winds": {
+      "value": {
+        "dealer_continues": "same_hand_and_seat_winds",
+        "dealer_changes": "advance_hand_and_rotate_seat_winds"
+      },
+      "concept_ids": [
+        "game.hand.transition.round",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "match.end.scheduled": {
+      "value": {
+        "scheduled_final_hand": "south_4",
+        "dealer_noten": "end",
+        "dealer_tenpai": "continue",
+        "dealer_win": "continue",
+        "agari_yame": false
+      },
+      "concept_ids": [
+        "game.match.end.scheduled",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "match.end.bankruptcy": {
+      "value": {
+        "bankruptcy_end": false,
+        "zero_or_negative_score_ends_match": false
+      },
+      "concept_ids": [
+        "game.match.end.special.bankruptcy",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "match.end.extension": {
+      "value": {
+        "adopted": false,
+        "west_round": false
+      },
+      "concept_ids": [
+        "game.match.extension",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "match.end.final_deposit": {
+      "value": {
+        "resolution_mode": "LEAVE_ON_TABLE",
+        "unallocated_table_balance": true
+      },
+      "concept_ids": [
+        "game.match.end.final_deposit",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    },
+    "match.final_points": {
+      "value": {
+        "return_points": 30000,
+        "raw_points_unit": 1000,
+        "rank_points": [
+          50,
+          10,
+          -10,
+          -30
+        ],
+        "tie_rule": "average_occupied_rank_points",
+        "final_deposit": "leave_on_table",
+        "oka_included_in_first_place_points": 20
+      },
+      "concept_ids": [
+        "game.match.final_points.rank",
+        "ruleset.npm.official.2008_05_10"
+      ]
+    }
+  }
+}

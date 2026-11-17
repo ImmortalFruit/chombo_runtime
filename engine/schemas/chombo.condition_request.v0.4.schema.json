@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chombo.local/schemas/chombo.condition_request.v0.4.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["document_kind", "schema_id", "format_version", "created_at", "producer", "integrity", "request_id", "calculation_basis", "ranking_scope", "target", "position_source", "match_rule_ref", "concept_refs", "provenance", "search_scope"],
+  "properties": {
+    "document_kind": {"const": "CONDITION_REQUEST"}, "schema_id": {"const": "https://chombo.local/schemas/chombo.condition_request.v0.4.schema.json"}, "format_version": {"const": "1.0.0"},
+    "created_at": {"type": "string", "format": "date-time", "maxLength": 256}, "producer": {"$ref": "#/$defs/producer"}, "integrity": {"$ref": "#/$defs/integrity"},
+    "request_id": {"type": "string", "format": "uuid"}, "calculation_basis": {"enum": ["CURRENT_HAND_COMEBACK", "INPUT_CONSTRAINED_COMEBACK"]}, "ranking_scope": {"enum": ["SINGLE_MATCH_RANK", "AGGREGATE_RANK"]},
+    "target": {"type": "object", "additionalProperties": false, "required": ["participant_id", "target_rank", "comeback_tie_policy"], "properties": {"participant_id": {"$ref": "#/$defs/id"}, "target_rank": {"type": "integer", "minimum": 1, "maximum": 4, "description": "Rank N or better (numeric rank <= N), subject to explicit cutoff tie policy."}, "comeback_tie_policy": {"enum": ["REQUIRE_STRICT_LEAD", "CHASER_ADVANTAGE"]}}},
+    "position_source": {"oneOf": [
+      {"type": "object", "additionalProperties": false, "required": ["kind", "condition_ref_id", "condition_ref_digest", "evaluation_point"], "properties": {"kind": {"const": "SUPPORT_REF"}, "condition_ref_id": {"$ref": "#/$defs/id"}, "condition_ref_digest": {"$ref": "#/$defs/hash"}, "evaluation_point": {"const": "HAND_END"}}},
+      {"type": "object", "additionalProperties": false, "required": ["kind", "state"], "properties": {"kind": {"const": "INLINE_STATE"}, "state": {"type": "object"}}}
+    ]},
+    "input_constraints": {"type": "object", "additionalProperties": false, "required": ["evaluation_point", "allowed_result_kinds"], "properties": {"evaluation_point": {"enum": ["HAND_END", "MATCH_END"]}, "allowed_result_kinds": {"$ref": "#/$defs/results"}, "result_participants": {"type": "array", "maxItems": 4}, "score_bounds": {"type": "object", "maxProperties": 256}, "rank_gap_bounds": {"type": "object", "maxProperties": 256}, "hand_horizon": {"type": "integer", "minimum": 1, "maximum": 64}, "force_match_end": {"type": "boolean"}}},
+    "match_rule_ref": {"$ref": "#/$defs/profile_ref"}, "concept_refs": {"type": "array", "minItems": 1, "maxItems": 512, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+    "provenance": {"type": "object", "maxProperties": 256},
+    "search_scope": {"type": "object", "additionalProperties": false, "required": ["allowed_result_kinds", "max_depth", "max_candidates", "max_transitions", "max_wall_time_ms"], "properties": {"allowed_result_kinds": {"$ref": "#/$defs/results"}, "max_depth": {"type": "integer", "minimum": 1, "maximum": 64}, "max_candidates": {"type": "integer", "minimum": 1, "maximum": 10000}, "max_transitions": {"type": "integer", "minimum": 1, "maximum": 4096}, "max_wall_time_ms": {"type": "integer", "minimum": 1, "maximum": 60000}}},
+    "aggregate_context": {"type": "object", "additionalProperties": false, "required": ["values", "profile_ref"], "properties": {"values": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "object", "additionalProperties": false, "required": ["participant_id", "value"], "properties": {"participant_id": {"$ref": "#/$defs/id"}, "value": {"type": "integer"}}}}, "profile_ref": {"$ref": "#/$defs/profile_ref_no_snapshot"}}}
+  },
+  "$defs": {
+    "id": {"type": "string", "minLength": 1, "maxLength": 256, "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"}, "hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "producer": {"type": "object", "additionalProperties": false, "required": ["app_id", "app_version", "build_revision", "engine_version"], "properties": {"app_id": {"type": "string"}, "app_version": {"type": "string"}, "build_revision": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "engine_version": {"type": "string"}}},
+    "integrity": {"type": "object", "additionalProperties": false, "required": ["algorithm", "document_hash"], "properties": {"algorithm": {"const": "canonical-json-sha256.v1"}, "document_hash": {"$ref": "#/$defs/hash"}}},
+    "profile_ref": {"type": "object", "additionalProperties": false, "required": ["profile_id", "version", "content_hash", "snapshot_id"], "properties": {"profile_id": {"$ref": "#/$defs/id"}, "version": {"type": "string"}, "content_hash": {"$ref": "#/$defs/hash"}, "snapshot_id": {"$ref": "#/$defs/id"}}},
+    "profile_ref_no_snapshot": {"type": "object", "additionalProperties": false, "required": ["profile_id", "version", "content_hash"], "properties": {"profile_id": {"$ref": "#/$defs/id"}, "version": {"type": "string"}, "content_hash": {"$ref": "#/$defs/hash"}}},
+    "results": {"type": "array", "minItems": 1, "maxItems": 5, "uniqueItems": true, "items": {"enum": ["TARGET_RON", "TARGET_DEALT_IN", "TARGET_TSUMO", "OTHER_WIN", "DRAW"]}}
+  }
+}

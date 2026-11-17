@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "ledger_id": "chombo.v0_3.rule_source_verification.v1",
+  "release_version": "0.3.0",
+  "checked_at": "2026-09-24T14:42:22+08:00",
+  "checked_revision": "ad174943d5092db9483a0532a6b0cd5c56bb1830",
+  "results": [
+    {
+      "ruleset_id": "m_league.official_rules",
+      "profile_ids": ["m_league_official_rules_2026_09_08_content_snapshot", "m_league_simulation.v1"],
+      "ruleset_version": "2026-09-08-content-snapshot",
+      "result": "UNCHANGED",
+      "sources": [
+        {"source_id": "m_league.official_rules", "url": "https://m-league.jp/about/", "comparison": "section.p-rule descendant text, Unicode whitespace collapsed, NFC, SHA-256", "expected": "6282f54e4f58fb20ea42ae8cf2d0a7f64085fa0b3d9f04bae9fd3b42c7dd8b50", "observed": "6282f54e4f58fb20ea42ae8cf2d0a7f64085fa0b3d9f04bae9fd3b42c7dd8b50", "status": "MATCH"}
+      ],
+      "scope_status": "MATCH",
+      "resolution": "NONE_REQUIRED",
+      "notes": "正規化本文31,239 byteが一致。互換simulation profileも同じ資格済み規則源で確認した。"
+    },
+    {
+      "ruleset_id": "jpml.official_rules",
+      "profile_ids": ["jpml_official_2026_04_01_rule_0_7"],
+      "ruleset_version": "2026-04-01-rule-0.7",
+      "result": "UNCHANGED",
+      "sources": [
+        {"source_id": "jpml.competition_rules", "url": "https://www.ma-jan.or.jp/activity/game_rule.html", "comparison": "official route to current published sheets", "expected": "reachable", "observed": "reachable", "status": "REACHABLE"},
+        {"source_id": "jpml.competition_rules.gid0", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vS23LsIu2BmUCVgj326GNwtKbxWtFDswxi0yWETJq_Sn_hwypel5ZGM9g6oBhH9Q7naaT2Rqqk6yjgb/pubhtml", "comparison": "published CSV gid=0 SHA-256", "expected": "7b2a8af03dc0970568a30b772120f969a77c3cfee4af373485880dc038899541", "observed": "7b2a8af03dc0970568a30b772120f969a77c3cfee4af373485880dc038899541", "status": "MATCH"},
+        {"source_id": "jpml.competition_rules.gid1037086896", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vS23LsIu2BmUCVgj326GNwtKbxWtFDswxi0yWETJq_Sn_hwypel5ZGM9g6oBhH9Q7naaT2Rqqk6yjgb/pubhtml", "comparison": "published CSV gid=1037086896 SHA-256", "expected": "82913959ea852341906582cf179f358950457f3e51b1cecbdb89c04f3fbff845", "observed": "82913959ea852341906582cf179f358950457f3e51b1cecbdb89c04f3fbff845", "status": "MATCH"},
+        {"source_id": "jpml.adopted_yaku", "url": "https://www.ma-jan.or.jp/activity/yaku.html", "comparison": "official source reachability and scope", "expected": null, "observed": "reachable", "status": "REACHABLE"},
+        {"source_id": "jpml.glossary", "url": "https://www.ma-jan.or.jp/class_1/1552.html", "comparison": "official source reachability and scope", "expected": null, "observed": "reachable", "status": "REACHABLE"},
+        {"source_id": "jpml.official_rules_through_2024", "url": "https://www.ma-jan.or.jp/column_other/115081.html", "comparison": "old-edition boundary reachability", "expected": null, "observed": "reachable", "status": "REACHABLE"}
+      ],
+      "scope_status": "MATCH",
+      "resolution": "NONE_REQUIRED"
+    },
+    {
+      "ruleset_id": "saikouisen.highest_title_rules",
+      "profile_ids": ["saikouisen_highest_title_rules_2024_12_05"],
+      "ruleset_version": "2024-12-05",
+      "result": "UNCHANGED",
+      "sources": [
+        {"source_id": "saikouisen.rules_index", "url": "https://saikouisen.com/about/rules/", "comparison": "official Google Drive route and representative-format scope", "expected": "drive-file:1KfRZQQYkmtBRytaYlBePPmf5TRv4k-96", "observed": "drive-file:1KfRZQQYkmtBRytaYlBePPmf5TRv4k-96", "status": "MATCH"},
+        {"source_id": "saikouisen.regulations_2024-12-05", "url": "https://drive.google.com/file/d/1KfRZQQYkmtBRytaYlBePPmf5TRv4k-96/view?usp=drive_link", "comparison": "PDF SHA-256", "expected": "b18abd9463d4ab9438e48459f62e70d0628dd6f9fb5f7bdddfff1c33a93fd5e1", "observed": "b18abd9463d4ab9438e48459f62e70d0628dd6f9fb5f7bdddfff1c33a93fd5e1", "status": "MATCH"}
+      ],
+      "scope_status": "MATCH",
+      "resolution": "NONE_REQUIRED"
+    },
+    {
+      "ruleset_id": "npm.official_rules",
+      "profile_ids": ["npm_official_rules_2008_05_10"],
+      "ruleset_version": "2008-05-10",
+      "result": "CHANGED",
+      "sources": [
+        {"source_id": "npm.official_rules", "url": "https://npm2001.com/about/rule/", "comparison": "whole-page HTML SHA-256 plus official WordPress normalized content and modified", "expected": "5bb10e397d350cb82bff2d6d1a75d82cf05ce4253411029d44a1d933babc511c", "observed": "page:450c3125aa74470c7ea524e66651de2fdb32b1213551ec6d79ccb9fde8af6063;content:1791b20637d5c5f03c4d0c3dfefee78a5ae874a5d752a767cf89058477e0fdb4;modified:2024-01-07T12:26:08", "status": "CHANGED_RESOLVED"},
+        {"source_id": "npm.competition_regulations_index", "url": "https://npm2001.com/about/regulations/", "comparison": "official PDF route and scope", "expected": null, "observed": "reachable", "status": "REACHABLE"},
+        {"source_id": "npm.competition_regulations_2008-05-10", "url": "https://npm2001.com/pdf/regulations.pdf", "comparison": "PDF SHA-256", "expected": "27fc0d79828a66ad0cf106f145a3328d34edf6235280efbeddcd131212290f6f", "observed": "27fc0d79828a66ad0cf106f145a3328d34edf6235280efbeddcd131212290f6f", "status": "MATCH"}
+      ],
+      "scope_status": "MATCH",
+      "resolution": "NO_NEW_PROFILE_REQUIRED",
+      "notes": "全ページ外枠hashだけが変化。WordPress本文hashとmodified、固定PDF、33 dimensionは不変。"
+    },
+    {
+      "ruleset_id": "mu.shouou_mu_league",
+      "profile_ids": ["mu_shouou_mu_league_2025_01_21_content_snapshot"],
+      "ruleset_version": "2025-01-21-content-snapshot",
+      "result": "CHANGED",
+      "sources": [
+        {"source_id": "mu.competition_regulations", "url": "https://mu-mahjong.jp/tournament/%E7%AB%B6%E6%8A%80%E8%A6%8F%E5%AE%9A/", "comparison": "whole-page HTML SHA-256 plus WordPress normalized content and modified", "expected": "94c9509a8da26fc033232371091028ad94f05a81d4719041fad0824e9f1013c4", "observed": "page:865b6928e4a95a192ee56ec6c2fdace19834f827337528418c3be8794c6d43d2;content:b110170cc900cd06d7613016edb33299aa06d8f0fa3118378d0995cfb0cacbbb;modified:2025-01-22T20:05:02", "status": "CHANGED_RESOLVED"},
+        {"source_id": "mu.official_rules", "url": "https://mu-mahjong.jp/wp-content/uploads/2025/01/murule_202501.pdf", "comparison": "PDF SHA-256", "expected": "9db01ef92b4653fdf3ac7d803f9f4dddb1430242e9dc5eefb10517b03e85f88f", "observed": "9db01ef92b4653fdf3ac7d803f9f4dddb1430242e9dc5eefb10517b03e85f88f", "status": "MATCH"},
+        {"source_id": "mu.mu_cup_rules", "url": "https://mu-mahjong.jp/tournament/%CE%BC%E3%82%AB%E3%83%83%E3%83%97/", "comparison": "whole-page HTML SHA-256 plus WordPress normalized content and modified", "expected": "c64bccab28a25dc2463c4e171c10245db18da3a7e44ec8eea822d8a0dd034d7e", "observed": "page:d788a8490e71d91421850e29233c6f26fa212845d7b285a01dbef3cffb2557e0;content:d6189fbf8249a78b7aa30ae935a036cfe91311ddc4ff24da71cb29099df8d2f2;modified:2026-08-09T20:42:50", "status": "CHANGED_RESOLVED"},
+        {"source_id": "mu.mu_league_rules", "url": "https://mu-mahjong.jp/tournament/%CE%BC%E3%83%AA%E3%83%BC%E3%82%B0%EF%BC%88%E5%B0%86%E7%8E%8B%EF%BC%89/", "comparison": "whole-page HTML SHA-256 plus WordPress normalized content and modified", "expected": "8d188d1538675001acb6d01846353d96eb8867a72733a372b6aabfa33c0f6944", "observed": "page:d87fb113d1a472772d4558543c1f831423ad3ec7440f1f9f4cfb9dbc216ab2c8;content:d0fdc785b4d5a9adf79464bbbd29b35cb0927bf422a14ed636b9cd8a3ebd3e00;modified:2026-08-24T20:30:45", "status": "CHANGED_RESOLVED"}
+      ],
+      "scope_status": "MATCH",
+      "resolution": "NO_NEW_PROFILE_REQUIRED",
+      "notes": "全ページ外枠hashは変化。WordPress本文modifiedはいずれも2026-09-07の固定snapshot取得前で、公式PDFと33 dimensionに差分なし。"
+    },
+    {
+      "ruleset_id": "rmu.rules",
+      "profile_ids": ["rmu_a_2026_04_12_content_snapshot", "rmu_b_2026_04_12_content_snapshot", "rmu_m_2026_04_12_content_snapshot"],
+      "ruleset_version": "2026-04-12-content-snapshot",
+      "result": "CHANGED",
+      "sources": [
+        {"source_id": "rmu.rules_2026-04-12", "url": "https://rmu.jp/rule", "comparison": "whole-page HTML SHA-256, article text SHA-256, and dateModified", "expected": "eb55dc351957c0e235a7755ae8fa1b5ab5a71b86d0ec6e31f7626a57ec79a6eb", "observed": "article:b0c822345848b77d05ce71d20395fee2177a9b7a9250489a2c337150316989cf;modified:2026-04-12T22:08:54+09:00", "status": "CHANGED_RESOLVED"},
+        {"source_id": "rmu.crown_a_rule", "url": "https://rmu.jp/title/crown", "comparison": "official A-rule adoption route and scope", "expected": null, "observed": "reachable", "status": "REACHABLE"}
+      ],
+      "scope_status": "MATCH",
+      "resolution": "NO_NEW_PROFILE_REQUIRED",
+      "notes": "動的な全ページ外枠だけが変化。article正規化本文hash、dateModified、A・B・Mの33 dimensionは不変。"
+    },
+    {
+      "ruleset_id": "wrc.rules",
+      "profile_ids": ["wrc_rules_2025"],
+      "ruleset_version": "2025",
+      "result": "UNCHANGED",
+      "sources": [
+        {"source_id": "wrc.rules_downloads", "url": "https://www.worldriichi.org/wrc-rules", "comparison": "current edition, clarifications, archive and scope", "expected": "WRC Rules 2025 plus Clarifications 2025", "observed": "WRC Rules 2025 plus Clarifications 2025", "status": "MATCH"},
+        {"source_id": "wrc.rules_2025_v20250526", "url": "https://www.worldriichi.org/s/WRC-Rules-2025-42fx.pdf", "comparison": "PDF SHA-256", "expected": "6868638609d3a0e41b551d7870e6f01b5b349883456e73badbc158457f97a8bd", "observed": "6868638609d3a0e41b551d7870e6f01b5b349883456e73badbc158457f97a8bd", "status": "MATCH"},
+        {"source_id": "wrc.clarifications_2025_2025-06-29", "url": "https://www.worldriichi.org/s/WRC_2025_Rules_Clarification.pdf", "comparison": "PDF SHA-256", "expected": "2817c3e4fd4031c733f8baf38c914d02a1e3b6ffe99a27925f9432d5e39cfd06", "observed": "2817c3e4fd4031c733f8baf38c914d02a1e3b6ffe99a27925f9432d5e39cfd06", "status": "MATCH"}
+      ],
+      "scope_status": "MATCH",
+      "resolution": "NONE_REQUIRED"
+    },
+    {
+      "ruleset_id": "tenhou.ranked.four_player_south.red",
+      "profile_ids": ["tenhou_ranked_four_player_south_red_2026_09_08_content_snapshot"],
+      "ruleset_version": "2026-09-08-content-snapshot",
+      "result": "UNCHANGED",
+      "sources": [
+        {"source_id": "tenhou.manual", "url": "https://tenhou.net/man/index.html", "comparison": "CRLF-to-LF normalized HTML SHA-256 and latest rule-change note", "expected": "6a9c01e91460385c70ac615939b7d5d7754ccfdce522d714a5ba28f15cb97a89;2022-01-21", "observed": "6a9c01e91460385c70ac615939b7d5d7754ccfdce522d714a5ba28f15cb97a89;2022-01-21", "status": "MATCH"}
+      ],
+      "scope_status": "MATCH",
+      "resolution": "NONE_REQUIRED"
+    }
+  ],
+  "release_gate": {
+    "status": "PASSED",
+    "unavailable_count": 0,
+    "unresolved_change_count": 0
+  }
+}

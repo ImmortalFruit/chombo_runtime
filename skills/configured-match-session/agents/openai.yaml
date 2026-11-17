@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chomboの条件指定対局"
+  short_description: "局・本場・供託・持ち点を指定して検証用の半荘を開始"
+  default_prompt: "$configured-match-session で、使用する規則と開始条件を確認して半荘を開始してください。"

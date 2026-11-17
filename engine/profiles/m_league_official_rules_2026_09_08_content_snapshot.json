@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "profile_id": "m_league_official_rules_2026_09_08_content_snapshot",
+  "ruleset_id": "m_league.official_rules",
+  "ruleset_version": "2026-09-08-content-snapshot",
+  "scope_id": "four_player_east_south_complete.v1",
+  "source_snapshots": {
+    "official_rules_url": "https://m-league.jp/about/",
+    "official_rules_normalized_text_sha256": "6282f54e4f58fb20ea42ae8cf2d0a7f64085fa0b3d9f04bae9fd3b42c7dd8b50",
+    "retrieved_on": "2026-09-08"
+  },
+  "dimensions": {
+    "match.start.procedure": {
+      "value": "virtual_seeded_seat_dealer_wall_and_deal_generation",
+      "concept_ids": ["game.match.setup.virtual_seat_and_dealer_selection", "game.match.setup.virtual_wall_and_deal_generation", "game.match.setup.dealer_opening_acquisition"]
+    },
+    "match.start.points": {
+      "value": {"points_per_player": 25000, "honba": 0, "riichi_deposit_points": 0},
+      "concept_ids": ["game.score.starting_points", "game.match.setup.virtual_balance_initialization_boundary"]
+    },
+    "match.structure": {
+      "value": {"format": "east_south", "scheduled_final_hand": {"prevailing_wind": "south", "hand_number": 4}},
+      "concept_ids": ["game.match.east_south"]
+    },
+    "tile.red_five.composition": {
+      "value": {"5m": 1, "5p": 1, "5s": 1, "total": 3},
+      "concept_ids": ["tile.red_five"]
+    },
+    "dora.profile": {
+      "value": {"standard": true, "red": true, "kan": true, "ura": true, "kan_ura": true, "han_each": 1, "dora_alone_is_yaku": false},
+      "concept_ids": ["scoring.dora.standard", "scoring.dora.red", "scoring.dora.kan", "scoring.dora.ura", "scoring.dora.kan_ura"]
+    },
+    "response.call.priority": {
+      "value": [["ron"], ["pon", "kan_open"], ["chi"]],
+      "concept_ids": ["game.hand.action.call.priority", "game.hand.response.resolution"]
+    },
+    "response.post_call_discard_restriction": {
+      "value": {"prohibit_discard_completing_called_meld_with_used_group": true},
+      "concept_ids": ["game.hand.action.call.post_discard_restriction"]
+    },
+    "kan.count_limit": {
+      "value": {"established_kans_max": 4, "fifth_kan_allowed": false},
+      "concept_ids": ["game.hand.action.kan.count_limit"]
+    },
+    "kan.profile_boundaries": {
+      "value": {"chankan_on_concealed_kan": false, "generic_daiminkan_liability": false, "yakuman_liability": ["daisangen", "daisuushii", "suukantsu"]},
+      "concept_ids": ["game.scoring.special.chankan_payment", "game.scoring.special.daiminkan_liability", "game.scoring.special.yakuman_liability"]
+    },
+    "kan.last_draw_restrictions": {
+      "value": {"kan_on_last_draw": false, "riichi_on_last_draw": false, "calls_on_last_discard": false, "qualified_ron_on_last_discard": true},
+      "concept_ids": ["game.hand.wall.last_draw.action_restrictions", "game.hand.last_discard.response_restrictions"]
+    },
+    "riichi.score_eligibility": {
+      "value": {"minimum_points": 1100},
+      "concept_ids": ["game.hand.riichi.eligibility"]
+    },
+    "riichi.post_establishment_kan": {
+      "value": {"concealed_kan_only": true, "drawn_tile_must_be_used": true, "waits_must_be_unchanged": true, "meld_interpretations_must_not_change": true, "yaku_treatment_must_not_change": true},
+      "concept_ids": ["game.hand.riichi.post_establishment_actions"]
+    },
+    "riichi.first_turn_and_ippatsu": {
+      "value": {"track_first_uninterrupted_turn": true, "established_chi_pon_or_any_kan_interrupts": true, "ippatsu_expires_on_next_own_discard": true},
+      "concept_ids": ["game.hand.turn.first_uninterrupted", "game.hand.ippatsu.right.lifecycle", "game.hand.yaku.ippatsu", "game.hand.yaku.double_riichi"]
+    },
+    "win.multiple_ron_resolution": {
+      "value": {"maximum_winners": 1, "claimant_order": ["next_player", "opposite_player", "previous_player"]},
+      "concept_ids": ["game.hand.win.multiple_ron", "game.hand.win.head_bump", "game.scoring.special.multiple_winner_score"]
+    },
+    "hand.abortive_draws": {
+      "value": {"adopted": false},
+      "concept_ids": ["game.hand.end.abortive_draw"]
+    },
+    "hand.special.nagashi_mangan": {
+      "value": {"adopted": false},
+      "concept_ids": ["game.hand.end.special.nagashi_mangan_profile"]
+    },
+    "yaku.ordinary_catalog_and_values": {
+      "value": {"catalog": "qualified_ordinary_yaku_v1", "apply_open_closed_han": true, "remove_approved_non_composable_lower_yaku": true},
+      "concept_ids": ["game.hand.yaku.ordinary.open_closed_value", "game.hand.yaku.ordinary.composition"]
+    },
+    "yaku.yakuman_catalog_and_values": {
+      "value": {"catalog": "qualified_yakuman_12_v1", "catalog_size": 12, "combine_distinct_yakuman": true, "special_double_yakuman": false},
+      "concept_ids": ["game.hand.yaku.yakuman.catalog", "game.hand.yaku.yakuman.variants"]
+    },
+    "scoring.fu": {
+      "value": {"double_wind_pair_fu": 2, "chiitoitsu_fu": 25, "pinfu_tsumo_fu": 20, "open_pinfu_shape_ron_fu": 30},
+      "concept_ids": ["game.scoring.fu.components", "game.scoring.fu.calculation", "game.scoring.fu.hane"]
+    },
+    "scoring.engine_profile": {
+      "value": "m_league_2026",
+      "concept_ids": ["game.scoring.limit.thresholds", "game.scoring.limit.kiriage_mangan", "game.scoring.payment.rounding"]
+    },
+    "scoring.limit_and_rounding": {
+      "value": {"kiriage_mangan": [[30, 4], [60, 3]], "aotenjou": false, "ordinary_13_plus": "sanbaiman_cap", "payment_rounding_unit": 100},
+      "concept_ids": ["game.scoring.basic_points.non_limit", "game.scoring.limit.thresholds", "game.scoring.limit.kiriage_mangan", "game.scoring.payment.rounding"]
+    },
+    "settlement.honba": {
+      "value": {"points_per_honba": 300, "ron_payer": "discarder", "tsumo_points_per_non_winner": 100},
+      "concept_ids": ["game.counter.honba", "game.scoring.honba.ron", "game.scoring.honba.tsumo"]
+    },
+    "settlement.riichi_deposit": {
+      "value": {"points_per_declaration": 1000, "win": "approved_winner_takes_all", "exhaustive_draw": "carry_over"},
+      "concept_ids": ["game.score.riichi_deposit_transfer", "game.hand.end.riichi_deposit"]
+    },
+    "settlement.exhaustive_draw_tenpai": {
+      "value": {"total_points": 3000, "zero_or_four_tenpai_transfer": 0},
+      "concept_ids": ["game.hand.end.draw_tenpai_declaration", "game.hand.end.draw_payment"]
+    },
+    "transition.dealer": {
+      "value": {"dealer_continues_on_win": true, "dealer_continues_on_exhaustive_draw_when_tenpai": true, "dealer_changes_on_exhaustive_draw_when_noten": true},
+      "concept_ids": ["game.hand.transition.dealer"]
+    },
+    "transition.honba": {
+      "value": {"dealer_continues": "increment_by_one", "exhaustive_draw_and_dealer_changes": "increment_by_one", "non_dealer_win": "reset_to_zero"},
+      "concept_ids": ["game.hand.transition.honba"]
+    },
+    "transition.riichi_deposit": {
+      "value": {"exhaustive_draw": "carry_entire_pool_forward", "qualified_win": "transfer_to_approved_winner"},
+      "concept_ids": ["game.hand.transition.state_carryover", "game.hand.end.riichi_deposit"]
+    },
+    "transition.round_and_seat_winds": {
+      "value": {"dealer_continues": "same_hand_and_seat_winds", "dealer_changes": "advance_hand_and_rotate_seat_winds"},
+      "concept_ids": ["game.hand.transition.round", "game.hand.transition.seat_wind_assignment"]
+    },
+    "match.end.scheduled": {
+      "value": {"scheduled_final_hand": "south_4", "dealer_continues": "continue_same_hand", "dealer_changes": "end_match", "agari_yame": false, "tenpai_yame": false},
+      "concept_ids": ["game.match.end.scheduled"]
+    },
+    "match.end.bankruptcy": {
+      "value": {"bankruptcy_end": false, "zero_or_negative_score_ends_match": false},
+      "concept_ids": ["game.match.end.exceptional", "game.match.end.special.bankruptcy"]
+    },
+    "match.end.extension": {
+      "value": {"adopted": false, "must_not_create_west_round": true},
+      "concept_ids": ["game.match.extension", "game.match.end.special.extension"]
+    },
+    "match.end.final_deposit": {
+      "value": {"resolution_mode": "AWARD", "single_top": "transfer_entire_pool_to_top_player", "tied_top": "split_pool_among_tied_top_players", "three_way_remainder_priority": "closer_to_starting_dealer"},
+      "concept_ids": ["game.match.end.final_deposit", "game.match.final_points.final_deposit_resolution"]
+    },
+    "match.final_points": {
+      "value": {"return_points": 30000, "raw_points_unit": 1000, "official_rank_points": [50.0, 10.0, -10.0, -30.0], "oka": [20.0, 0.0, 0.0, 0.0], "uma": [30.0, 10.0, -10.0, -30.0], "tie_rule": "average_occupied_rank_points", "tied_first_oka": "split_equally_to_0.1", "remainder_priority": "closer_to_starting_dealer", "final_deposit": "profile_defined_top_resolution", "precision_points": 0.1},
+      "concept_ids": ["game.match.points.raw", "game.match.points.return", "game.match.points.oka", "game.match.final_points.rank", "game.match.final_points.uma", "game.match.final_points.tie", "game.match.final_points.m_league_profile", "game.match.final_points.rounding", "game.match.final_points.breakdown"]
+    }
+  }
+}

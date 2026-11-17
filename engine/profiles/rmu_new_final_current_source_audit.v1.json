@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "audit_id": "chombo.v0_4.rmu_new_final_current_source_audit.v1",
+  "todo_id": "K40-06",
+  "audited_on": "2026-11-01",
+  "source": {
+    "page_url": "https://rmu.jp/rule",
+    "image_url": "https://rmu.jp/cms/wp-content/uploads/2025/05/S__40902671-640x360.jpg",
+    "image_path_version": "2025/05",
+    "retrieved_on": "2026-11-01",
+    "media_type": "image/jpeg",
+    "pixel_dimensions": {"width": 640, "height": 360},
+    "sha256": "116b20500ec09a895a1371133ae23d420ab0c3d43634439d418a92a46a12d6af"
+  },
+  "confirmed_dimensions": {
+    "seating_order": "fourth_to_third_to_second_to_first_around_table",
+    "reseat_on_rank_change": true,
+    "initial_dealer_basis": "aggregate_leader_is_kari_kari_east_then_official_two_dice_procedure",
+    "hand_identity": "east_1",
+    "honba_initial": 0,
+    "honba_after_win": 0,
+    "honba_after_draw": 0,
+    "next_dealer_after_win": "winner",
+    "next_dealer_after_dealer_noten_draw": "nearest_tenpai_player_to_current_dealer",
+    "next_dealer_after_all_noten_draw": "south_seat"
+  },
+  "event_base_rule_evidence": [
+    {
+      "event_id": "rmu.open_league.22",
+      "edition": "22",
+      "base_profile_id": "rmu_b_2026_04_12_content_snapshot",
+      "source_url": "https://rmu.jp/title/openleague",
+      "status": "SOURCE_CONFIRMED"
+    },
+    {
+      "event_id": "rmu.little_challenge_cup.4",
+      "edition": "4",
+      "base_profile_id": "rmu_m_2026_04_12_content_snapshot",
+      "source_url": "https://rmu.jp/title/little%E3%83%81%E3%83%A3%E3%83%AC%E3%83%B3%E3%82%B8%E3%82%AB%E3%83%83%E3%83%97",
+      "status": "SOURCE_CONFIRMED"
+    },
+    {
+      "event_id": "rmu.rookie_king.8",
+      "edition": "8",
+      "base_profile_id": "rmu_a_2026_04_12_content_snapshot",
+      "source_url": "https://rmu.jp/title/%E6%96%B0%E4%BA%BA%E7%8E%8B%E6%88%A6",
+      "status": "SOURCE_CONFIRMED"
+    }
+  ],
+  "supplemental_evidence": [
+    {
+      "source_url": "https://rmu.jp/2810",
+      "source_kind": "RMU_OFFICIAL_MATCH_REPORT",
+      "supports": ["point_totals_use_decimal_precision_compatible_with_100_point_sticks", "new_final_conditions_are_calculated_from_point_gap"]
+    },
+    {
+      "source_url": "https://rmu.jp/2525",
+      "source_kind": "RMU_OFFICIAL_MATCH_REPORT",
+      "supports": ["rmu_uses_catch_up_advantage_for_equal_totals_in_documented_competition"]
+    },
+    {
+      "source_url": "https://rmu.jp/title/%E3%82%B9%E3%83%97%E3%83%AA%E3%83%B3%E3%83%88%E3%82%AB%E3%83%83%E3%83%97",
+      "source_kind": "RMU_OFFICIAL_EVENT_PAGE",
+      "supports": ["event_rule_places_the_participant_who_catches_up_above_on_equal_points"]
+    }
+  ],
+  "provisional_concepts": [
+    {
+      "concept_id": "game.competition.rmu_new_final.point_conversion.chombo_provisional",
+      "status": "LEARNING",
+      "value": {"points_to_sticks_multiplier": 1000, "minimum_stick_unit": 100, "preserve_negative": true, "rounding": "NONE"}
+    },
+    {
+      "concept_id": "game.competition.rmu_new_final.tie_resolution.chombo_provisional",
+      "status": "LEARNING",
+      "value": {"seat_tie_order": "SEEDED_UNIFORM_RANDOM", "equal_top_after_win": "WINNER_OVERTAKES", "seed_required": true}
+    },
+    {
+      "concept_id": "game.competition.rmu_new_final.riichi_deposit.chombo_provisional",
+      "status": "LEARNING",
+      "value": {"initial_pool": "EXPLICIT_STATE", "draw": "CARRY_ENTIRE_POOL", "qualified_win": "WINNER_TAKES_ALL", "finish_comparison": "AFTER_DEPOSIT_TRANSFER"}
+    }
+  ],
+  "provisional_ruleset": {
+    "ruleset_id": "chombo.rmu_new_final.provisional.v1",
+    "display_name_ja": "RMU新決勝（仮）",
+    "status": "LEARNING",
+    "execution_status": "RULES_INCOMPLETE",
+    "selection": "EXPLICIT_ONLY",
+    "must_not_alias": ["RMU新決勝方式", "rmu.new_final"]
+  },
+  "unresolved_dimensions": [
+    "point_stick_conversion_scale_unit_rounding_negative_and_fraction_handling",
+    "initial_seat_order_when_totals_are_equal",
+    "reseating_order_when_totals_are_equal",
+    "top_definition_and_comparison_when_totals_are_equal",
+    "riichi_deposit_initialization_distribution_carryover_and_finish_handling",
+    "official_two_dice_dealer_selection_to_deterministic_seed_mapping"
+  ],
+  "profile_candidates": [
+    {"base_profile_id": "rmu_a_2026_04_12_content_snapshot", "status": "RULES_INCOMPLETE"},
+    {"base_profile_id": "rmu_b_2026_04_12_content_snapshot", "status": "RULES_INCOMPLETE"},
+    {"base_profile_id": "rmu_m_2026_04_12_content_snapshot", "status": "RULES_INCOMPLETE"}
+  ],
+  "executable_profile_count": 0,
+  "execution_status": "RULES_INCOMPLETE",
+  "fallback_allowed": false
+}

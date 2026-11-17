@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "profile_id": "tenhou_ranked_four_player_south_red_2026_09_08_content_snapshot",
+  "ruleset_id": "tenhou.ranked.four_player_south.red",
+  "ruleset_version": "2026-09-08-content-snapshot",
+  "scope_id": "four_player_east_south_complete.v1",
+  "source_snapshots": {
+    "official_manual_url": "https://tenhou.net/man/index.html",
+    "official_manual_normalized_html_sha256": "6a9c01e91460385c70ac615939b7d5d7754ccfdce522d714a5ba28f15cb97a89",
+    "retrieved_on": "2026-09-08",
+    "latest_embedded_rule_change": "2022-01-21"
+  },
+  "dimensions": {
+    "match.start.procedure": {
+      "value": "virtual_seeded_seat_dealer_wall_and_deal_generation",
+      "concept_ids": [
+        "game.match.setup.virtual_seat_and_dealer_selection",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "match.start.points": {
+      "value": {
+        "points_per_player": 25000,
+        "honba": 0,
+        "riichi_deposit_points": 0
+      },
+      "concept_ids": [
+        "game.score.starting_points",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "match.structure": {
+      "value": {
+        "format": "east_south",
+        "scheduled_final_hand": {
+          "prevailing_wind": "south",
+          "hand_number": 4
+        }
+      },
+      "concept_ids": [
+        "game.match.east_south",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "tile.red_five.composition": {
+      "value": {
+        "5m": 1,
+        "5p": 1,
+        "5s": 1,
+        "total": 3
+      },
+      "concept_ids": [
+        "tile.red_five",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "dora.profile": {
+      "value": {
+        "standard": true,
+        "red": true,
+        "kan": true,
+        "ura": true,
+        "kan_ura": true,
+        "han_each": 1,
+        "dora_alone_is_yaku": false
+      },
+      "concept_ids": [
+        "scoring.dora.standard",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "response.call.priority": {
+      "value": [
+        [
+          "ron"
+        ],
+        [
+          "pon",
+          "kan_open"
+        ],
+        [
+          "chi"
+        ]
+      ],
+      "concept_ids": [
+        "game.hand.action.call.priority",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "response.post_call_discard_restriction": {
+      "value": {
+        "same_tile": true,
+        "other_end_of_called_sequence": true
+      },
+      "concept_ids": [
+        "game.hand.action.call.post_discard_restriction",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "kan.count_limit": {
+      "value": {
+        "established_kans_max": 4,
+        "fifth_kan_allowed": false
+      },
+      "concept_ids": [
+        "game.hand.action.kan.count_limit",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "kan.profile_boundaries": {
+      "value": {
+        "chankan_on_concealed_kan": false,
+        "generic_daiminkan_liability": false,
+        "yakuman_liability": [
+          "daisangen",
+          "daisuushii"
+        ]
+      },
+      "concept_ids": [
+        "game.scoring.special.chankan_payment",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "kan.last_draw_restrictions": {
+      "value": {
+        "kan_on_last_draw": false,
+        "riichi_on_last_draw": false,
+        "calls_on_last_discard": false,
+        "qualified_ron_on_last_discard": true
+      },
+      "concept_ids": [
+        "game.hand.wall.last_draw.action_restrictions",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "riichi.score_eligibility": {
+      "value": {
+        "minimum_points": 1000,
+        "next_draw_required": true
+      },
+      "concept_ids": [
+        "game.hand.riichi.eligibility",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "riichi.post_establishment_kan": {
+      "value": {
+        "concealed_kan_only": true,
+        "drawn_tile_only": true,
+        "meld_type_count_must_not_decrease": true,
+        "all_wait_shapes_must_be_unchanged": true,
+        "yaku_change_allowed": true
+      },
+      "concept_ids": [
+        "game.hand.riichi.post_establishment_actions",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "riichi.first_turn_and_ippatsu": {
+      "value": {
+        "double_riichi": true,
+        "ippatsu": true,
+        "established_call_interrupts_first_turn": true
+      },
+      "concept_ids": [
+        "game.hand.yaku.double_riichi",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "win.multiple_ron_resolution": {
+      "value": {
+        "maximum_winners": 2,
+        "claimant_order": [
+          "next_player",
+          "opposite_player",
+          "previous_player"
+        ],
+        "triple_claim": "abortive_draw",
+        "honba_and_deposit": "first_winner_in_claimant_order"
+      },
+      "concept_ids": [
+        "game.hand.win.head_bump",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "hand.abortive_draws": {
+      "value": {
+        "adopted": true,
+        "reasons": {
+          "nine_terminals": {
+            "activation": "player_declaration",
+            "minimum_distinct_terminal_or_honor_types": 9,
+            "declaration_window": "after_first_self_draw_before_first_discard",
+            "requires_no_prior_call_or_concealed_kan": true,
+            "requires_no_prior_discard_by_declarer": true,
+            "acceptance_timing": "immediately_after_valid_declaration"
+          },
+          "four_winds_first_discard": {
+            "activation": "automatic",
+            "condition": "all_four_players_first_discard_is_same_wind_tile",
+            "requires_no_call_before_fourth_discard": true,
+            "acceptance_timing": "after_fourth_first_discard_response_window_closes_without_qualified_win_or_call"
+          },
+          "four_riichi": {
+            "activation": "automatic",
+            "condition": "all_four_players_have_established_riichi",
+            "unestablished_riichi_declaration_does_not_count": true,
+            "acceptance_timing": "after_fourth_riichi_discard_response_window_closes_without_qualified_win"
+          },
+          "four_kans": {
+            "activation": "automatic",
+            "condition": "four_completed_kans_exist_across_at_least_two_players",
+            "single_player_four_kans_exception": true,
+            "acceptance_timing": "after_fourth_kan_replacement_draw_discard_response_window_closes_without_qualified_win",
+            "fifth_kan_is_not_authorized": true,
+            "fifth_kan_intent": "reject_without_state_transition"
+          },
+          "three_ron": {
+            "activation": "automatic_during_discard_response_resolution",
+            "condition": "exactly_three_independently_qualified_ron_claims_on_same_discard",
+            "acceptance_timing": "after_all_required_responses_are_collected",
+            "result_replaces_ron_winners": true,
+            "zero_one_or_two_qualified_ron_claims_do_not_trigger": true
+          }
+        },
+        "shared_result": {
+          "score_movements": "none",
+          "exhaustive_draw_tenpai_payment": "not_applied",
+          "dealer_transition": "dealer_continues",
+          "honba_transition": "increment_by_one",
+          "riichi_deposit_transition": "carry_over",
+          "round_and_hand_number": "unchanged"
+        },
+        "priority": {
+          "qualified_win_on_triggering_discard": "win_precedes_abortive_draw",
+          "three_ron": "three_qualified_ron_claims_become_abortive_draw_instead_of_wins"
+        }
+      },
+      "concept_ids": [
+        "game.hand.end.abortive_draw",
+        "ruleset.tenhou.abortive_draw.nine_terminals",
+        "ruleset.tenhou.abortive_draw.four_winds_first_discard",
+        "ruleset.tenhou.abortive_draw.four_riichi",
+        "ruleset.tenhou.abortive_draw.four_kans",
+        "ruleset.tenhou.abortive_draw.three_ron",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "hand.special.nagashi_mangan": {
+      "value": {
+        "adopted": true,
+        "qualification": {
+          "end_condition": "exhaustive_draw",
+          "all_own_discards_are_terminals_or_honors": true,
+          "any_own_discard_called_by_another_player": false,
+          "own_open_meld_disqualifies": false,
+          "tenpai_required": false
+        },
+        "result_classification": "nagashi_mangan_special_draw_settlement",
+        "payment": {
+          "method": "mangan_tsumo_equivalent",
+          "dealer_qualifier": {"each_non_dealer_pays": 4000},
+          "non_dealer_qualifier": {"dealer_pays": 4000, "each_other_non_dealer_pays": 2000}
+        },
+        "honba": {"each_payer_adds_per_honba": 100},
+        "riichi_deposit": {
+          "sole_qualifier_receives_all": true,
+          "multiple_qualifiers": "first_qualifier_from_dealer_receives_all"
+        },
+        "exhaustive_draw_tenpai_payment": "not_applied",
+        "dealer_transition": {
+          "dealer_qualifies": "repeat_same_hand_and_increment_honba",
+          "dealer_does_not_qualify": "advance_dealer_and_increment_honba"
+        },
+        "multiple_qualifiers": "settle_each_qualifier_independently"
+      },
+      "concept_ids": [
+        "game.hand.end.special.nagashi_mangan_definition",
+        "game.hand.end.special.nagashi_mangan_profile",
+        "game.hand.end.special.nagashi_mangan_settlement",
+        "game.hand.end.special.nagashi_mangan_standard_profile",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "yaku.ordinary_catalog_and_values": {
+      "value": {
+        "catalog": "tenhou_ranked_four_player",
+        "ippatsu": true,
+        "open_tanyao": true
+      },
+      "concept_ids": [
+        "game.hand.yaku.ordinary.open_closed_value",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "yaku.yakuman_catalog_and_values": {
+      "value": {
+        "catalog": "tenhou_ranked_four_player",
+        "combine_distinct_yakuman": true,
+        "counted_yakuman": true,
+        "special_wait_double_yakuman": false,
+        "maximum_multiple": 4
+      },
+      "concept_ids": [
+        "game.hand.yaku.yakuman.catalog",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "scoring.fu": {
+      "value": {
+        "double_wind_pair_fu": 4,
+        "chiitoitsu_fu": 25,
+        "pinfu_tsumo_fu": 20,
+        "open_pinfu_shape_ron_fu": 30,
+        "rinshan_tsumo_fu": 2
+      },
+      "concept_ids": [
+        "game.scoring.fu.components",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "scoring.engine_profile": {
+      "value": "tenhou_ranked_four_player",
+      "concept_ids": [
+        "game.scoring.limit.thresholds",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "scoring.limit_and_rounding": {
+      "value": {
+        "kiriage_mangan": [],
+        "aotenjou": false,
+        "ordinary_11_to_12": "sanbaiman",
+        "ordinary_13_plus": "counted_yakuman",
+        "maximum_multiple_yakuman": 4,
+        "payment_rounding_unit": 100
+      },
+      "concept_ids": [
+        "game.scoring.limit.thresholds",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "settlement.honba": {
+      "value": {
+        "points_per_honba": 300,
+        "ron_payer": "discarder",
+        "tsumo_points_per_non_winner": 100
+      },
+      "concept_ids": [
+        "game.counter.honba",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "settlement.riichi_deposit": {
+      "value": {
+        "points_per_declaration": 1000,
+        "win": "approved_winner_takes_all",
+        "exhaustive_draw": "carry_over"
+      },
+      "concept_ids": [
+        "game.score.riichi_deposit_transfer",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "settlement.exhaustive_draw_tenpai": {
+      "value": {
+        "total_points": 3000,
+        "formal_tenpai": true,
+        "zero_or_four_tenpai_transfer": 0
+      },
+      "concept_ids": [
+        "game.hand.end.draw_payment",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "transition.dealer": {
+      "value": {
+        "dealer_continues_on_win": true,
+        "dealer_continues_on_exhaustive_draw_when_tenpai": true,
+        "dealer_changes_on_exhaustive_draw_when_noten": true
+      },
+      "concept_ids": [
+        "game.hand.transition.dealer",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "transition.honba": {
+      "value": {
+        "dealer_continues": "increment_by_one",
+        "dealer_changes": "reset_to_zero"
+      },
+      "concept_ids": [
+        "game.hand.transition.honba",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "transition.riichi_deposit": {
+      "value": {
+        "exhaustive_draw": "carry_entire_pool_forward",
+        "qualified_win": "transfer_to_approved_winner"
+      },
+      "concept_ids": [
+        "game.hand.transition.state_carryover",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "transition.round_and_seat_winds": {
+      "value": {
+        "dealer_continues": "same_hand_and_seat_winds",
+        "dealer_changes": "advance_hand_and_rotate_seat_winds"
+      },
+      "concept_ids": [
+        "game.hand.transition.round",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "match.end.scheduled": {
+      "value": {
+        "scheduled_final_hand": "south_4",
+        "dealer_noten": "end_if_any_player_at_or_above_30000_else_advance",
+        "dealer_tenpai": "end_if_dealer_is_top_and_at_or_above_30000_else_continue",
+        "dealer_win": "end_if_dealer_is_top_and_at_or_above_30000_else_continue",
+        "agari_yame": true,
+        "tenpai_yame": true
+      },
+      "concept_ids": [
+        "game.match.end.scheduled",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "match.end.bankruptcy": {
+      "value": {
+        "bankruptcy_end": true,
+        "negative_score_ends_match": true,
+        "zero_score_ends_match": false
+      },
+      "concept_ids": [
+        "game.match.end.special.bankruptcy",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "match.end.extension": {
+      "value": {
+        "adopted": true,
+        "west_round": true,
+        "threshold_points": 30000,
+        "sudden_death": true,
+        "maximum_final_hand": "west_4"
+      },
+      "concept_ids": [
+        "game.match.extension",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "match.end.final_deposit": {
+      "value": {
+        "resolution_mode": "FIRST_PLACE_TAKES_ALL",
+        "unallocated_table_balance": false
+      },
+      "concept_ids": [
+        "game.match.end.final_deposit",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    },
+    "match.final_points": {
+      "value": {
+        "return_points": 30000,
+        "raw_points_unit": 1000,
+        "rank_points": [
+          20,
+          10,
+          -10,
+          -20
+        ],
+        "tie_rule": "east_1_seat_order",
+        "final_deposit": "first_place_takes_all",
+        "oka_included_in_first_place_points": 20,
+        "sub_1000_rounding": "none"
+      },
+      "concept_ids": [
+        "game.match.final_points.rank",
+        "ruleset.tenhou.ranked.four_player_south.red.2026-09-08-content-snapshot"
+      ]
+    }
+  }
+}

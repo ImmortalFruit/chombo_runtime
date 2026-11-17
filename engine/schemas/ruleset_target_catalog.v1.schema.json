@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chombo.local/schemas/ruleset_target_catalog.v1.schema.json",
+  "title": "Chombo ruleset target catalog v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "catalog_id", "scope_id", "retrieved_on", "targets"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "catalog_id": {"const": "chombo.v0_2.ruleset_targets.v1"},
+    "scope_id": {"const": "four_player_east_south_complete.v1"},
+    "retrieved_on": {"type": "string", "format": "date"},
+    "targets": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "family_id", "provider_type", "official_name", "representative_format",
+          "version_resolution", "primary_sources", "change_detection", "alternate_formats"
+        ],
+        "properties": {
+          "family_id": {"enum": ["jpml", "saikouisen", "npm", "mu", "rmu", "wrc", "tenhou"]},
+          "provider_type": {"enum": ["competition_organization", "international_rules", "online_service"]},
+          "official_name": {"type": "string", "minLength": 1},
+          "representative_format": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["format_id", "name", "selection_boundary"],
+            "properties": {
+              "format_id": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"},
+              "name": {"type": "string", "minLength": 1},
+              "selection_boundary": {"type": "string", "minLength": 1}
+            }
+          },
+          "version_resolution": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["status", "method", "resolved_version", "profile_gate"],
+            "properties": {
+              "status": {"enum": ["EXPLICIT_EDITION", "CONTENT_SNAPSHOT", "CONTENT_SNAPSHOT_REQUIRED", "RUNTIME_SNAPSHOT_REQUIRED"]},
+              "method": {"type": "string", "minLength": 1},
+              "resolved_version": {"type": ["string", "null"]},
+              "profile_gate": {"type": "string", "minLength": 1}
+            }
+          },
+          "primary_sources": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["source_id", "kind", "url", "role"],
+              "properties": {
+                "source_id": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"},
+                "kind": {"enum": ["official_rules_page", "official_rules_pdf", "official_manual", "official_runtime"]},
+                "url": {"type": ["string", "null"]},
+                "role": {"type": "string", "minLength": 1}
+              }
+            }
+          },
+          "change_detection": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["watch", "on_change"],
+            "properties": {
+              "watch": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+              "on_change": {"const": "CREATE_NEW_VERSION_AND_REVIEW_EXISTING_PROFILE"}
+            }
+          },
+          "alternate_formats": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["format_id", "disposition"],
+              "properties": {
+                "format_id": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"},
+                "disposition": {"enum": ["SEPARATE_PROFILE_IF_ADDED", "REGISTERED_SEPARATE_PROFILE"]}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

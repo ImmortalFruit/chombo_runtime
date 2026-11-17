@@ -1,0 +1,6 @@
+{
+  "fu": {"base":"副底","menzen_ron":"門前ロン","tsumo":"ツモ","wait":"待ち","value_pair":"役牌の雀頭","triplet":"刻子","quad":"槓子","chiitoitsu":"七対子","pinfu_tsumo":"平和ツモ"},
+  "wait": {"ryanmen":"両面待ち","kanchan":"嵌張待ち","penchan":"辺張待ち","tanki":"単騎待ち","shanpon":"双碰待ち"},
+  "family": {"NAGASHI_MANGAN":"流し満貫","ABORTIVE_DRAW":"途中流局"},
+  "reason": {"nagashi_mangan":"流し満貫","nine_terminals":"九種九牌","four_winds_first_discard":"四風連打","four_riichi":"四家立直","four_kans":"四開槓","three_ron":"三家和"}
+}

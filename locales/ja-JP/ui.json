@@ -1,0 +1,74 @@
+{
+  "terms": {
+    "home": "ホーム",
+    "play": "対局",
+    "replay": "牌譜再生",
+    "analysis": "手牌解析",
+    "rules": "ルール管理",
+    "seed": "乱数シード",
+    "checkpoint": "保存時点",
+    "automatic_checkpoint": "自動保存"
+  },
+  "delivery": {
+    "NOT_SENT": "未送信",
+    "STARTED": "送信開始済み",
+    "UNKNOWN": "送信状況不明"
+  },
+  "forms": {
+    "hand.complete.standard": "一般形",
+    "hand.complete.seven_pairs": "七対子形",
+    "hand.complete.thirteen_orphans": "国士無双形"
+  },
+  "actions": {
+    "open_kan": "カン",
+    "concealed_kan": "カン",
+    "added_kan": "カン"
+  },
+  "reasons": {
+    "SUBJECT_AMBIGUOUS": "質問の対象を選んでください。",
+    "SELF_SEAT_UNRESOLVED": "自分の席を確認できません。",
+    "USER_CANCELLED": "操作を中止しました。",
+    "SEND_NOT_AUTHORIZED": "外部送信は許可されませんでした。",
+    "ALREADY_TERMINAL": "この処理は既に終了しています。",
+    "RUNTIME_STOPPING": "Chomboを終了しています。"
+  },
+  "subjects": {
+    "SELF": "自家",
+    "PUBLIC_TABLE": "卓上の公開情報"
+  },
+  "errors": {
+    "INVALID_REQUEST": "入力内容を確認してください。",
+    "INPUT_INCOMPLETE": "必要な項目を入力してください。",
+    "INVALID_STATE": "持ち点・供託・参加者の入力を確認してください。",
+    "RESPONSE_INVALID": "応答を正しく確認できませんでした。",
+    "CONTEXT_UNAVAILABLE": "画面の状態を取得できませんでした。",
+    "OPERATION_INCOMPLETE": "操作はまだ完了していません。",
+    "STORAGE_UNAVAILABLE": "データの保存・読込みを完了できませんでした。保存先を確認してください。",
+    "ACTIVE_SESSION_CONFLICT": "開いている対局があります。対局画面に戻ってください。",
+    "DATA_DIR_IN_USE": "同じ保存先を使用するアプリが既に起動しています。",
+    "REVISION_CONFLICT": "他の操作で状態が更新されました。最新状態を読み直してください。",
+    "REQUEST_ID_CONFLICT": "同じ操作IDで異なる内容が送られました。",
+    "RESOURCE_LIMIT": "処理できる件数またはデータ量の上限に達しました。",
+    "RESOURCE_NOT_FOUND": "対象のデータが見つからないか、利用できません。",
+    "PERMISSION_DENIED": "この対象を操作する権限がありません。",
+    "REFERENCE_EXPIRED": "対象の局面は無効になりました。新しい質問を開始してください。",
+    "REVIEW_REQUIRED": "ルールまたは必要な知識の確認が必要です。",
+    "CAPABILITY_UNAVAILABLE": "この機能は現在利用できません。",
+    "LLM_UNCONFIGURED": "AIサービスが未設定です。システム設定を確認してください。",
+    "BROWSER_SESSION_EXPIRED": "設定の有効期限が切れました。APIキーを再設定してください。",
+    "PROVIDER_CONFIGURATION_CHANGED": "AIサービスの設定が変わりました。送信内容を確認し直してください。",
+    "AUTHENTICATION_FAILED": "APIキーによる認証に失敗しました。設定を確認してください。",
+    "RATE_LIMITED": "APIの利用が制限されています。利用上限・残高・送信間隔を確認してください。",
+    "BILLING_REQUIRED": "APIの課金設定または利用可能な残高を確認してください。",
+    "NETWORK_ERROR": "AIサービスとの通信に失敗しました。接続状態を確認してください。",
+    "PROVIDER_UNAVAILABLE": "AIサービスを現在利用できません。時間をおいて確認してください。",
+    "PROVIDER_REQUEST_REJECTED": "AIサービスが要求を受け付けませんでした。設定を確認してください。",
+    "OUTPUT_INVALID": "応答を検証できませんでした。",
+    "TIMEOUT": "応答を待つ時間が上限に達しました。",
+    "INTERNAL_ERROR": "処理中にエラーが発生しました。",
+    "RECOVERY_REQUIRED": "未確定の処理があります。保存状態を確認してください。",
+    "COMPLETED_RECORD_UNAVAILABLE": "牌譜を保存するには対局を終了してください。",
+    "RULES_INCOMPLETE": "計算に必要なルールが不足しています。",
+    "KNOWLEDGE_UNQUALIFIED": "必要な知識の確認が完了していません。"
+  }
+}

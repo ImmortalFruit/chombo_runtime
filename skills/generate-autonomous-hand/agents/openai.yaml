@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chomboの自動対局"
+  short_description: "Chombo四家で一局を自動進行し、牌譜を保存"
+  default_prompt: "$generate-autonomous-hand で、使用する規則を確認してChombo四家の一局を生成してください。"

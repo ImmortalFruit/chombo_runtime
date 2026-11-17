@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "m_league_rule_source_2026_09_08_content_snapshot",
+  "ruleset_id": "m_league.official_rules",
+  "ruleset_version": "2026-09-08-content-snapshot",
+  "planned_profile_id": "m_league_official_rules_2026_09_08_content_snapshot",
+  "source": {
+    "source_id": "m_league.official_rules",
+    "kind": "official_rules_page",
+    "url": "https://m-league.jp/about/",
+    "retrieved_at": "2026-09-08T01:04:57+09:00",
+    "http_content_type": "text/html; charset=UTF-8"
+  },
+  "content_identity": {
+    "selector": "section.p-rule",
+    "canonicalization": [
+      "parse the UTF-8 response body as HTML",
+      "select exactly one section element whose class is p-rule",
+      "concatenate descendant text nodes in document order separated by U+0020",
+      "split on Unicode whitespace and join tokens with one U+0020",
+      "normalize the result to Unicode NFC",
+      "encode the result as UTF-8"
+    ],
+    "canonical_utf8_bytes": 31239,
+    "canonical_sha256": "6282f54e4f58fb20ea42ae8cf2d0a7f64085fa0b3d9f04bae9fd3b42c7dd8b50",
+    "repeat_fetches_verified": 2
+  },
+  "edition_metadata": {
+    "explicit_edition_present": false,
+    "effective_date_present": false,
+    "revision_date_present": false,
+    "season_binding_present": false,
+    "resolution": "USER_APPROVED_CONTENT_SNAPSHOT"
+  },
+  "applicability": {
+    "scope_id": "four_player_east_south_complete.v1",
+    "included": "Mリーグ公式サイトの「Mリーグの公式戦ルール」に掲示された四人東南戦の競技規則本文",
+    "excluded": [
+      "チーム編成、日程、賞金、シリーズ進出条件などのシーズンレギュレーション",
+      "物理対局でのみ発生する反則、所作違反、誤操作、牌・山の破損、罰則、審判裁定、再競技"
+    ]
+  },
+  "approval": {
+    "approved_on": "2026-09-08",
+    "approval_source": "user_approved_content_snapshot_resolution_for_p2_02",
+    "boundary": "取得日単独ではなく、公式URL、抽出境界、正規化手順、本文SHA-256を一組で規則版として固定する"
+  },
+  "change_detection": {
+    "watch": [
+      "公式ページの版、施行日、改定日、適用シーズン表示",
+      "section.p-ruleの正規化本文SHA-256",
+      "公式規則URL"
+    ],
+    "on_change": "CREATE_NEW_VERSION_AND_REVIEW_EXISTING_PROFILE"
+  }
+}

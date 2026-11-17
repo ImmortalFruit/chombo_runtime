@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "chombo_qualified_snapshot_v1",
+  "created_at": "2026-08-26",
+  "source_concepts": [
+    {"path": "concepts/hand-completion-tenpai-and-waits.json", "status": "QUALIFIED"},
+    {"path": "concepts/winning-and-furiten.json", "status": "QUALIFIED"},
+    {"path": "concepts/ordinary-yaku.json", "status": "QUALIFIED"},
+    {"path": "concepts/dora-system.json", "status": "QUALIFIED"},
+    {"path": "concepts/scoring-and-payment.json", "status": "QUALIFIED"},
+    {"path": "concepts/aotenjo.json", "status": "QUALIFIED"},
+    {"path": "concepts/honba-scoring.json", "status": "QUALIFIED"},
+    {"path": "concepts/yakuman.json", "status": "QUALIFIED"},
+    {"path": "concepts/special-scoring-situations.json", "status": "QUALIFIED"}
+  ],
+  "profiles": {
+    "aotenjo_numeric_v1": {
+      "scoring_mode": "aotenjo",
+      "kiriage_mangan": [],
+      "ordinary_13_plus": "uncapped",
+      "yakuman_units_supported": false,
+      "honba_supported": false
+    },
+    "general_red_kazoe_yakuman": {
+      "kiriage_mangan": [[30, 4], [60, 3]],
+      "ordinary_13_plus": "counted_yakuman_or_four_times_mangan"
+    },
+    "m_league_2026": {
+      "kiriage_mangan": [[30, 4], [60, 3]],
+      "ordinary_13_plus": "sanbaiman_cap"
+    },
+    "saikouisen_classic_no_kiriage": {
+      "kiriage_mangan": [],
+      "ordinary_13_plus": "unsupported"
+    }
+  },
+  "unsupported": [
+    "fu_component_evaluation",
+    "responsibility_payment",
+    "multiple_winner_settlement",
+    "riichi_deposit",
+    "dealer_continuation",
+    "next_hand_transition"
+  ]
+}

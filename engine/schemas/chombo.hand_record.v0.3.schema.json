@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chombo.local/schemas/chombo.hand_record.v0.3.schema.json",
+  "title": "Chombo v0.3 finalized hand record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["document_kind", "schema_id", "format_version", "origin_kind", "record_state", "mutation_policy", "producer", "created_at", "baseline_status", "record_id", "lineage", "participants", "rules", "payload", "integrity"],
+  "properties": {
+    "document_kind": {"const": "HAND_RECORD"},
+    "schema_id": {"const": "https://chombo.local/schemas/chombo.hand_record.v0.3.schema.json"},
+    "format_version": {"const": "1.0.0"},
+    "origin_kind": {"const": "CHOMBO_SESSION"},
+    "record_state": {"const": "FINALIZED"},
+    "mutation_policy": {"const": "IMMUTABLE"},
+    "producer": {"$ref": "#/$defs/producer"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "baseline_status": {"enum": ["EVALUATION", "RELEASED"]},
+    "record_id": {"type": "string", "format": "uuid"},
+    "lineage": {"$ref": "#/$defs/lineage"},
+    "participants": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"$ref": "#/$defs/participant"}},
+    "rules": {"type": "object"},
+    "payload": {"type": "object", "additionalProperties": false, "required": ["hand"], "properties": {"hand": {"type": "object"}}},
+    "integrity": {"$ref": "#/$defs/integrity"}
+  },
+  "$defs": {
+    "producer": {"type": "object", "additionalProperties": false, "required": ["app_id", "app_version", "build_revision", "engine_version"], "properties": {"app_id": {"const": "chombo"}, "app_version": {"type": "string"}, "build_revision": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "engine_version": {"type": "string", "minLength": 1}}},
+    "lineage": {"type": "object", "additionalProperties": false, "required": ["lineage_id", "source_session_id", "parent_checkpoint_id", "parent_record_id", "fork_position"], "properties": {"lineage_id": {"type": "string", "format": "uuid"}, "source_session_id": {"type": "string", "format": "uuid"}, "parent_checkpoint_id": {"type": "null"}, "parent_record_id": {"type": "null"}, "fork_position": {"type": "null"}}},
+    "participant": {"type": "object", "additionalProperties": false, "required": ["participant_id", "display_name", "controller_id"], "properties": {"participant_id": {"type": "string", "minLength": 1}, "display_name": {"type": "string", "minLength": 1}, "controller_id": {"type": "string", "minLength": 1}}},
+    "integrity": {"type": "object", "additionalProperties": false, "required": ["algorithm", "document_hash"], "properties": {"algorithm": {"const": "canonical-json-sha256.v1"}, "document_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}}
+  }
+}

@@ -1,0 +1,20 @@
+Chombo
+Copyright 2026 Chombo project contributors
+
+This product includes teaching, domain-knowledge, localization, and media works
+licensed under Creative Commons Attribution 4.0 International. See
+LICENSE_SCOPE.md and LICENSES/CC-BY-4.0.txt.
+
+The source repository includes the Yuji Boku font software:
+Copyright 2021 The Yuji Project Authors
+https://github.com/Kinutafontfactory/Yuji
+Licensed under the SIL Open Font License, Version 1.1. The font and its license
+are retained only as generation inputs and are not included in the Codex
+Runtime Bundle.
+
+The Chombo name and logo are not licensed as trademarks and must not be used to
+imply endorsement, affiliation, or official status.
+
+The static Web UI includes third-party packages. Their names, exact versions,
+and complete package-provided license/notice texts are retained in
+ui/.output/public/_nuxt/third-party-notices.json in Runtime distributions.

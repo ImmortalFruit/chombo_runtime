@@ -1,0 +1,529 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "custom_rule_confirmed.v1.schema.json",
+  "description": "Structural interchange schema. Engine also enforces resource limits, strict numeric types, reference integrity, approval and transactional constraints.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "custom_ruleset_id",
+    "version",
+    "profile_id",
+    "scope_id",
+    "source_draft",
+    "base_ref",
+    "dimensions",
+    "lineage",
+    "validation_ref",
+    "snapshot_id",
+    "confirmed_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "custom_ruleset_id": {
+      "type": "string",
+      "pattern": "^custom\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "profile_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope_id": {
+      "const": "four_player_east_south_complete.v1"
+    },
+    "source_draft": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "draft_id",
+        "revision",
+        "input_digest"
+      ],
+      "properties": {
+        "draft_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "input_digest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "base_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "ruleset_id",
+        "ruleset_version",
+        "profile_id",
+        "snapshot_id"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "OFFICIAL",
+            "CUSTOM_CONFIRMED"
+          ]
+        },
+        "ruleset_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ruleset_version": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "integer",
+              "minimum": 1
+            }
+          ]
+        },
+        "profile_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "snapshot_id": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "OFFICIAL"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "ruleset_version": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "ruleset_version": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "ruleset_id": {
+                "type": "string",
+                "pattern": "^custom\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "match.start.procedure",
+        "match.start.points",
+        "match.structure",
+        "tile.red_five.composition",
+        "dora.profile",
+        "response.call.priority",
+        "response.post_call_discard_restriction",
+        "kan.count_limit",
+        "kan.profile_boundaries",
+        "kan.last_draw_restrictions",
+        "riichi.score_eligibility",
+        "riichi.post_establishment_kan",
+        "riichi.first_turn_and_ippatsu",
+        "win.multiple_ron_resolution",
+        "hand.abortive_draws",
+        "hand.special.nagashi_mangan",
+        "yaku.ordinary_catalog_and_values",
+        "yaku.yakuman_catalog_and_values",
+        "scoring.fu",
+        "scoring.engine_profile",
+        "scoring.limit_and_rounding",
+        "settlement.honba",
+        "settlement.riichi_deposit",
+        "settlement.exhaustive_draw_tenpai",
+        "transition.dealer",
+        "transition.honba",
+        "transition.riichi_deposit",
+        "transition.round_and_seat_winds",
+        "match.end.scheduled",
+        "match.end.bankruptcy",
+        "match.end.extension",
+        "match.end.final_deposit",
+        "match.final_points"
+      ],
+      "properties": {
+        "match.start.procedure": {
+          "$ref": "#/$defs/dimension"
+        },
+        "match.start.points": {
+          "$ref": "#/$defs/dimension"
+        },
+        "match.structure": {
+          "$ref": "#/$defs/dimension"
+        },
+        "tile.red_five.composition": {
+          "$ref": "#/$defs/dimension"
+        },
+        "dora.profile": {
+          "$ref": "#/$defs/dimension"
+        },
+        "response.call.priority": {
+          "$ref": "#/$defs/dimension"
+        },
+        "response.post_call_discard_restriction": {
+          "$ref": "#/$defs/dimension"
+        },
+        "kan.count_limit": {
+          "$ref": "#/$defs/dimension"
+        },
+        "kan.profile_boundaries": {
+          "$ref": "#/$defs/dimension"
+        },
+        "kan.last_draw_restrictions": {
+          "$ref": "#/$defs/dimension"
+        },
+        "riichi.score_eligibility": {
+          "$ref": "#/$defs/dimension"
+        },
+        "riichi.post_establishment_kan": {
+          "$ref": "#/$defs/dimension"
+        },
+        "riichi.first_turn_and_ippatsu": {
+          "$ref": "#/$defs/dimension"
+        },
+        "win.multiple_ron_resolution": {
+          "$ref": "#/$defs/dimension"
+        },
+        "hand.abortive_draws": {
+          "$ref": "#/$defs/dimension"
+        },
+        "hand.special.nagashi_mangan": {
+          "$ref": "#/$defs/dimension"
+        },
+        "yaku.ordinary_catalog_and_values": {
+          "$ref": "#/$defs/dimension"
+        },
+        "yaku.yakuman_catalog_and_values": {
+          "$ref": "#/$defs/dimension"
+        },
+        "scoring.fu": {
+          "$ref": "#/$defs/dimension"
+        },
+        "scoring.engine_profile": {
+          "$ref": "#/$defs/dimension"
+        },
+        "scoring.limit_and_rounding": {
+          "$ref": "#/$defs/dimension"
+        },
+        "settlement.honba": {
+          "$ref": "#/$defs/dimension"
+        },
+        "settlement.riichi_deposit": {
+          "$ref": "#/$defs/dimension"
+        },
+        "settlement.exhaustive_draw_tenpai": {
+          "$ref": "#/$defs/dimension"
+        },
+        "transition.dealer": {
+          "$ref": "#/$defs/dimension"
+        },
+        "transition.honba": {
+          "$ref": "#/$defs/dimension"
+        },
+        "transition.riichi_deposit": {
+          "$ref": "#/$defs/dimension"
+        },
+        "transition.round_and_seat_winds": {
+          "$ref": "#/$defs/dimension"
+        },
+        "match.end.scheduled": {
+          "$ref": "#/$defs/dimension"
+        },
+        "match.end.bankruptcy": {
+          "$ref": "#/$defs/dimension"
+        },
+        "match.end.extension": {
+          "$ref": "#/$defs/dimension"
+        },
+        "match.end.final_deposit": {
+          "$ref": "#/$defs/dimension"
+        },
+        "match.final_points": {
+          "$ref": "#/$defs/dimension"
+        }
+      }
+    },
+    "lineage": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 32,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "ruleset_id",
+          "ruleset_version",
+          "profile_id",
+          "snapshot_id"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "OFFICIAL",
+              "CUSTOM_CONFIRMED"
+            ]
+          },
+          "ruleset_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ruleset_version": {
+            "oneOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "integer",
+                "minimum": 1
+              }
+            ]
+          },
+          "profile_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "snapshot_id": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "OFFICIAL"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "ruleset_version": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "ruleset_version": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "ruleset_id": {
+                  "type": "string",
+                  "pattern": "^custom\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "validation_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "validation_ref",
+        "validator_version",
+        "approval_catalog_digest",
+        "capability_catalog_digest"
+      ],
+      "properties": {
+        "validation_ref": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "validator_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "approval_catalog_digest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "capability_catalog_digest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "snapshot_id": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "confirmed_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|\\+00:00)$"
+    }
+  },
+  "$defs": {
+    "dimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "concept_ids",
+        "origin_ref",
+        "override_provenance_id",
+        "approval_refs"
+      ],
+      "properties": {
+        "value": {},
+        "concept_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "origin_ref": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "kind",
+                "ruleset_id",
+                "ruleset_version",
+                "profile_id",
+                "snapshot_id"
+              ],
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "OFFICIAL",
+                    "CUSTOM_CONFIRMED"
+                  ]
+                },
+                "ruleset_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "ruleset_version": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    {
+                      "type": "integer",
+                      "minimum": 1
+                    }
+                  ]
+                },
+                "profile_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "snapshot_id": {
+                  "type": "string",
+                  "pattern": "^sha256:[0-9a-f]{64}$"
+                }
+              },
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "kind": {
+                        "const": "OFFICIAL"
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "ruleset_version": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "else": {
+                    "properties": {
+                      "ruleset_version": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "ruleset_id": {
+                        "type": "string",
+                        "pattern": "^custom\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "draft_id",
+                "revision"
+              ],
+              "properties": {
+                "draft_id": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+                },
+                "revision": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            }
+          ]
+        },
+        "override_provenance_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "approval_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

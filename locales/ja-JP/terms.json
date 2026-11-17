@@ -1,0 +1,18 @@
+{
+  "tile.normal": "通常牌",
+  "tile.numbered": "数牌",
+  "tile.honor": "字牌",
+  "tile.terminal": "老頭牌",
+  "tile.simple": "中張牌",
+  "tile.terminal_or_honor": "幺九牌",
+  "tile.dragon": "三元牌",
+  "tile.wind": "風牌",
+  "tile.red_five": "赤い5牌",
+  "game.hand.yaku.tanyao": "断幺九",
+  "game.hand.wind_role.non_value": "オタ風",
+  "game.hand.wind_role.double": "連風牌",
+  "game.hand.wind_role.double.east": "ダブ東",
+  "game.hand.wind_role.double.south": "ダブ南",
+  "game.hand.riichi.silent_tenpai": "黙聴（ダマ）",
+  "game.hand.riichi.okuri_kan": "送り槓"
+}

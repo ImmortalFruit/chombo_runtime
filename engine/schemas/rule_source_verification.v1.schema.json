@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chombo.local/schemas/rule_source_verification.v1.schema.json",
+  "type": "object",
+  "required": ["schema_version", "ledger_id", "release_version", "checked_at", "checked_revision", "results", "release_gate"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "ledger_id": {"type": "string", "pattern": "^chombo\\.v[0-9_]+\\.rule_source_verification\\.v1$"},
+    "release_version": {"type": "string", "minLength": 1},
+    "checked_at": {"type": "string", "format": "date-time"},
+    "checked_revision": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "results": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["ruleset_id", "profile_ids", "ruleset_version", "result", "sources", "scope_status", "resolution"],
+        "properties": {
+          "ruleset_id": {"type": "string", "minLength": 1},
+          "profile_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "ruleset_version": {"type": "string", "minLength": 1},
+          "result": {"enum": ["UNCHANGED", "CHANGED", "UNAVAILABLE"]},
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["source_id", "url", "comparison", "status"],
+              "properties": {
+                "source_id": {"type": "string", "minLength": 1},
+                "url": {"type": "string", "pattern": "^https://"},
+                "comparison": {"type": "string", "minLength": 1},
+                "expected": {"type": ["string", "null"]},
+                "observed": {"type": ["string", "null"]},
+                "status": {"enum": ["MATCH", "REACHABLE", "CHANGED_RESOLVED", "UNAVAILABLE"]}
+              },
+              "additionalProperties": false
+            }
+          },
+          "scope_status": {"enum": ["MATCH", "CHANGED", "UNAVAILABLE"]},
+          "resolution": {"enum": ["NONE_REQUIRED", "NO_NEW_PROFILE_REQUIRED", "NEW_PROFILE_REQUIRED", "BLOCKED"]},
+          "notes": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "release_gate": {
+      "type": "object",
+      "required": ["status", "unavailable_count", "unresolved_change_count"],
+      "properties": {
+        "status": {"enum": ["PASSED", "BLOCKED"]},
+        "unavailable_count": {"type": "integer", "minimum": 0},
+        "unresolved_change_count": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

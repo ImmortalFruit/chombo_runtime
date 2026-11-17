@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "catalog_id": "chombo.record_engine_code_compatibility.v1",
+  "entries": [
+    {
+      "path": "engine/hand_completion.py",
+      "current_digest": "sha256:e712ff75c1307840a3dfb49883d2acff16168ac71478321c732932d3c351eeba",
+      "compatible_digests": [
+        "sha256:a00b94175ba09ef462173e2c453ee7fd21d5af33e0ae06b4472246efbb80a24c",
+        "sha256:83ca8d27a1c653604d36ac7db9be278c9dc21b800a19e214ea9b7c3f8ca6a3eb",
+        "sha256:46cf04c9b919a27d87f6d2655586eb0f0d623a9fcd2b64f55481366657e4dce5",
+        "sha256:7d92675ffc565146b264cf94e6f441836a44c852cc77dfe3ef6edf3b9b26d61d"
+      ],
+      "verification_id": "chombo.bug_20261110_001_003.combined_hand_completion"
+    },
+    {
+      "path": "engine/scoring.py",
+      "current_digest": "sha256:32c539fedd91abf457cb8c75dc7bbaf8410981e1d07bf9647e4e4ac1511cdbb0",
+      "compatible_digests": [
+        "sha256:7b4e67fb526a0ad9958cfca7cfa3523fe9d7966ffef56e7a85b6a6212bcd4ef2",
+        "sha256:ad458bcc016debd949381e69eeb09f6e59ef157fed07fd6052558105f06916f9"
+      ],
+      "verification_id": "chombo.v052.runtime_knowledge_reader"
+    },
+    {
+      "path": "engine/match_app.py",
+      "current_digest": "sha256:fee05af887e7d57d033561ef5605f345fd7d0e82a379c569e92516c8b868a54f",
+      "compatible_digests": [
+        "sha256:cf04b6dd9874ced034b4baf05cd7f4edb77534709f45e0d764b302f1ee78eb75"
+      ],
+      "verification_id": "chombo.bug_20261111_002.replay_evaluation_opt_in"
+    },
+    {
+      "path": "engine/hand_app.py",
+      "current_digest": "sha256:94c1a5b53ae6ad7a3a04c881d11878582b3134441a4904938869f2234b56bdea",
+      "compatible_digests": [
+        "sha256:f81ec0a939c8aaf6ffdf9804cd9eda9f32a78dc097781999da73dd0013fd2db4"
+      ],
+      "verification_id": "chombo.bug_20261111_006.action_json_object_guard"
+    },
+    {
+      "path": "engine/rule_profiles.py",
+      "current_digest": "sha256:3a1208ae6aabaa9ea1881b8bea8d2ec2aae588da1fd3904024030cb574bd8aab",
+      "compatible_digests": [
+        "sha256:ecf7dac09bf05267c71f78bbb32c2fe5ad71c16e685337fc21b0ad99dda97ef3"
+      ],
+      "verification_id": "chombo.v052.runtime_knowledge_reader"
+    },
+    {
+      "path": "engine/rule_drafts.py",
+      "current_digest": "sha256:01061ad022474e8467813f065f0392e115f258fa3ecffe6f16838cd4df0432a1",
+      "compatible_digests": [
+        "sha256:2ea5cb9710f47409c188730d08c579b4afc9e3e5348648c8c2a7820ea1ac6425"
+      ],
+      "verification_id": "chombo.v052.runtime_knowledge_reader"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "麻雀の点数計算"
+  short_description: "指定した規則で符・翻・本場などから支払いを計算"
+  default_prompt: "$calculate-mahjong-score で、適用する規則を確認して麻雀の点数を計算してください。"

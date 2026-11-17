@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chombo.local/schemas/chombo.session_checkpoint.v0.3.schema.json",
+  "title": "Chombo v0.3 internal live-session checkpoint",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "document_kind", "schema_id", "format_version", "origin_kind",
+    "record_state", "mutation_policy", "producer", "created_at",
+    "checkpoint_id", "session_id", "lineage_id", "parent_checkpoint_id",
+    "display_name", "save_kind", "position", "rules", "participants",
+    "session", "game_state", "action_context", "hand_execution",
+    "random_state", "controllers", "access_binding", "request_ledger", "integrity"
+  ],
+  "properties": {
+    "document_kind": {"const": "SESSION_CHECKPOINT"},
+    "schema_id": {"const": "https://chombo.local/schemas/chombo.session_checkpoint.v0.3.schema.json"},
+    "format_version": {"const": "1.0.0"},
+    "origin_kind": {"const": "CHOMBO_SESSION"},
+    "record_state": {"const": "CHECKPOINT"},
+    "mutation_policy": {"const": "IMMUTABLE"},
+    "producer": {
+      "type": "object", "additionalProperties": false,
+      "required": ["app_id", "app_version", "build_revision", "engine_version"],
+      "properties": {
+        "app_id": {"const": "chombo"}, "app_version": {"type": "string", "minLength": 1},
+        "build_revision": {"type": "string", "minLength": 1}, "engine_version": {"type": "string", "minLength": 1}
+      }
+    },
+    "created_at": {"type": "string", "minLength": 1},
+    "checkpoint_id": {"$ref": "#/$defs/uuid"},
+    "session_id": {"$ref": "#/$defs/uuid"},
+    "lineage_id": {"$ref": "#/$defs/uuid"},
+    "parent_checkpoint_id": {"oneOf": [{"$ref": "#/$defs/uuid"}, {"type": "null"}]},
+    "display_name": {"type": "string", "minLength": 1},
+    "save_kind": {"enum": ["MANUAL", "AUTO"]},
+    "position": {"type": "object"},
+    "rules": {"type": "object"},
+    "participants": {"type": "array", "minItems": 4, "maxItems": 4},
+    "session": {"type": "object"},
+    "game_state": {"type": "object"},
+    "action_context": {"type": "object"},
+    "hand_execution": {"type": "object"},
+    "random_state": {"type": "object"},
+    "controllers": {"type": "array", "minItems": 4, "maxItems": 4},
+    "access_binding": {"type": "object"},
+    "request_ledger": {"type": "array"},
+    "integrity": {
+      "type": "object", "additionalProperties": false,
+      "required": ["algorithm", "document_hash"],
+      "properties": {
+        "algorithm": {"const": "canonical-json-sha256.v1"},
+        "document_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+      }
+    }
+  },
+  "$defs": {
+    "uuid": {"type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"}
+  }
+}

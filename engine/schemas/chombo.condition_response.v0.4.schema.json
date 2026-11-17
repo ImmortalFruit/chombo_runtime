@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://chombo.local/schemas/chombo.condition_response.v0.4.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["document_kind", "schema_id", "format_version", "created_at", "producer", "integrity", "request_id", "status", "calculation_basis", "ranking_scope", "evaluation_point", "calculator_version", "input_digest", "match_rule_ref", "aggregate_profile_ref", "concept_refs", "evidence", "usage"],
+  "properties": {
+    "document_kind": {"const": "CONDITION_RESPONSE"}, "schema_id": {"const": "https://chombo.local/schemas/chombo.condition_response.v0.4.schema.json"}, "format_version": {"const": "1.0.0"}, "created_at": {"type": "string", "format": "date-time"},
+    "producer": {"$ref": "#/$defs/producer"}, "integrity": {"$ref": "#/$defs/integrity"}, "request_id": {"type": "string", "format": "uuid"},
+    "status": {"enum": ["ACHIEVABLE", "UNREACHABLE", "INDETERMINATE_LIMIT", "INPUT_INCOMPLETE", "INVALID_REQUEST", "INVALID_STATE", "SNAPSHOT_MISMATCH", "RULES_INCOMPLETE", "KNOWLEDGE_UNQUALIFIED", "LIMIT_INVALID"]},
+    "calculation_basis": {"enum": ["CURRENT_HAND_COMEBACK", "INPUT_CONSTRAINED_COMEBACK"]}, "ranking_scope": {"enum": ["SINGLE_MATCH_RANK", "AGGREGATE_RANK"]}, "evaluation_point": {"enum": ["HAND_END", "MATCH_END"]},
+    "calculator_version": {"type": "string", "maxLength": 256}, "input_digest": {"$ref": "#/$defs/hash"}, "match_rule_ref": {"type": "object", "maxProperties": 256}, "aggregate_profile_ref": {"type": ["object", "null"], "maxProperties": 256},
+    "concept_refs": {"type": "array", "maxItems": 512, "uniqueItems": true}, "evidence": {"type": "array", "maxItems": 4096}, "usage": {"type": "object", "maxProperties": 256},
+    "candidates": {"type": "array", "maxItems": 10000}, "partial_candidates": {"type": "array", "maxItems": 10000}, "complete_search_evidence": {"type": "object", "maxProperties": 256}, "limit_reason": {"type": "string", "maxLength": 4096}
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, "producer": {"type": "object", "additionalProperties": false, "required": ["app_id", "app_version", "build_revision", "engine_version"], "properties": {"app_id": {"type": "string"}, "app_version": {"type": "string"}, "build_revision": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "engine_version": {"type": "string"}}}, "integrity": {"type": "object", "additionalProperties": false, "required": ["algorithm", "document_hash"], "properties": {"algorithm": {"const": "canonical-json-sha256.v1"}, "document_hash": {"$ref": "#/$defs/hash"}}}}
+}

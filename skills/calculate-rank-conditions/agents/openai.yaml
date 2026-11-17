@@ -1,0 +1,4 @@
+interface:
+  display_name: "順位・ポイント条件計算"
+  short_description: "固定局面の順位条件や、指定した加算方式の目標ポイントを計算"
+  default_prompt: "$calculate-rank-conditions で、検証済みの入力と指定した規則から順位・ポイントの達成条件を計算してください。"

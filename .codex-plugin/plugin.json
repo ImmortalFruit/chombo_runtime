@@ -1,0 +1,26 @@
+{
+  "name": "chombo",
+  "version": "0.5.2",
+  "description": "確認済みの知識と計算機能で日本麻雀の学習・対局を支援するCodex向けエージェント",
+  "author": {
+    "name": "Immortal_Fruit"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Chombo",
+    "logo": "./assets/chombo-icon.png",
+    "composerIcon": "./assets/chombo-icon.png",
+    "shortDescription": "確認済みの知識で日本麻雀を学び、対局・牌譜再生に使えます。",
+    "longDescription": "Chomboは、確認済みの知識とEngineを使って、日本麻雀の学習、手牌解析、点数・条件計算、ローカル対局、牌譜再生を支援します。未学習の知識は推測で補いません。",
+    "developerName": "Immortal_Fruit",
+    "category": "Education",
+    "capabilities": [
+      "麻雀学習",
+      "手牌画像の生成"
+    ],
+    "defaultPrompt": [
+      "Chomboが学習済みの範囲と使える機能を説明してください。",
+      "使用する規則を確認して、Chomboとの一局を始めてください。"
+    ]
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "custom_rule_draft.v1.schema.json",
+  "description": "Structural interchange schema. Engine also enforces resource limits, strict numeric types, reference integrity, approval and transactional constraints.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "draft_id",
+    "revision",
+    "custom_ruleset_id",
+    "display_name",
+    "scope_id",
+    "base_ref",
+    "overrides",
+    "provenance",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "draft_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "custom_ruleset_id": {
+      "type": "string",
+      "pattern": "^custom\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope_id": {
+      "const": "four_player_east_south_complete.v1"
+    },
+    "base_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "ruleset_id",
+        "ruleset_version",
+        "profile_id",
+        "snapshot_id"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "OFFICIAL",
+            "CUSTOM_CONFIRMED"
+          ]
+        },
+        "ruleset_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ruleset_version": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "integer",
+              "minimum": 1
+            }
+          ]
+        },
+        "profile_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "snapshot_id": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "OFFICIAL"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "ruleset_version": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "ruleset_version": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "ruleset_id": {
+                "type": "string",
+                "pattern": "^custom\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "overrides": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "value",
+          "provenance_id"
+        ],
+        "properties": {
+          "value": {},
+          "provenance_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "actor_id",
+          "recorded_at",
+          "request_summary"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "USER_REQUEST",
+              "IMPORTED_DRAFT"
+            ]
+          },
+          "actor_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recorded_at": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "(Z|\\+00:00)$"
+          },
+          "request_summary": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|\\+00:00)$"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|\\+00:00)$"
+    }
+  }
+}

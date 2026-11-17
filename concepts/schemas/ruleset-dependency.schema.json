@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chombo.local/schemas/ruleset-dependency.schema.json",
+  "title": "Chombo ruleset dependency metadata",
+  "description": "Metadata attached to a Concept-owned rule dimension. This schema classifies existing knowledge; it does not qualify new knowledge.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "dimension_id",
+    "classification",
+    "concept_ids",
+    "on_unspecified"
+  ],
+  "properties": {
+    "dimension_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)+$"
+    },
+    "classification": {
+      "enum": [
+        "RULESET_INVARIANT",
+        "RULESET_DEPENDENT",
+        "RULESET_UNRESOLVED"
+      ]
+    },
+    "concept_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)+$"
+      },
+      "uniqueItems": true
+    },
+    "value_path": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Optional JSON-style path to the Concept-owned value. It must not contain a copied rule value."
+    },
+    "on_unspecified": {
+      "enum": [
+        "USE_QUALIFIED_VALUE",
+        "RULE_PROFILE_INCOMPLETE",
+        "REVIEW_REQUIRED"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "classification": {
+            "const": "RULESET_INVARIANT"
+          }
+        },
+        "required": ["classification"]
+      },
+      "then": {
+        "properties": {
+          "concept_ids": {
+            "minItems": 1
+          },
+          "on_unspecified": {
+            "const": "USE_QUALIFIED_VALUE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "classification": {
+            "const": "RULESET_DEPENDENT"
+          }
+        },
+        "required": ["classification"]
+      },
+      "then": {
+        "properties": {
+          "concept_ids": {
+            "minItems": 1
+          },
+          "on_unspecified": {
+            "const": "RULE_PROFILE_INCOMPLETE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "classification": {
+            "const": "RULESET_UNRESOLVED"
+          }
+        },
+        "required": ["classification"]
+      },
+      "then": {
+        "properties": {
+          "on_unspecified": {
+            "const": "REVIEW_REQUIRED"
+          }
+        }
+      }
+    }
+  ]
+}

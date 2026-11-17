@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chombo.local/schemas/chombo.condition_state.v0.4.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["document_kind", "schema_id", "format_version", "created_at", "producer", "integrity", "state_id", "position", "participants", "scores", "round_state"],
+  "properties": {
+    "document_kind": {"const": "CONDITION_STATE"},
+    "schema_id": {"const": "https://chombo.local/schemas/chombo.condition_state.v0.4.schema.json"},
+    "format_version": {"const": "1.0.0"},
+    "created_at": {"type": "string", "format": "date-time", "maxLength": 256},
+    "producer": {"$ref": "#/$defs/producer"},
+    "integrity": {"$ref": "#/$defs/integrity"},
+    "state_id": {"$ref": "#/$defs/id"},
+    "position": {
+      "type": "object", "additionalProperties": false,
+      "required": ["match_id", "hand_id", "event_id", "event_sequence", "state_digest"],
+      "properties": {"match_id": {"$ref": "#/$defs/id"}, "hand_id": {"$ref": "#/$defs/id"}, "event_id": {"$ref": "#/$defs/id"}, "event_sequence": {"type": "integer", "minimum": 0}, "state_digest": {"$ref": "#/$defs/hash"}}
+    },
+    "participants": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "object", "additionalProperties": false, "required": ["participant_id", "seat"], "properties": {"participant_id": {"$ref": "#/$defs/id"}, "seat": {"enum": ["EAST", "SOUTH", "WEST", "NORTH"]}}}},
+    "scores": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "object", "additionalProperties": false, "required": ["participant_id", "value"], "properties": {"participant_id": {"$ref": "#/$defs/id"}, "value": {"type": "integer"}}}},
+    "round_state": {"type": "object", "additionalProperties": false, "required": ["round_wind", "hand_number", "dealer_participant_id", "honba", "riichi_deposits", "match_completion_state", "initial_score_total"], "properties": {"round_wind": {"enum": ["EAST", "SOUTH", "WEST", "NORTH"]}, "hand_number": {"type": "integer", "minimum": 1}, "dealer_participant_id": {"$ref": "#/$defs/id"}, "honba": {"type": "integer", "minimum": 0}, "riichi_deposits": {"type": "integer", "minimum": 0}, "match_completion_state": {"enum": ["IN_PROGRESS", "COMPLETED"]}, "initial_score_total": {"type": "integer", "minimum": 0}}}
+  },
+  "$defs": {
+    "id": {"type": "string", "minLength": 1, "maxLength": 256, "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"},
+    "hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "producer": {"type": "object", "additionalProperties": false, "required": ["app_id", "app_version", "build_revision", "engine_version"], "properties": {"app_id": {"type": "string", "maxLength": 16384}, "app_version": {"type": "string", "maxLength": 16384}, "build_revision": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "engine_version": {"type": "string", "maxLength": 16384}}},
+    "integrity": {"type": "object", "additionalProperties": false, "required": ["algorithm", "document_hash"], "properties": {"algorithm": {"const": "canonical-json-sha256.v1"}, "document_hash": {"$ref": "#/$defs/hash"}}}
+  }
+}

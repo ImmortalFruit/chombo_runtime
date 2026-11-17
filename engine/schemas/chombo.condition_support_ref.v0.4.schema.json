@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://chombo.local/schemas/chombo.condition_support_ref.v0.4.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["document_kind", "schema_id", "format_version", "created_at", "producer", "integrity", "condition_ref_id", "source", "authority", "state_ref", "rules_ref", "request_digest", "grant_ref"],
+  "properties": {
+    "document_kind": {"const": "CONDITION_SUPPORT_REF"}, "schema_id": {"const": "https://chombo.local/schemas/chombo.condition_support_ref.v0.4.schema.json"}, "format_version": {"const": "1.0.0"}, "created_at": {"type": "string", "format": "date-time"},
+    "producer": {"$ref": "#/$defs/producer"}, "integrity": {"$ref": "#/$defs/integrity"}, "condition_ref_id": {"$ref": "#/$defs/id"},
+    "source": {"type": "object", "maxProperties": 256}, "authority": {"type": "object", "maxProperties": 256},
+    "state_ref": {"type": "object", "additionalProperties": false, "required": ["state_id", "state_digest"], "properties": {"state_id": {"$ref": "#/$defs/id"}, "state_digest": {"$ref": "#/$defs/hash"}}},
+    "rules_ref": {"type": "object", "maxProperties": 256}, "request_digest": {"$ref": "#/$defs/hash"}, "grant_ref": {"type": ["object", "null"], "maxProperties": 256}
+  },
+  "$defs": {"id": {"type": "string", "minLength": 1, "maxLength": 256}, "hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, "producer": {"type": "object", "additionalProperties": false, "required": ["app_id", "app_version", "build_revision", "engine_version"], "properties": {"app_id": {"type": "string"}, "app_version": {"type": "string"}, "build_revision": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "engine_version": {"type": "string"}}}, "integrity": {"type": "object", "additionalProperties": false, "required": ["algorithm", "document_hash"], "properties": {"algorithm": {"const": "canonical-json-sha256.v1"}, "document_hash": {"$ref": "#/$defs/hash"}}}}
+}

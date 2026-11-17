@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "ledger_id": "chombo.v0_4.aggregate_ranking_source_audit.v1",
+  "audited_on": "2026-10-19",
+  "scope": "registered_four_player_profiles_and_rmu_new_final",
+  "registered_profile_coverage": {
+    "registry_id": "chombo.ruleset_profiles.v1",
+    "expected_profile_count": 10,
+    "profile_ids": [
+      "m_league_official_rules_2026_09_08_content_snapshot",
+      "jpml_official_2026_04_01_rule_0_7",
+      "saikouisen_highest_title_rules_2024_12_05",
+      "npm_official_rules_2008_05_10",
+      "mu_shouou_mu_league_2025_01_21_content_snapshot",
+      "rmu_a_2026_04_12_content_snapshot",
+      "rmu_b_2026_04_12_content_snapshot",
+      "rmu_m_2026_04_12_content_snapshot",
+      "wrc_rules_2025",
+      "tenhou_ranked_four_player_south_red_2026_09_08_content_snapshot"
+    ],
+    "aggregate_profile_status": "RULES_INCOMPLETE",
+    "executable_aggregate_profile_count": 0,
+    "reason": "registered single-match sources do not define a complete competition-level aggregate format and aggregate tie policy",
+    "must_not_infer_from": [
+      "single_match_tie_rule",
+      "organization_or_service_name",
+      "current_seat",
+      "display_order"
+    ]
+  },
+  "formats": [
+    {
+      "format_id": "registered_profiles.generic_aggregate",
+      "format_kind": "NORMAL_MULTI_MATCH_AGGREGATE",
+      "adoption_status": "NOT_ADOPTED_WITHOUT_EVENT_SPECIFIC_SOURCE",
+      "source_version": "registered-source-set-through-2026-09-08",
+      "source_snapshot_hashes": [
+        "engine/profiles/rule_source_verification.v1.json"
+      ],
+      "tie_policy_status": "UNRESOLVED",
+      "unresolved_fields": [
+        "event_identity_and_edition",
+        "participant_set",
+        "completed_match_count_or_stage_boundary",
+        "carry_over_and_reset_rule",
+        "aggregate_tie_policy",
+        "rounding_stage_and_mode",
+        "penalty_boundary"
+      ],
+      "execution_status": "RULES_INCOMPLETE",
+      "notes": "A complete single-match Rule Profile is necessary but is not an aggregate competition profile."
+    },
+    {
+      "format_id": "rmu.normal_final_aggregate",
+      "format_kind": "NORMAL_MULTI_MATCH_AGGREGATE",
+      "adoption_status": "EVENT_SPECIFIC_ONLY",
+      "source_version": "2026-10-19-content-snapshot",
+      "source_snapshot_hashes": [
+        "rmu.openleague.article.sha256:d10cba05317e6241b18309bfa39cccb88b9ab72af449c36af84a37c4924617f6",
+        "rmu.grandprix.article.sha256:8e605e524b0aa783022074283215d6801c89a8963b3a49aa8b5e97c88c216b16"
+      ],
+      "adoption_examples": [
+        {
+          "event": "RMU Open League 2026",
+          "base_rule": "rmu.b",
+          "normal_final_matches_before_new_final": 4,
+          "url": "https://rmu.jp/title/openleague"
+        },
+        {
+          "event": "RMU Grand Prix 9th",
+          "base_rule": "event_page_does_not_resolve_a_b_or_m",
+          "normal_final_matches_before_new_final": 3,
+          "url": "https://rmu.jp/title/rmu%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%97%E3%83%AA"
+        }
+      ],
+      "tie_policy_status": "UNRESOLVED",
+      "unresolved_fields": [
+        "aggregate_tie_policy",
+        "penalty_boundary",
+        "grand_prix_base_rule",
+        "event_specific_carry_over_or_reset"
+      ],
+      "execution_status": "RULES_INCOMPLETE",
+      "notes": "The normal matches are accumulated before a separately selected new-final stage; they are not the new-final format itself."
+    },
+    {
+      "format_id": "rmu.new_final",
+      "format_kind": "RMU_NEW_FINAL",
+      "adoption_status": "ADOPTED_BY_NAMED_EVENTS",
+      "source_version": "2017-05-01-overview-plus-2026-11-01-current-image-reaudit",
+      "source_snapshot_hashes": [
+        "rmu.rules.article.sha256:b0c822345848b77d05ce71d20395fee2177a9b7a9250489a2c337150316989cf",
+        "rmu.new_final_overview.article.sha256:4b6a43b5c86b65a34f41fd5a4118c10d9337794a1623d1a95ba8a9f3149ecd4b",
+        "rmu.openleague.article.sha256:d10cba05317e6241b18309bfa39cccb88b9ab72af449c36af84a37c4924617f6",
+        "rmu.grandprix.article.sha256:8e605e524b0aa783022074283215d6801c89a8963b3a49aa8b5e97c88c216b16",
+        "rmu.new_final_current_overview.image.sha256:116b20500ec09a895a1371133ae23d420ab0c3d43634439d418a92a46a12d6af"
+      ],
+      "primary_sources": [
+        {
+          "source_id": "rmu.rules",
+          "url": "https://rmu.jp/rule",
+          "role": "official separation of A, B and M rules from the optionally adopted new-final format",
+          "date_modified": "2026-04-12T22:08:54+09:00"
+        },
+        {
+          "source_id": "rmu.new_final_overview",
+          "url": "https://rmu.jp/552",
+          "role": "official 2017-05-01 overview of conversion, seating, all-East-1 structure, no rank points, finish and next-dealer rules"
+        },
+        {
+          "source_id": "rmu.new_final_current_overview_image",
+          "url": "https://rmu.jp/cms/wp-content/uploads/2025/05/S__40902671-640x360.jpg",
+          "role": "current official rule-page image resolving seating, initial dealer procedure, zero honba and next-dealer rules",
+          "retrieved_on": "2026-11-01"
+        },
+        {
+          "source_id": "rmu.openleague.2026",
+          "url": "https://rmu.jp/title/openleague",
+          "role": "current adoption example: B-rule four-match final followed by new final"
+        },
+        {
+          "source_id": "rmu.grandprix.9",
+          "url": "https://rmu.jp/title/rmu%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%97%E3%83%AA",
+          "role": "current adoption example: three-match final followed by new final"
+        }
+      ],
+      "resolved_source_statements": [
+        "convert_pre_stage_total_points_to_point_sticks",
+        "seat_in_descending_total_order_counter_to_normal_mahjong_rotation",
+        "reseat_when_rank_order_changes",
+        "every_hand_is_east_1",
+        "no_rank_points",
+        "finish_only_when_the_winner_becomes_aggregate_top",
+        "draw_rank_change_does_not_finish",
+        "after_win_the_winner_is_next_dealer",
+        "after_draw_dealer_noten_passes_deal",
+        "after_draw_choose_tenpai_player_nearest_to_current_dealer",
+        "all_noten_makes_south_seat_next_dealer",
+        "initial_and_subsequent_hands_have_zero_honba",
+        "aggregate_leader_is_kari_kari_east_for_official_two_dice_initial_dealer_procedure",
+        "new_final_results_are_outside_regular_record_management"
+      ],
+      "tie_policy_status": "UNRESOLVED",
+      "concept_review_status": "PARTIALLY_QUALIFIED",
+      "concept_review_ref": "docs/operations/v0.4-rmu-new-final-concept-review.md",
+      "current_source_audit_ref": "engine/profiles/rmu_new_final_current_source_audit.v1.json",
+      "unresolved_fields": [
+        "point_stick_conversion_scale_and_rounding",
+        "top_definition_when_totals_are_equal",
+        "initial_seat_order_when_pre_stage_totals_are_equal",
+        "reseating_order_when_totals_are_equal",
+        "riichi_deposit_initialization_and_transition",
+        "event_specific_base_rule_when_adoption_page_does_not_name_a_b_or_m",
+        "official_two_dice_dealer_selection_to_deterministic_seed_mapping"
+      ],
+      "execution_status": "RULES_INCOMPLETE",
+      "product_scope": "KNOWLEDGE_ONLY",
+      "developer_archive_ref": "developer/archive/rmu-new-final/README.md",
+      "notes": "This is a separate championship format, not an executable aggregate ranking profile and not an automatic consequence of selecting RMU."
+    }
+  ],
+  "change_detection": {
+    "normalization": "extract article element, remove markup, decode entities, collapse Unicode whitespace, normalize NFC, then SHA-256 UTF-8 bytes",
+    "watch": [
+      "official source dateModified",
+      "normalized article SHA-256",
+      "named event edition and system text",
+      "base A, B or M rule selection",
+      "match count and carry-over or reset text",
+      "aggregate tie wording",
+      "new-final adoption or explicit exclusion"
+    ],
+    "on_change": "CREATE_NEW_SOURCE_SNAPSHOT_AND_REVIEW_AFFECTED_FORMAT_ONLY",
+    "whole_page_html_hash_is_advisory_only": true
+  },
+  "release_gate": {
+    "status": "BLOCK_EXECUTION",
+    "reason": "audited aggregate profiles remain incomplete; RMU new final is knowledge only and its execution work is excluded from v0.4 release dependencies",
+    "required_next_todos": []
+  }
+}

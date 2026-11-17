@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chomboの不具合報告"
+  short_description: "Chomboのエラーを整理し、内容確認後にGitHubまたはメールで報告"
+  default_prompt: "$report-chombo-bug で、このChomboのエラーの報告文を作成し、送信先と内容を確認してから送信してください。"

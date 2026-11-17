@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "profiles": [
+    {
+      "ruleset_id": "m_league.official_rules",
+      "ruleset_version": "2026-09-08-content-snapshot",
+      "profile_id": "m_league_official_rules_2026_09_08_content_snapshot",
+      "path": "m_league_official_rules_2026_09_08_content_snapshot.json",
+      "aliases": ["m-league-official-2026-09-08", "Mリーグ公式ルール2026-09-08"]
+    },
+    {
+      "ruleset_id": "jpml.official_rules",
+      "ruleset_version": "2026-04-01-rule-0.7",
+      "profile_id": "jpml_official_2026_04_01_rule_0_7",
+      "path": "jpml_official_2026_04_01_rule_0_7.json",
+      "aliases": ["jpml-official-2026-04-01-0.7", "日本プロ麻雀連盟公式ルール2026-04-01-0.7"]
+    },
+    {
+      "ruleset_id": "saikouisen.highest_title_rules",
+      "ruleset_version": "2024-12-05",
+      "profile_id": "saikouisen_highest_title_rules_2024_12_05",
+      "path": "saikouisen_highest_title_rules_2024_12_05.json",
+      "aliases": ["saikouisen-highest-title-rules-2024-12-05", "最高位戦ルール2024-12-05"]
+    },
+    {
+      "ruleset_id": "npm.official_rules",
+      "ruleset_version": "2008-05-10",
+      "profile_id": "npm_official_rules_2008_05_10",
+      "path": "npm_official_rules_2008_05_10.json",
+      "aliases": ["npm-official-rules-2008-05-10", "日本プロ麻雀協会公式ルール2008-05-10"]
+    },
+    {
+      "ruleset_id": "mu.shouou_mu_league",
+      "ruleset_version": "2025-01-21-content-snapshot",
+      "profile_id": "mu_shouou_mu_league_2025_01_21_content_snapshot",
+      "path": "mu_shouou_mu_league_2025_01_21_content_snapshot.json",
+      "aliases": ["mu-shouou-mu-league-2025-01-21", "麻将連合将王μリーグ2025-01-21"]
+    },
+    {
+      "ruleset_id": "rmu.a",
+      "ruleset_version": "2026-04-12-content-snapshot",
+      "profile_id": "rmu_a_2026_04_12_content_snapshot",
+      "path": "rmu_a_2026_04_12_content_snapshot.json",
+      "aliases": ["rmu-a-2026-04-12", "RMU-Aルール2026-04-12"]
+    },
+    {
+      "ruleset_id": "rmu.b",
+      "ruleset_version": "2026-04-12-content-snapshot",
+      "profile_id": "rmu_b_2026_04_12_content_snapshot",
+      "path": "rmu_b_2026_04_12_content_snapshot.json",
+      "aliases": ["rmu-b-2026-04-12", "RMU-Bルール2026-04-12"]
+    },
+    {
+      "ruleset_id": "rmu.m",
+      "ruleset_version": "2026-04-12-content-snapshot",
+      "profile_id": "rmu_m_2026_04_12_content_snapshot",
+      "path": "rmu_m_2026_04_12_content_snapshot.json",
+      "aliases": ["rmu-m-2026-04-12", "RMU-Mルール2026-04-12"]
+    },
+    {
+      "ruleset_id": "wrc.rules",
+      "ruleset_version": "2025",
+      "profile_id": "wrc_rules_2025",
+      "path": "wrc_rules_2025.json",
+      "aliases": ["wrc-rules-2025", "WRCルール2025"]
+    },
+    {
+      "ruleset_id": "tenhou.ranked.four_player_south.red",
+      "ruleset_version": "2026-09-08-content-snapshot",
+      "profile_id": "tenhou_ranked_four_player_south_red_2026_09_08_content_snapshot",
+      "path": "tenhou_ranked_four_player_south_red_2026_09_08_content_snapshot.json",
+      "aliases": ["tenhou-ranked-four-south-red-2026-09-08", "天鳳段位戦四南喰赤2026-09-08"]
+    }
+  ]
+}

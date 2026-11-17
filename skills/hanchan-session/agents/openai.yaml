@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chomboの半荘対局"
+  short_description: "利用者一人とChombo三家で東南戦を対局"
+  default_prompt: "$hanchan-session で、使用する規則を確認してChomboとの半荘を開始してください。"

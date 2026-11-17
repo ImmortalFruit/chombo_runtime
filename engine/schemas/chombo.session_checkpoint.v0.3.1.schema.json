@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chombo.local/schemas/chombo.session_checkpoint.v0.3.1.schema.json",
+  "title": "Chombo v0.3.1 committed operation checkpoint",
+  "type": "object",
+  "required": ["document_kind", "schema_id", "format_version", "position", "operation_journal", "outbox", "session", "integrity"],
+  "properties": {
+    "document_kind": {"const": "SESSION_CHECKPOINT"},
+    "schema_id": {"const": "https://chombo.local/schemas/chombo.session_checkpoint.v0.3.1.schema.json"},
+    "format_version": {"const": "1.1.0"}, "position": {"type": "object"},
+    "operation_journal": {"type": "object"}, "outbox": {"type": "object"},
+    "session": {"type": "object"}, "integrity": {"type": "object"}
+  }
+}

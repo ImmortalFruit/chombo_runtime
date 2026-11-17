@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "default_locale": "ja-JP",
+  "authoring_locale": "ja-JP",
+  "conversational_teaching_locale": "ja-JP",
+  "knowledge_policy": "qualified_only",
+  "learning_states": ["LEARNING", "QUALIFIED", "MASTERED"],
+  "skill_ids": [
+    "render-hand",
+    "analyze-hand-completion",
+    "calculate-mahjong-score",
+    "quick-game",
+    "hanchan-session",
+    "configured-match-session",
+    "generate-autonomous-hand",
+    "replay-mahjong-hand",
+    "calculate-rank-conditions",
+    "report-chombo-bug"
+  ]
+}

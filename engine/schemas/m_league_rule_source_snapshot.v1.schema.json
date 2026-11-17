@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chombo.local/schemas/m_league_rule_source_snapshot.v1.schema.json",
+  "title": "Chombo M-League official rule source snapshot v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "snapshot_id", "ruleset_id", "ruleset_version", "planned_profile_id", "source",
+    "content_identity", "edition_metadata", "applicability", "approval", "change_detection"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "snapshot_id": {"type": "string", "pattern": "^m_league_rule_source_[0-9]{4}_[0-9]{2}_[0-9]{2}_content_snapshot$"},
+    "ruleset_id": {"const": "m_league.official_rules"},
+    "ruleset_version": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}-content-snapshot$"},
+    "planned_profile_id": {"type": "string", "pattern": "^m_league_official_rules_[0-9]{4}_[0-9]{2}_[0-9]{2}_content_snapshot$"},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "kind", "url", "retrieved_at", "http_content_type"],
+      "properties": {
+        "source_id": {"const": "m_league.official_rules"},
+        "kind": {"const": "official_rules_page"},
+        "url": {"const": "https://m-league.jp/about/"},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "http_content_type": {"type": "string", "minLength": 1}
+      }
+    },
+    "content_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["selector", "canonicalization", "canonical_utf8_bytes", "canonical_sha256", "repeat_fetches_verified"],
+      "properties": {
+        "selector": {"const": "section.p-rule"},
+        "canonicalization": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "canonical_utf8_bytes": {"type": "integer", "minimum": 1},
+        "canonical_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "repeat_fetches_verified": {"type": "integer", "minimum": 2}
+      }
+    },
+    "edition_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["explicit_edition_present", "effective_date_present", "revision_date_present", "season_binding_present", "resolution"],
+      "properties": {
+        "explicit_edition_present": {"const": false},
+        "effective_date_present": {"const": false},
+        "revision_date_present": {"const": false},
+        "season_binding_present": {"const": false},
+        "resolution": {"const": "USER_APPROVED_CONTENT_SNAPSHOT"}
+      }
+    },
+    "applicability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scope_id", "included", "excluded"],
+      "properties": {
+        "scope_id": {"const": "four_player_east_south_complete.v1"},
+        "included": {"type": "string", "minLength": 1},
+        "excluded": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["approved_on", "approval_source", "boundary"],
+      "properties": {
+        "approved_on": {"type": "string", "format": "date"},
+        "approval_source": {"const": "user_approved_content_snapshot_resolution_for_p2_02"},
+        "boundary": {"type": "string", "minLength": 1}
+      }
+    },
+    "change_detection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["watch", "on_change"],
+      "properties": {
+        "watch": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "on_change": {"const": "CREATE_NEW_VERSION_AND_REVIEW_EXISTING_PROFILE"}
+      }
+    }
+  }
+}

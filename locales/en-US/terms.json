@@ -1,0 +1,18 @@
+{
+  "tile.normal": "normal tiles",
+  "tile.numbered": "numbered tiles",
+  "tile.honor": "honor tiles",
+  "tile.terminal": "terminal tiles",
+  "tile.simple": "simple tiles",
+  "tile.terminal_or_honor": "terminal or honor tiles",
+  "tile.dragon": "dragon tiles",
+  "tile.wind": "wind tiles",
+  "tile.red_five": "red five tiles",
+  "game.hand.yaku.tanyao": "All Simples",
+  "game.hand.wind_role.non_value": "non-value wind",
+  "game.hand.wind_role.double": "double wind",
+  "game.hand.wind_role.double.east": "double East",
+  "game.hand.wind_role.double.south": "double South",
+  "game.hand.riichi.silent_tenpai": "silent tenpai (damaten)",
+  "game.hand.riichi.okuri_kan": "okuri-kan"
+}

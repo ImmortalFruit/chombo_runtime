@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "catalog_id": "chombo.v0_2.ruleset_targets.v1",
+  "scope_id": "four_player_east_south_complete.v1",
+  "retrieved_on": "2026-09-08",
+  "targets": [
+    {
+      "family_id": "jpml",
+      "provider_type": "competition_organization",
+      "official_name": "日本プロ麻雀連盟",
+      "representative_format": {
+        "format_id": "jpml.official_rules",
+        "name": "日本プロ麻雀連盟公式ルール",
+        "selection_boundary": "連盟の競技ルールページが公式ルールとして掲示する四人東南戦。WRCルールおよび大会固有特例は含めない。"
+      },
+      "version_resolution": {
+        "status": "EXPLICIT_EDITION",
+        "method": "公式ページが示す年度または改定日を版表示として採用し、表示がない場合は取得日ではなく正規化本文と参照資料のSHA-256を版識別子にする。",
+        "resolved_version": "2026-04-01-rule-0.7",
+        "profile_gate": "競技ルール0.7と採用役一覧を一組で固定し、公式資料にない必須dimensionをConcept審査で解決するまで完全プロファイルを登録しない。"
+      },
+      "primary_sources": [
+        {"source_id": "jpml.competition_rules", "kind": "official_rules_page", "url": "https://www.ma-jan.or.jp/activity/game_rule.html", "role": "現行競技ルール0.7への公式導線"},
+        {"source_id": "jpml.competition_rules_2026-04-01_0.7", "kind": "official_rules_sheet", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vS23LsIu2BmUCVgj326GNwtKbxWtFDswxi0yWETJq_Sn_hwypel5ZGM9g6oBhH9Q7naaT2Rqqk6yjgb/pubhtml", "role": "2026-04-01競技ルール0.7本文と順位点別表"},
+        {"source_id": "jpml.adopted_yaku", "kind": "official_rules_page", "url": "https://www.ma-jan.or.jp/activity/yaku.html", "role": "現行採用役一覧"},
+        {"source_id": "jpml.glossary", "kind": "official_glossary", "url": "https://www.ma-jan.or.jp/class_1/1552.html", "role": "供託の和了時受渡しと流局時持越しの公式補足"},
+        {"source_id": "jpml.official_rules_through_2024", "kind": "official_rules_page", "url": "https://www.ma-jan.or.jp/column_other/115081.html", "role": "2024年度までと明記された旧版境界"}
+      ],
+      "change_detection": {"watch": ["ページの年度・改定日", "埋込資料URL", "正規化本文SHA-256"], "on_change": "CREATE_NEW_VERSION_AND_REVIEW_EXISTING_PROFILE"},
+      "alternate_formats": [{"format_id": "jpml.wrc", "disposition": "SEPARATE_PROFILE_IF_ADDED"}]
+    },
+    {
+      "family_id": "saikouisen",
+      "provider_type": "competition_organization",
+      "official_name": "最高位戦日本プロ麻雀協会",
+      "representative_format": {
+        "format_id": "saikouisen.highest_title_rules",
+        "name": "最高位戦ルール",
+        "selection_boundary": "公式ルールページの最高位戦ルールと競技規定。Classicおよび対局種別特例は混在させない。"
+      },
+      "version_resolution": {
+        "status": "EXPLICIT_EDITION",
+        "method": "公式ルールページが案内する現行競技規定PDFの文書内改定日を版とし、PDFのSHA-256を同版の不変識別に併記する。",
+        "resolved_version": "2024-12-05",
+        "profile_gate": "2024-12-05改定競技規定PDFのハッシュと適用対象を固定し、公式資料にない必須dimensionをConcept審査で解決するまで完全プロファイルを登録しない。"
+      },
+      "primary_sources": [
+        {"source_id": "saikouisen.rules_index", "kind": "official_rules_page", "url": "https://saikouisen.com/about/rules/", "role": "形式一覧、最終更新日、規定への公式導線"},
+        {"source_id": "saikouisen.regulations_2024-12-05", "kind": "official_rules_pdf", "url": "https://drive.google.com/file/d/1KfRZQQYkmtBRytaYlBePPmf5TRv4k-96/view?usp=drive_link", "role": "公式ページが案内する代表形式の版付き本文"}
+      ],
+      "change_detection": {"watch": ["公式ページの最終更新日", "PDF URL", "PDF SHA-256"], "on_change": "CREATE_NEW_VERSION_AND_REVIEW_EXISTING_PROFILE"},
+      "alternate_formats": [
+        {"format_id": "saikouisen.classic", "disposition": "SEPARATE_PROFILE_IF_ADDED"},
+        {"format_id": "saikouisen.event_exception", "disposition": "SEPARATE_PROFILE_IF_ADDED"}
+      ]
+    },
+    {
+      "family_id": "npm",
+      "provider_type": "competition_organization",
+      "official_name": "日本プロ麻雀協会",
+      "representative_format": {
+        "format_id": "npm.official_rules",
+        "name": "日本プロ麻雀協会公式ルール",
+        "selection_boundary": "公式ルールおよび競技規定が定める四人東南戦。大会固有システムは含めない。"
+      },
+      "version_resolution": {
+        "status": "EXPLICIT_EDITION",
+        "method": "公式競技規定PDFの改訂履歴にある最終改訂日を版とし、現行公式ルールHTMLとPDFのSHA-256を一組で固定する。",
+        "resolved_version": "2008-05-10",
+        "profile_gate": "2008-05-10改訂競技規定と現行公式ルール概要の内容ハッシュを固定し、資料に明記されない必須dimensionをConcept審査で解決するまで完全プロファイルを登録しない。"
+      },
+      "primary_sources": [
+        {"source_id": "npm.official_rules_snapshot_2026-09-07", "kind": "official_rules_page", "url": "https://npm2001.com/about/rule/", "role": "版表示のない現行公式ルール概要"},
+        {"source_id": "npm.competition_regulations_index", "kind": "official_rules_page", "url": "https://npm2001.com/about/regulations/", "role": "競技規定本文と公式PDF導線"},
+        {"source_id": "npm.competition_regulations_2008-05-10", "kind": "official_rules_pdf", "url": "https://npm2001.com/pdf/regulations.pdf", "role": "2008-05-10最終改訂表示を持つ競技規定本文"}
+      ],
+      "change_detection": {"watch": ["公式ルールHTMLの内容SHA-256", "競技規定PDF URL", "HTMLおよびPDF SHA-256"], "on_change": "CREATE_NEW_VERSION_AND_REVIEW_EXISTING_PROFILE"},
+      "alternate_formats": []
+    },
+    {
+      "family_id": "mu",
+      "provider_type": "competition_organization",
+      "official_name": "麻将連合",
+      "representative_format": {
+        "format_id": "mu.shouou_mu_league",
+        "name": "将王決定戦・μリーグ・μ2リーグルール",
+        "selection_boundary": "麻将連合公式ルールに、公式競技規定ページが指定するテンパイ料0点の将王決定戦・μリーグ・μ2リーグ特則を組み合わせる。物理対局固有の反則・裁定は共通除外とする。"
+      },
+      "version_resolution": {
+        "status": "CONTENT_SNAPSHOT",
+        "method": "公式ルールPDFの文書内制定・改定表示を優先し、競技別特則ページとPDFのSHA-256を一組の版識別子として固定する。",
+        "resolved_version": "2025-01-21-content-snapshot",
+        "profile_gate": "2025年1月の公式ルールPDF、現行競技規定、μカップ規定抜粋、μリーグ採用形式を一組で固定し、資料に明記されない必須dimensionをConcept審査で解決するまで完全プロファイルを登録しない。"
+      },
+      "primary_sources": [
+        {"source_id": "mu.competition_regulations", "kind": "official_rules_page", "url": "https://mu-mahjong.jp/tournament/%E7%AB%B6%E6%8A%80%E8%A6%8F%E5%AE%9A/", "role": "採用形式別の追加規定と公式PDF導線"},
+        {"source_id": "mu.official_rules", "kind": "official_rules_pdf", "url": "https://mu-mahjong.jp/wp-content/uploads/2025/01/murule_202501.pdf", "role": "公式ルール本文"},
+        {"source_id": "mu.mu_cup_rules", "kind": "official_rules_page", "url": "https://mu-mahjong.jp/tournament/%CE%BC%E3%82%AB%E3%83%83%E3%83%97/", "role": "共通基礎となるμカップ規定抜粋"},
+        {"source_id": "mu.mu_league_rules", "kind": "official_format_page", "url": "https://mu-mahjong.jp/tournament/%CE%BC%E3%83%AA%E3%83%BC%E3%82%B0%EF%BC%88%E5%B0%86%E7%8E%8B%EF%BC%89/", "role": "テンパイ料0点とμカップ規則継承を示す現行採用形式"}
+      ],
+      "change_detection": {"watch": ["公式ルールPDFの改定表示とURL", "競技別特則本文", "両資料SHA-256"], "on_change": "CREATE_NEW_VERSION_AND_REVIEW_EXISTING_PROFILE"},
+      "alternate_formats": [
+        {"format_id": "mu.mu_cup", "disposition": "SEPARATE_PROFILE_IF_ADDED"},
+        {"format_id": "mu.tour_ranking", "disposition": "SEPARATE_PROFILE_IF_ADDED"}
+      ]
+    },
+    {
+      "family_id": "rmu",
+      "provider_type": "competition_organization",
+      "official_name": "RMU",
+      "representative_format": {
+        "format_id": "rmu.a",
+        "name": "Aルール",
+        "selection_boundary": "公式ページが基本ルールと定義するAルール。Bルール、Mルール、新決勝方式は含めない。"
+      },
+      "version_resolution": {
+        "status": "CONTENT_SNAPSHOT",
+        "method": "公式ページの改定日または版表示を優先し、表示がない場合は取得HTMLのSHA-256でA・B・Mルールを個別に不変化する。",
+        "resolved_version": "2026-04-12-content-snapshot",
+        "profile_gate": "公式ページの更新メタデータ、取得HTML SHA-256、Aルールを採用する現行大会を一組で固定し、A・B・Mを独立登録して新決勝方式を混在させない。"
+      },
+      "primary_sources": [
+        {"source_id": "rmu.rules_2026-04-12", "kind": "official_rules_page", "url": "https://rmu.jp/rule", "role": "A・B・Mの形式区分、Aルール本文、更新メタデータ"},
+        {"source_id": "rmu.crown_a_rule", "kind": "official_rules_page", "url": "https://rmu.jp/title/crown", "role": "RMUクラウンが公式Aルールを採用することの確認"}
+      ],
+      "change_detection": {"watch": ["改定日または版表示", "公式ルールHTML SHA-256", "形式一覧"], "on_change": "CREATE_NEW_VERSION_AND_REVIEW_EXISTING_PROFILE"},
+      "alternate_formats": [
+        {"format_id": "rmu.b", "disposition": "REGISTERED_SEPARATE_PROFILE"},
+        {"format_id": "rmu.m", "disposition": "REGISTERED_SEPARATE_PROFILE"},
+        {"format_id": "rmu.new_final", "disposition": "SEPARATE_PROFILE_IF_ADDED"}
+      ]
+    },
+    {
+      "family_id": "wrc",
+      "provider_type": "international_rules",
+      "official_name": "World Riichi Championship",
+      "representative_format": {
+        "format_id": "wrc.rules",
+        "name": "WRC Rules",
+        "selection_boundary": "WRC Rules本体に同年のClarificationsを重ねる。Optional Rulesおよび個別大会の裁定は含めない。"
+      },
+      "version_resolution": {
+        "status": "EXPLICIT_EDITION",
+        "method": "公式ダウンロードページのRules年版を主版とし、同年Clarificationsの版・SHA-256を必須の副識別子にする。",
+        "resolved_version": "2025",
+        "profile_gate": "WRC Rules 2025 v20250526と2025年6月29日Clarificationsを一組で保存・ハッシュ化し、完全33dimensionへ接続済み。"
+      },
+      "primary_sources": [
+        {"source_id": "wrc.rules_downloads", "kind": "official_rules_page", "url": "https://www.worldriichi.org/wrc-rules", "role": "2025 Rules、Clarifications、archiveへの公式導線"},
+        {"source_id": "wrc.rules_2025_v20250526", "kind": "official_rules_pdf", "url": "https://www.worldriichi.org/s/WRC-Rules-2025-42fx.pdf", "role": "WRC Rules 2025 v20250526本文"},
+        {"source_id": "wrc.clarifications_2025_2025-06-29", "kind": "official_rules_pdf", "url": "https://www.worldriichi.org/s/WRC_2025_Rules_Clarification.pdf", "role": "最終自摸後の立直を許可する2025年6月29日付補足"}
+      ],
+      "change_detection": {"watch": ["現行Rules年版", "Clarifications年版とURL", "両PDF SHA-256", "archiveへの移動"], "on_change": "CREATE_NEW_VERSION_AND_REVIEW_EXISTING_PROFILE"},
+      "alternate_formats": [{"format_id": "wrc.optional_rules", "disposition": "SEPARATE_PROFILE_IF_ADDED"}]
+    },
+    {
+      "family_id": "tenhou",
+      "provider_type": "online_service",
+      "official_name": "オンライン対戦麻雀 天鳳",
+      "representative_format": {
+        "format_id": "tenhou.ranked.four_player_south.red",
+        "name": "段位戦4人打ち・東南戦・喰断あり赤あり",
+        "selection_boundary": "公式マニュアルの段位戦4人打ちを基礎とし、東南戦、喰断あり、赤ありを選択する。東風戦、三人打ち、雀荘戦、個室、大会ロビーは含めない。"
+      },
+      "version_resolution": {
+        "status": "CONTENT_SNAPSHOT",
+        "method": "公式マニュアルの規則本文と変更注記を正規化しSHA-256で固定する。UIオプションは実行意味値へ展開して同じスナップショットに含める。",
+        "resolved_version": "2026-09-08-content-snapshot",
+        "profile_gate": "公式マニュアルHTMLのSHA-256、最終変更注記、段位戦4人打ちの東南・喰断あり・赤ありという選択を一組で固定し、完全33dimensionへ接続済み。"
+      },
+      "primary_sources": [{"source_id": "tenhou.manual", "kind": "official_manual", "url": "https://tenhou.net/man/index.html", "role": "段位戦4人打ちの規則、選択肢、変更注記"}],
+      "change_detection": {"watch": ["段位戦4人打ち本文SHA-256", "日付付き変更注記", "利用可能な卓・オプション"], "on_change": "CREATE_NEW_VERSION_AND_REVIEW_EXISTING_PROFILE"},
+      "alternate_formats": [
+        {"format_id": "tenhou.ranked.four_player_east", "disposition": "SEPARATE_PROFILE_IF_ADDED"},
+        {"format_id": "tenhou.jansou", "disposition": "SEPARATE_PROFILE_IF_ADDED"},
+        {"format_id": "tenhou.private_or_tournament", "disposition": "SEPARATE_PROFILE_IF_ADDED"}
+      ]
+    }
+  ]
+}
