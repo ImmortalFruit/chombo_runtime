@@ -44,8 +44,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "633719f1a059ae976d77f721a5c3b35637c5633aa55052b64e9df43771b4ee48",
-      "size": 16561
+      "sha256": "38ae7840067b309001d19e2ea87c8f4cdac4976cffc4041b52541106149ab1cb",
+      "size": 10583
     },
     {
       "path": "VERSION",
@@ -1496,6 +1496,6 @@
   "release_mode": "release",
   "schema_version": 1,
   "source_dirty": false,
-  "source_revision": "01555b92ca2a725c49e998dedd84dba667b1fd30",
+  "source_revision": "92ddff9a5c11557463837a341db55a325107fe14",
   "version": "0.5.2"
 }
